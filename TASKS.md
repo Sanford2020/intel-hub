@@ -2,48 +2,61 @@
 
 任务看板 — **Single Master Agent** 调度 **Skills**。老板模式见 `workflows/autonomous-delivery.md`。
 
+**多迭代路线图：** `docs/plans/roadmap-3-employees.md`（Sprint S1→S4 派单依据）
+
 ## BACKLOG
 
-- Commercial authentication and authorization model
-- Production deployment hardening
-- Worker/beat 24h observation + `docs/operations/` record
-- Full-text search (v0.2+)
-- Entity relationship graph
-- **Stickiness Phase 2:** Setup wizard、简报英中双语
-- Commercial auth scope ADR（Architecture）
-- `OPENAI_API_KEY` production strategy（Deployment）
-- Curate broken RSS feeds → `REVIEW.md`（Backend）
-- Resolve `DECISIONS.md` vs `docs/decisions.md` authority
+### M7 候选（S3 完成后四选一）
+
+- M7-A 双语简报（中文化海外信息）
+- M7-B Setup Wizard（5 分钟跑起来）
+- M7-C AI 成本守门（限额 / 队列优先级 / mock 透明）
+- M7-D Postgres 全文检索
+
+### 长期
+
+- 多租户隔离与配额（M8+）
+- Elasticsearch / 向量检索
+- 实体关系图
+- Mobile / 推送 App
+- 翻译质量评估 + 人工反馈环
 
 ## TODO
 
-### M5 Daily Archive & Trends（Master 规划完成 → 待批准开发）
+### S1 · M5 Daily Archive & Trends（当前 Sprint · 已批准派单）
 
-见 `docs/plans/M5-daily-archive-trends.md`
+派单顺序见 `docs/plans/roadmap-3-employees.md` §2；详细规划见 `docs/plans/M5-daily-archive-trends.md`。
 
-| Task | Skill | 状态 |
-| --- | --- | --- |
-| TASK-20260521-M5-A: migration + metrics + Celery archive task | Windsurf · Backend | TODO |
-| TASK-20260521-M5-B: archives/trends API | Windsurf · Backend | TODO |
-| TASK-20260521-M5-C: `/archives` + `/trends` UI | Windsurf · Frontend | TODO |
-| TASK-20260521-M5-D: pytest + acceptance + Review 报告 | Codex | TODO |
-| TASK-20260521-M5-M: ADR + PRD 更新 | Cursor · Master | TODO |
+| Task | Skill | 状态 | 依赖 |
+| --- | --- | --- | --- |
+| TASK-20260521-M5-M: ADR + PRD scenario 10 + 看板维护 | Cursor · Master | TODO | — |
+| TASK-20260521-M5-A: migration + metrics + Celery archive task | Windsurf · Backend | TODO | M5-M Accepted |
+| TASK-20260521-M5-B: archives/trends API | Windsurf · Backend | TODO | M5-A |
+| TASK-20260521-M5-C: `/archives` + `/trends` UI | Windsurf · Frontend | TODO | M5-B |
+| TASK-20260521-M5-D: pytest + acceptance + Review 报告 | Codex | TODO | M5-A 起即可 |
 
-### M3 Ops Hardening
+### S2 · M3.5 Ops Closure（与 S1 并行 · 文件不冲突）
 
-- TASK-20260521-03: RSS 源健康清单 + `REVIEW.md` 更新（Codex + Backend）
-- TASK-20260521-04: `validate_project.ps1` 全量（含 build + docker config）纳入 CI 说明
-
-### M4 Intel Stack Integration（Master 当前 Sprint）
-
-见 `docs/integrations-m4.md`
+派单依据 `docs/plans/roadmap-3-employees.md` §3。
 
 | Task | Skill | 状态 |
 | --- | --- | --- |
-| TASK-20260519-M4-A: RSSHub docker + rsshub-x seeds + OSINT RSS | Backend | DONE |
-| TASK-20260519-M4-B: `aihot` / `apify` parsers + pipeline | Backend | DONE |
-| TASK-20260519-M4-C: n8n / Telegram 简报出站 + config 补全 | Backend | DONE |
-| TASK-20260519-M4-D: 前端类型、batch 脚本、pytest | Frontend + Codex | DONE |
+| TASK-20260521-OPS-01: RSS 源健康清单 v2 | Codex · Test | TODO |
+| TASK-20260521-OPS-02: `validate_project.sh` + GitHub Actions CI | Codex · Deployment | TODO |
+| TASK-20260521-OPS-03: Worker / Beat 24h 观测落档 | Codex · Test | TODO |
+| TASK-20260521-OPS-04: 解决 `DECISIONS.md` vs `docs/decisions.md` 权威性 | Cursor · Documentation | TODO |
+
+### S3 · M6 Commercial Auth Foundation（S1 DONE 后启动 · 强串行）
+
+派单依据 `docs/plans/roadmap-3-employees.md` §4。
+
+| Task | Skill | 状态 | 依赖 |
+| --- | --- | --- | --- |
+| TASK-20260601-M6-ADR: 鉴权 ADR + 子任务拆解 | Cursor · Architecture | TODO | S1 DONE |
+| TASK-20260601-M6-A: User / Session / JWT scaffold | Windsurf · Backend | TODO | M6-ADR |
+| TASK-20260601-M6-B: 受保护路由 + RBAC | Windsurf · Backend | TODO | M6-A |
+| TASK-20260601-M6-C: `/login` + AuthProvider + 路由守卫 | Windsurf · Frontend | TODO | M6-B |
+| TASK-20260601-M6-D: 鉴权测试 + 部署 + 文档 | Codex | TODO | M6-A 起即可
 
 ## DOING
 
@@ -57,10 +70,17 @@
 
 ### M4 Intel Stack Integration — 2026-05-19
 
-- `docs/integrations-m4.md`、RSSHub docker、`aihot`/`apify` 连接器、n8n/Telegram 出站
-- Seeds: `osint-rss-sources.json`、`aihot-api-sources.json`、`rsshub-x-sources.json`（25 条）
-- **BestBlogs 策展 RSS**：`bestblogs-sources.json`（7 条）+ `ingest-social-fast` 优先队列
-- **71 pytest passing**
+见 `docs/integrations-m4.md`
+
+| Task | Skill | 状态 |
+| --- | --- | --- |
+| TASK-20260519-M4-A: RSSHub docker + rsshub-x seeds + OSINT RSS | Backend | DONE |
+| TASK-20260519-M4-B: `aihot` / `apify` parsers + pipeline | Backend | DONE |
+| TASK-20260519-M4-C: n8n / Telegram 简报出站 + config 补全 | Backend | DONE |
+| TASK-20260519-M4-D: 前端类型、batch 脚本、pytest | Frontend + Codex | DONE |
+
+摘要：`docs/integrations-m4.md`、RSSHub docker、`aihot`/`apify` 连接器、n8n/Telegram 出站；
+seeds 含 osint-rss / aihot-api / rsshub-x（25 条）+ BestBlogs 策展（7 条）+ `ingest-social-fast` 优先队列；**71 pytest passing**。
 
 ### M2 Operator Closure — 2026-05-21
 

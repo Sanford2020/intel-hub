@@ -1,0 +1,24 @@
+{
+  "project": "intel-hub",
+  "name": "全球情报资讯搜集中台",
+  "stage": "sprint-6-operational-loop",
+  "stage_name": "Sprint 6 — 运营闭环",
+  "completed_stages": [
+    "00-project-init",
+    "sprint-1-data-foundation",
+    "sprint-2-ingest-worker",
+    "sprint-3-ai-intelligence",
+    "sprint-4-dashboard",
+    "sprint-5-alerts",
+    "mvp-v0.1"
+  ],
+  "active_sprint": {
+    "id": "sprint-6-operational-loop",
+    "goal": "让采集→分析→告警闭环在本地持续运行",
+    "started_at": "2026-05-19"
+  },
+  "skipped_stages": [],
+  "mode": "guided",
+  "mvp_version": "0.1",
+  "updated_at": "2026-05-19"
+}

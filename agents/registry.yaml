@@ -1,0 +1,87 @@
+# Unified Agent Registry — three pillars
+
+layers:
+  business:
+    source: opc-methodology
+    path: skills/opc/
+    docs: docs/standards/opc-methodology.md
+  personas:
+    source: agency-agents
+    path: agents/agency/
+    docs: docs/standards/agency-agents.md
+  engineering:
+    source: 12-factor-agents
+    path: services/agent/
+    docs: docs/standards/12-factor-agents.md
+
+# Core engineering team (always present)
+core_agents:
+  - id: product_manager
+    path: agents/roles/product_manager.md
+    layer: core
+  - id: architect
+    path: agents/roles/architect.md
+    layer: core
+  - id: backend_engineer
+    path: agents/roles/backend_engineer.md
+    layer: core
+  - id: frontend_engineer
+    path: agents/roles/frontend_engineer.md
+    layer: core
+  - id: ai_engineer
+    path: agents/roles/ai_engineer.md
+    layer: core
+  - id: devops_engineer
+    path: agents/roles/devops_engineer.md
+    layer: core
+  - id: qa_engineer
+    path: agents/roles/qa_engineer.md
+    layer: core
+  - id: security_engineer
+    path: agents/roles/security_engineer.md
+    layer: core
+
+# OPC methodology skills (sync via scripts/sync-integrations)
+opc_skills:
+  - id: opc-orchestrator
+    path: skills/opc/opc-orchestrator/SKILL.md
+    stage: orchestrator
+  - id: opc-resource-audit
+    path: skills/opc/opc-resource-audit/SKILL.md
+    stage: "01"
+  - id: opc-niche-positioning
+    path: skills/opc/opc-niche-positioning/SKILL.md
+    stage: "02"
+  - id: opc-value-proposition
+    path: skills/opc/opc-value-proposition/SKILL.md
+    stage: "03"
+  - id: opc-business-model-design
+    path: skills/opc/opc-business-model-design/SKILL.md
+    stage: "04"
+  - id: opc-mvp-designer
+    path: skills/opc/opc-mvp-designer/SKILL.md
+    stage: "06"
+  - id: opc-conversion-loop
+    path: skills/opc/opc-conversion-loop/SKILL.md
+    stage: "07"
+  - id: opc-asset-ops
+    path: skills/opc/opc-asset-ops/SKILL.md
+    stage: "08"
+  - id: opc-dashboard-review
+    path: skills/opc/opc-dashboard-review/SKILL.md
+    stage: "09"
+
+# Agency divisions (sync via scripts/sync-integrations)
+agency_divisions:
+  - engineering
+  - design
+  - product
+  - marketing
+  - project-management
+  - testing
+  - strategy
+
+orchestrators:
+  engineering: agents/orchestrator.md
+  business: skills/opc/opc-orchestrator/SKILL.md
+  runtime: services/agent/loop.py

@@ -1,0 +1,81 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+*.egg
+*.whl
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite3
+
+# Celery
+celerybeat-schedule
+celerybeat-schedule*
+celerybeat.pid
+
+# Frontend test/runtime output
+apps/web/test-results/
+
+# Local import/runtime progress
+seeds/notion-mcp-chunks/.payloads/
+seeds/notion-mcp-chunks/.import-progress.json
+
+# Synced vendor clones
+.vendor/
+
+# Synced external content (regenerate with scripts/sync-integrations.ps1)
+# Keep README files tracked; synced skill/agent files optional to commit
+skills/opc/*
+!skills/opc/README.md
+agents/agency/*
+!agents/agency/README.md
+
+# OPC workflow outputs (user-generated)
+opc-doc/outputs/
+opc-doc/inputs/
+!opc-doc/README.md
+!opc-doc/state/
+
+# Build artifacts
+*.tar.gz
+*.zip
+*.tsbuildinfo

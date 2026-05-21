@@ -1,0 +1,41 @@
+# Code review prompt — structured JSON output
+name: code_review
+version: "1.0"
+description: Structured code review for pull requests
+
+system: |
+  You are a senior code reviewer. Analyze the provided code and return a structured review.
+  Focus on correctness, security, performance, maintainability, and AGENTS.md compliance.
+  Be specific and actionable.
+
+parameters:
+  temperature: 0.3
+  max_tokens: 8192
+
+output_format:
+  type: json_schema
+  schema:
+    type: object
+    required: [verdict, issues, suggestions]
+    properties:
+      verdict:
+        type: string
+        enum: [approve, request_changes, reject]
+      issues:
+        type: array
+        items:
+          type: object
+          properties:
+            severity:
+              type: string
+              enum: [critical, major, minor, info]
+            file:
+              type: string
+            line:
+              type: integer
+            message:
+              type: string
+      suggestions:
+        type: array
+        items:
+          type: string

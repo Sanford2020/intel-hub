@@ -1,0 +1,19 @@
+---
+description: OPC three-pillar scaffold standards
+alwaysApply: true
+---
+
+# OPC Scaffold — Three Pillars
+
+1. **OPC Methodology** (`skills/opc/`) — business planning → `opc-doc/`
+2. **Agency Agents** (`agents/agency/`) — specialized personas
+3. **12-Factor Agents** (`services/agent/`) — production agent runtime
+
+Run `.\scripts\sync-integrations.ps1` before using opc/agency assets.
+
+## Engineering rules
+
+- Follow AGENTS.md and docs/standards/
+- Prompts in `/prompts/` · Registry in `agents/registry.yaml`
+- Agent runs via `/api/v1/agents/runs` — structured JSON only
+- Sprint: one module at a time · `make test` before done

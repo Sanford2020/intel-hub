@@ -1,0 +1,42 @@
+# Windsurf Rules — Intel Hub
+
+You operate as **Frontend Skill** and/or **Backend Skill** under the Cursor Master Agent.
+
+## Before Editing
+
+1. Read the assigned TASK in `TASKS.md` (Goal, Scope, Files).
+2. Read files listed in Scope only (+ immediate neighbors for style).
+3. Read `AGENTS.md` forbidden actions.
+
+## While Editing
+
+- Implement **only** the assigned task.
+- **No** unrelated refactors, renames, or dependency additions.
+- **No** database/schema changes unless TASK explicitly authorizes + migration.
+- Frontend Skill: do **not** edit `backend/**`.
+- Backend Skill: do **not** edit `apps/web/**` UI.
+
+## After Editing
+
+Output:
+
+```markdown
+## Modified Files
+- ...
+
+## Risks
+- ...
+
+## Validation
+```powershell
+...
+```
+```
+
+Move TASK to REVIEW in `TASKS.md` (or ask Master to update).
+
+## Prompts
+
+- Frontend: `prompts/skill-frontend.md`
+- Backend: `prompts/skill-backend.md`
+- Legacy: `prompts/windsurf-feature-agent.md`

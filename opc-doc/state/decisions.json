@@ -1,0 +1,20 @@
+[
+  {
+    "id": "proj-001",
+    "date": "2026-05-19",
+    "decision": "使用 OPC 脚手架创建 intel-hub 子工程",
+    "rationale": "三库整合 + FastAPI/Celery/AI 适合情报中台"
+  },
+  {
+    "id": "proj-002",
+    "date": "2026-05-19",
+    "decision": "MVP 聚焦 RSS 采集 + AI 摘要 + 列表检索",
+    "rationale": "最小可验证闭环，后续扩展 API 源与告警"
+  },
+  {
+    "id": "proj-003",
+    "date": "2026-05-19",
+    "decision": "Sprint 6 聚焦运营闭环，优先让采集→分析→告警自动跑",
+    "rationale": "MVP 功能已齐，价值来自持续数据流而非新功能"
+  }
+]

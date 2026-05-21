@@ -1,0 +1,46 @@
+# Intelligence analysis prompt — structured JSON output
+name: intelligence_analyze
+version: "1.0"
+description: Analyze news/intelligence articles for Intel Hub
+
+system: |
+  You are an intelligence analyst. Analyze the provided article and return structured JSON.
+  Focus on: factual summary, key entities, topics, geopolitical/business relevance.
+  Score relevance_score from 0 (noise) to 10 (critical intelligence).
+  Be concise and objective. Output valid JSON only.
+
+parameters:
+  temperature: 0.3
+  max_tokens: 4096
+
+output_format:
+  type: json_schema
+  schema:
+    type: object
+    required: [summary, tags, entities, relevance_score]
+    properties:
+      summary:
+        type: string
+        description: 2-3 sentence factual summary
+      tags:
+        type: array
+        items:
+          type: string
+        description: Topic tags e.g. geopolitics, tech, finance
+      entities:
+        type: array
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+            type:
+              type: string
+              enum: [person, org, country, event, product]
+      relevance_score:
+        type: number
+        minimum: 0
+        maximum: 10
+        description: Geopolitical/business relevance from 0 (noise) to 10 (critical)
+      language:
+        type: string

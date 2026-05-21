@@ -1,0 +1,1609 @@
+[
+  {
+    "properties": {
+      "来源名称": "UK OFSI",
+      "Slug": "uk-ofsi-compliance",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=uk-ofsi-compliance | subcategory=制裁名单 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "UN Security Council Sanctions",
+      "Slug": "un-security-council-sanctions",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=un-security-council-sanctions | subcategory=制裁名单 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "BIS Entity List",
+      "Slug": "bis-entity-list-compliance",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=bis-entity-list-compliance | subcategory=制裁名单 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "BIS Denied Persons",
+      "Slug": "bis-denied-persons",
+      "分类": "compliance",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=bis-denied-persons | subcategory=制裁名单 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Australia DFAT Sanctions",
+      "Slug": "australia-dfat-sanctions",
+      "分类": "compliance",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=australia-dfat-sanctions | subcategory=制裁名单 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Canada SEMA",
+      "Slug": "canada-sema",
+      "分类": "compliance",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=canada-sema | subcategory=制裁名单 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Japan METI End User List",
+      "Slug": "japan-meti-end-user-list",
+      "分类": "compliance",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=japan-meti-end-user-list | subcategory=制裁名单 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "中国不可靠实体清单",
+      "Slug": "source-compliance",
+      "分类": "compliance",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=source-compliance | subcategory=制裁名单 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "OpenSanctions",
+      "Slug": "opensanctions",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=opensanctions | subcategory=PEP 与 KYC | region=global | 聚合全球制裁+PEP"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Wikidata Politicians",
+      "Slug": "wikidata-politicians",
+      "分类": "compliance",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=wikidata-politicians | subcategory=PEP 与 KYC | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "EveryPolitician (存档)",
+      "Slug": "everypolitician",
+      "分类": "compliance",
+      "层级": "Tier 2",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=everypolitician | subcategory=PEP 与 KYC | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "WorldCheck (Refinitiv)",
+      "Slug": "worldcheck-refinitiv",
+      "分类": "compliance",
+      "层级": "Tier 2",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=worldcheck-refinitiv | subcategory=PEP 与 KYC | region=global | 付费"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Dow Jones Risk",
+      "Slug": "dow-jones-risk",
+      "分类": "compliance",
+      "层级": "Tier 2",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=dow-jones-risk | subcategory=PEP 与 KYC | region=global | 付费"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ComplyAdvantage",
+      "Slug": "complyadvantage",
+      "分类": "compliance",
+      "层级": "Tier 2",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=complyadvantage | subcategory=PEP 与 KYC | region=global | API"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "US CourtListener",
+      "Slug": "us-courtlistener",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=us-courtlistener | subcategory=法院与立法 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "PACER (美国联邦法院)",
+      "Slug": "pacer",
+      "分类": "compliance",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=pacer | subcategory=法院与立法 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "EUR-Lex",
+      "Slug": "eur-lex-compliance",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=eur-lex-compliance | subcategory=法院与立法 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "UK Legislation.gov.uk",
+      "Slug": "uk-legislation-gov-uk",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=uk-legislation-gov-uk | subcategory=法院与立法 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ICIJ Offshore Leaks",
+      "Slug": "icij-offshore-leaks",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=icij-offshore-leaks | subcategory=反腐与透明 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Panama Papers 索引",
+      "Slug": "panama-papers",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=panama-papers | subcategory=反腐与透明 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "OCCRP Aleph",
+      "Slug": "occrp-aleph",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=occrp-aleph | subcategory=反腐与透明 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Transparency International",
+      "Slug": "transparency-international",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=transparency-international | subcategory=反腐与透明 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Global Witness",
+      "Slug": "global-witness",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=global-witness | subcategory=反腐与透明 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Wassenaar Arrangement",
+      "Slug": "wassenaar-arrangement",
+      "分类": "compliance",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=wassenaar-arrangement | subcategory=出口管制与贸易合规 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ITAR/EAR 更新 (State/Commerce)",
+      "Slug": "itar-ear-state-commerce",
+      "分类": "compliance",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=itar-ear-state-commerce | subcategory=出口管制与贸易合规 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Dual-use 清单 EU",
+      "Slug": "dual-use-eu",
+      "分类": "compliance",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "12-sanctions-legal-pep.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=dual-use-eu | subcategory=出口管制与贸易合规 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ReliefWeb",
+      "Slug": "reliefweb-humanitarian",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=reliefweb-humanitarian | subcategory=人道主义 | region=global",
+      "来源地址": "https://reliefweb.int/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "OCHA Situation Reports",
+      "Slug": "ocha-situation-reports",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=ocha-situation-reports | subcategory=人道主义 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "UNHCR News",
+      "Slug": "unhcr-news",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=unhcr-news | subcategory=人道主义 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "UNICEF Press",
+      "Slug": "unicef-press",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=unicef-press | subcategory=人道主义 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "WFP News",
+      "Slug": "wfp-news",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=wfp-news | subcategory=人道主义 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ICRC News",
+      "Slug": "icrc-news",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=icrc-news | subcategory=人道主义 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "MSF / Doctors Without Borders",
+      "Slug": "msf-doctors-without-borders",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=msf-doctors-without-borders | subcategory=人道主义 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "IFRC",
+      "Slug": "ifrc",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=ifrc | subcategory=人道主义 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ACAPS",
+      "Slug": "acaps",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=acaps | subcategory=人道主义 | region=global",
+      "来源地址": "https://www.acaps.org/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Humanitarian Data Exchange (HDX)",
+      "Slug": "humanitarian-data-exchange-hdx",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=humanitarian-data-exchange-hdx | subcategory=人道主义 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "USGS Earthquake",
+      "Slug": "usgs-earthquake-humanitarian",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=usgs-earthquake-humanitarian | subcategory=灾害 | region=global",
+      "来源地址": "https://earthquake.usgs.gov/earthquakes/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "GDACS",
+      "Slug": "gdacs",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=gdacs | subcategory=灾害 | region=global",
+      "来源地址": "https://www.gdacs.org/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "EM-DAT (CRED)",
+      "Slug": "em-dat-cred",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=em-dat-cred | subcategory=灾害 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "NASA EONET",
+      "Slug": "nasa-eonet",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=nasa-eonet | subcategory=灾害 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Copernicus EMS",
+      "Slug": "copernicus-ems-humanitarian",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=copernicus-ems-humanitarian | subcategory=灾害 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "FEMA",
+      "Slug": "fema",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=fema | subcategory=灾害 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Global Disaster Alert (GDACS)",
+      "Slug": "global-disaster-alert-gdacs",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=global-disaster-alert-gdacs | subcategory=灾害 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "OpenWeatherMap",
+      "Slug": "openweathermap",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=openweathermap | subcategory=气象与气候 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "NOAA Weather",
+      "Slug": "noaa-weather",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=noaa-weather | subcategory=气象与气候 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ECMWF",
+      "Slug": "ecmwf",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=ecmwf | subcategory=气象与气候 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "MeteoAlarm (EU)",
+      "Slug": "meteoalarm-eu",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=meteoalarm-eu | subcategory=气象与气候 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Tropical Tidbits",
+      "Slug": "tropical-tidbits",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=tropical-tidbits | subcategory=气象与气候 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Weather Underground",
+      "Slug": "weather-underground",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=weather-underground | subcategory=气象与气候 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "中国气象局",
+      "Slug": "source-humanitarian",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=source-humanitarian | subcategory=气象与气候 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "日本气象厅 JMA",
+      "Slug": "jma",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=jma | subcategory=气象与气候 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "WHO Disease Outbreak News",
+      "Slug": "who-disease-outbreak-news",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=who-disease-outbreak-news | subcategory=疫情与健康紧急 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ProMED-mail",
+      "Slug": "promed-mail",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=promed-mail | subcategory=疫情与健康紧急 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CDC Health Alert Network",
+      "Slug": "cdc-health-alert-network",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=cdc-health-alert-network | subcategory=疫情与健康紧急 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ECDC",
+      "Slug": "ecdc",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=ecdc | subcategory=疫情与健康紧急 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "GISAID (病毒序列)",
+      "Slug": "gisaid",
+      "分类": "humanitarian",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=gisaid | subcategory=疫情与健康紧急 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "IAEA Incident Reports",
+      "Slug": "iaea-incident-reports",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=iaea-incident-reports | subcategory=核与化学事故 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "NRC (US Nuclear)",
+      "Slug": "nrc-us-nuclear",
+      "分类": "humanitarian",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "13-humanitarian-disaster-weather.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=nrc-us-nuclear | subcategory=核与化学事故 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "新华社",
+      "Slug": "source-china",
+      "分类": "china",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "14-china-greater-china.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=source-china | subcategory=官方与权威媒体 | region=global | 多频道",
+      "来源地址": "http://www.xinhuanet.com/rss/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "央行/PBOC",
+      "Slug": "pboc",
+      "分类": "china",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "14-china-greater-china.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=pboc | subcategory=官方与权威媒体 | region=global | 货政"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "台湾中央社 CNA",
+      "Slug": "cna",
+      "分类": "china",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "14-china-greater-china.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=cna | subcategory=官方与权威媒体 | region=global",
+      "来源地址": "https://www.cna.com.tw/rss/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "财新 Caixin",
+      "Slug": "caixin",
+      "分类": "china",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "14-china-greater-china.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=caixin | subcategory=财经商业 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "21世纪经济报道",
+      "Slug": "21",
+      "分类": "china",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "14-china-greater-china.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=21 | subcategory=财经商业 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "36氪",
+      "Slug": "36-china",
+      "分类": "china",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "14-china-greater-china.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=36-china | subcategory=科技与产业 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "RAND Corporation",
+      "Slug": "rand-corporation",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=rand-corporation | subcategory=防务/政策 | region=global",
+      "来源地址": "https://www.rand.org/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Brookings",
+      "Slug": "brookings",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=brookings | subcategory=综合 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CSIS",
+      "Slug": "csis",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=csis | subcategory=地缘 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Carnegie Endowment",
+      "Slug": "carnegie-endowment",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=carnegie-endowment | subcategory=国际 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CFR (Council on Foreign Relations)",
+      "Slug": "cfr-council-on-foreign-relations",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=cfr-council-on-foreign-relations | subcategory=外交 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Atlantic Council",
+      "Slug": "atlantic-council",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=atlantic-council | subcategory=北约/欧洲 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Wilson Center",
+      "Slug": "wilson-center",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=wilson-center | subcategory=历史/地缘 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Heritage Foundation",
+      "Slug": "heritage-foundation",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=heritage-foundation | subcategory=保守派 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Cato Institute",
+      "Slug": "cato-institute",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=cato-institute | subcategory=自由派 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Pew Research",
+      "Slug": "pew-research",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=pew-research | subcategory=民调 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Stimson Center",
+      "Slug": "stimson-center",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=stimson-center | subcategory=亚洲 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Hudson Institute",
+      "Slug": "hudson-institute",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=hudson-institute | subcategory=1 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "American Enterprise Institute",
+      "Slug": "american-enterprise-institute",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=american-enterprise-institute | subcategory=1 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Chatham House (IISS 同档)",
+      "Slug": "chatham-house-iiss",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=chatham-house-iiss | subcategory=欧洲 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ECFR (European Council on Foreign Relations)",
+      "Slug": "ecfr-european-council-on-foreign-relations",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=ecfr-european-council-on-foreign-relations | subcategory=欧洲 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "IISS",
+      "Slug": "iiss-thinktank",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=iiss-thinktank | subcategory=欧洲 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Bruegel",
+      "Slug": "bruegel",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=bruegel | subcategory=欧洲 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "SWP (German)",
+      "Slug": "swp-german",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=swp-german | subcategory=欧洲 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "IFRI (French)",
+      "Slug": "ifri-french",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=ifri-french | subcategory=欧洲 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Clingendael (Dutch)",
+      "Slug": "clingendael-dutch",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=clingendael-dutch | subcategory=欧洲 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Lowy Institute (Australia)",
+      "Slug": "lowy-institute-australia",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=lowy-institute-australia | subcategory=亚太 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ASPI (Australian Strategic Policy)",
+      "Slug": "aspi-australian-strategic-policy",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=aspi-australian-strategic-policy | subcategory=亚太 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "RSIS (Singapore)",
+      "Slug": "rsis-singapore",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=rsis-singapore | subcategory=亚太 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "JIIA (Japan)",
+      "Slug": "jiia-japan",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=jiia-japan | subcategory=亚太 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ORF (India Observer Research)",
+      "Slug": "orf-india-observer-research",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=orf-india-observer-research | subcategory=亚太 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CICIR 中国现代国际关系研究院",
+      "Slug": "cicir",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=cicir | subcategory=亚太 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CASS 社科院",
+      "Slug": "cass",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=cass | subcategory=亚太 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "清华战略与安全研究中心",
+      "Slug": "source-thinktank",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=source-thinktank | subcategory=亚太 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "SIPRI",
+      "Slug": "sipri-thinktank",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=sipri-thinktank | subcategory=军备 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "NTI",
+      "Slug": "nti-thinktank",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=nti-thinktank | subcategory=核 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "FAS (Federation of American Scientists)",
+      "Slug": "fas-federation-of-american-scientists",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=fas-federation-of-american-scientists | subcategory=核/情报 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Bulletin of Atomic Scientists",
+      "Slug": "bulletin-of-atomic-scientists-thinktank",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=bulletin-of-atomic-scientists-thinktank | subcategory=核时钟 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ICCT",
+      "Slug": "icct",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=icct | subcategory=反恐 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "New America",
+      "Slug": "new-america",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=new-america | subcategory=科技政策 | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Bellingcat (调查)",
+      "Slug": "bellingcat-thinktank",
+      "分类": "thinktank",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=bellingcat-thinktank | subcategory=OSINT | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Long War Journal (FDD)",
+      "Slug": "long-war-journal-fdd",
+      "分类": "thinktank",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "15-think-tanks-policy.md",
+      "来源类型": "行业报告",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=long-war-journal-fdd | subcategory=反恐 | region=global"
+    }
+  }
+]

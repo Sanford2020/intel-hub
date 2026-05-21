@@ -1,0 +1,1693 @@
+[
+  {
+    "properties": {
+      "来源名称": "Reuters World",
+      "Slug": "reuters-world",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=reuters-world | subcategory= | region=global",
+      "来源地址": "https://www.reutersagency.com/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Reuters Top News",
+      "Slug": "reuters-top-news",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=reuters-top-news | subcategory= | region=global",
+      "来源地址": "https://feeds.reuters.com/reuters/topNews"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Reuters Business",
+      "Slug": "reuters-business",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=reuters-business | subcategory= | region=global",
+      "来源地址": "https://feeds.reuters.com/reuters/businessNews"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Reuters Technology",
+      "Slug": "reuters-technology",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=reuters-technology | subcategory= | region=global",
+      "来源地址": "https://feeds.reuters.com/reuters/technologyNews"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "AP Top News",
+      "Slug": "ap-top-news",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=ap-top-news | subcategory= | region=global",
+      "来源地址": "https://apnews.com/hub/ap-top-news"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "AP World",
+      "Slug": "ap-world",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=ap-world | subcategory= | region=global",
+      "来源地址": "https://apnews.com/hub/world-news"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "AFP (via partner feeds)",
+      "Slug": "afp-via-partner-feeds",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rest_api",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=afp-via-partner-feeds | subcategory= | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "BBC World",
+      "Slug": "bbc-world",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=bbc-world | subcategory= | region=global",
+      "来源地址": "http://feeds.bbci.co.uk/news/world/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "BBC Business",
+      "Slug": "bbc-business",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=bbc-business | subcategory= | region=global",
+      "来源地址": "http://feeds.bbci.co.uk/news/business/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "BBC Technology",
+      "Slug": "bbc-technology",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=bbc-technology | subcategory= | region=global",
+      "来源地址": "http://feeds.bbci.co.uk/news/technology/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Guardian World",
+      "Slug": "guardian-world",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=guardian-world | subcategory= | region=global",
+      "来源地址": "https://www.theguardian.com/world/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Guardian US",
+      "Slug": "guardian-us",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=guardian-us | subcategory= | region=global",
+      "来源地址": "https://www.theguardian.com/us-news/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CNN Top Stories",
+      "Slug": "cnn-top-stories",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=cnn-top-stories | subcategory= | region=global",
+      "来源地址": "http://rss.cnn.com/rss/cnn_topstories.rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CNN World",
+      "Slug": "cnn-world",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=cnn-world | subcategory= | region=global",
+      "来源地址": "http://rss.cnn.com/rss/edition_world.rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "NPR News",
+      "Slug": "npr-news",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=npr-news | subcategory= | region=global",
+      "来源地址": "https://feeds.npr.org/1001/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "NPR World",
+      "Slug": "npr-world",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=npr-world | subcategory= | region=global",
+      "来源地址": "https://feeds.npr.org/1004/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Al Jazeera English",
+      "Slug": "al-jazeera-english",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=al-jazeera-english | subcategory= | region=global",
+      "来源地址": "https://www.aljazeera.com/xml/rss/all.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Al Jazeera Arabic",
+      "Slug": "al-jazeera-arabic",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "ar",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=al-jazeera-arabic | subcategory= | region=global",
+      "来源地址": "https://www.aljazeera.net/aljazeera/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "DW English",
+      "Slug": "dw-english",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=dw-english | subcategory= | region=global",
+      "来源地址": "https://rss.dw.com/rdf/rss-en-all"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "France 24",
+      "Slug": "france-24",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=france-24 | subcategory= | region=global",
+      "来源地址": "https://www.france24.com/en/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "France 24 Arabic",
+      "Slug": "france-24-arabic",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "ar",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=france-24-arabic | subcategory= | region=global",
+      "来源地址": "https://www.france24.com/ar/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Euronews",
+      "Slug": "euronews",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=euronews | subcategory= | region=global",
+      "来源地址": "https://www.euronews.com/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Sky News",
+      "Slug": "sky-news",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=sky-news | subcategory= | region=global",
+      "来源地址": "https://feeds.skynews.com/feeds/rss/world.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CBS News",
+      "Slug": "cbs-news",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=cbs-news | subcategory= | region=global",
+      "来源地址": "https://www.cbsnews.com/latest/rss/main"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ABC News",
+      "Slug": "abc-news",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=abc-news | subcategory= | region=global",
+      "来源地址": "https://abcnews.go.com/abcnews/topstories"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "NBC News",
+      "Slug": "nbc-news",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=nbc-news | subcategory= | region=global",
+      "来源地址": "https://feeds.nbcnews.com/nbcnews/public/news"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "PBS NewsHour",
+      "Slug": "pbs-newshour",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=pbs-newshour | subcategory= | region=global",
+      "来源地址": "https://www.pbs.org/newshour/feeds/rss/headlines"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CBC News",
+      "Slug": "cbc-news",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=cbc-news | subcategory= | region=global",
+      "来源地址": "https://www.cbc.ca/cmlink/rss-world"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ABC Australia",
+      "Slug": "abc-australia",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=abc-australia | subcategory= | region=global",
+      "来源地址": "https://www.abc.net.au/news/feed/51120/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "NHK World",
+      "Slug": "nhk-world",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=nhk-world | subcategory= | region=global",
+      "来源地址": "https://www3.nhk.or.jp/nhkworld/en/news/rss/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "NHK 日本語",
+      "Slug": "nhk",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "ja",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=nhk | subcategory= | region=global",
+      "来源地址": "https://www3.nhk.or.jp/rss/news/cat0.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "TASS",
+      "Slug": "tass",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=tass | subcategory= | region=global",
+      "来源地址": "https://tass.com/rss/v2.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "RT (monitoring)",
+      "Slug": "rt-monitoring",
+      "分类": "wire",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=rt-monitoring | subcategory= | region=global",
+      "来源地址": "https://www.rt.com/rss/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Sputnik",
+      "Slug": "sputnik",
+      "分类": "wire",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=sputnik | subcategory= | region=global",
+      "来源地址": "https://sputniknews.com/export/rss2/archive/index.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Times of India",
+      "Slug": "times-of-india",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=times-of-india | subcategory= | region=global",
+      "来源地址": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "The Hindu",
+      "Slug": "the-hindu",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=the-hindu | subcategory= | region=global",
+      "来源地址": "https://www.thehindu.com/news/feeder/default.rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Jakarta Post",
+      "Slug": "jakarta-post",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=jakarta-post | subcategory= | region=global",
+      "来源地址": "https://www.thejakartapost.com/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Straits Times",
+      "Slug": "straits-times",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=straits-times | subcategory= | region=global",
+      "来源地址": "https://www.straitstimes.com/news/world/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "SCMP",
+      "Slug": "scmp",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=scmp | subcategory= | region=global",
+      "来源地址": "https://www.scmp.com/rss/91/feed"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Japan Times",
+      "Slug": "japan-times",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=japan-times | subcategory= | region=global",
+      "来源地址": "https://www.japantimes.co.jp/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Korea Herald",
+      "Slug": "korea-herald",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=korea-herald | subcategory= | region=global",
+      "来源地址": "http://www.koreaherald.com/common/rss/rss.php"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Kyodo News",
+      "Slug": "kyodo-news",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=kyodo-news | subcategory= | region=global",
+      "来源地址": "https://english.kyodonews.net/rss/news.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Latin America — MercoPress",
+      "Slug": "latin-america-mercopress",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=latin-america-mercopress | subcategory= | region=global",
+      "来源地址": "https://en.mercopress.com/rss/all"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Africa News",
+      "Slug": "africa-news",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=africa-news | subcategory= | region=global",
+      "来源地址": "https://www.africanews.com/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "AllAfrica",
+      "Slug": "allafrica",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=allafrica | subcategory= | region=global",
+      "来源地址": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Financial Times",
+      "Slug": "financial-times",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=financial-times | subcategory=财经主流（交叉引用 04） | region=global",
+      "来源地址": "https://www.ft.com/?format=rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "WSJ (limited RSS)",
+      "Slug": "wsj-limited-rss",
+      "分类": "wire",
+      "层级": "Tier 2",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=wsj-limited-rss | subcategory=财经主流（交叉引用 04） | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Bloomberg (API)",
+      "Slug": "bloomberg-api",
+      "分类": "wire",
+      "层级": "Tier 2",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=bloomberg-api | subcategory=财经主流（交叉引用 04） | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "CNBC",
+      "Slug": "cnbc",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=cnbc | subcategory=财经主流（交叉引用 04） | region=global",
+      "来源地址": "https://search.cnbc.com/rs/search/combinedcms/view.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "MarketWatch",
+      "Slug": "marketwatch",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=marketwatch | subcategory=财经主流（交叉引用 04） | region=global",
+      "来源地址": "https://feeds.marketwatch.com/marketwatch/topstories/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Economist",
+      "Slug": "economist",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=economist | subcategory=财经主流（交叉引用 04） | region=global",
+      "来源地址": "https://www.economist.com/the-world-this-week/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Google News — geopolitics",
+      "Slug": "google-news-geopolitics",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=google-news-geopolitics | subcategory=Google News 关键词（动态源） | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Google News — Taiwan",
+      "Slug": "google-news-taiwan",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=google-news-taiwan | subcategory=Google News 关键词（动态源） | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Google News — Ukraine",
+      "Slug": "google-news-ukraine",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=google-news-ukraine | subcategory=Google News 关键词（动态源） | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Google News — Middle East",
+      "Slug": "google-news-middle-east",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=google-news-middle-east | subcategory=Google News 关键词（动态源） | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Google News — AI regulation",
+      "Slug": "google-news-ai-regulation",
+      "分类": "wire",
+      "层级": "Tier 0",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "其他",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=google-news-ai-regulation | subcategory=Google News 关键词（动态源） | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Google News — 中国",
+      "Slug": "google-news",
+      "分类": "wire",
+      "层级": "Tier 1",
+      "接入方式": "unknown",
+      "语言": "multi",
+      "源文件": "01-global-news-wire.md",
+      "来源类型": "其他",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=google-news | subcategory=Google News 关键词（动态源） | region=global"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Politico",
+      "Slug": "politico",
+      "分类": "regional",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=politico | subcategory=北美 | region=global",
+      "来源地址": "https://rss.politico.com/politics-news.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "The Hill",
+      "Slug": "the-hill",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=the-hill | subcategory=北美 | region=global",
+      "来源地址": "https://thehill.com/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Axios",
+      "Slug": "axios",
+      "分类": "regional",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=axios | subcategory=北美 | region=global",
+      "来源地址": "https://api.axios.com/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Vox",
+      "Slug": "vox",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=vox | subcategory=北美 | region=global",
+      "来源地址": "https://www.vox.com/rss/index.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Slate",
+      "Slug": "slate",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=slate | subcategory=北美 | region=global",
+      "来源地址": "https://slate.com/feeds/all.rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Reason",
+      "Slug": "reason",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=reason | subcategory=北美 | region=global",
+      "来源地址": "https://reason.com/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Texas Tribune",
+      "Slug": "texas-tribune",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=texas-tribune | subcategory=北美 | region=global",
+      "来源地址": "https://www.texastribune.org/feeds/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ProPublica",
+      "Slug": "propublica",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=propublica | subcategory=北美 | region=global",
+      "来源地址": "https://www.propublica.org/feeds/propublica/main"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Spiegel International",
+      "Slug": "spiegel-international",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=spiegel-international | subcategory=欧洲 | region=global",
+      "来源地址": "https://www.spiegel.de/international/index.rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Deutsche Welle",
+      "Slug": "deutsche-welle",
+      "分类": "regional",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=deutsche-welle | subcategory=欧洲 | region=global",
+      "来源地址": "https://rss.dw.com/rdf/rss-en-all"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Le Monde",
+      "Slug": "le-monde",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "fr",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=le-monde | subcategory=欧洲 | region=global",
+      "来源地址": "https://www.lemonde.fr/rss/une.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "El País English",
+      "Slug": "el-pais-english",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=el-pais-english | subcategory=欧洲 | region=global",
+      "来源地址": "https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "ANSA",
+      "Slug": "ansa",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=ansa | subcategory=欧洲 | region=global",
+      "来源地址": "https://www.ansa.it/english/news/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "POLITICO Europe",
+      "Slug": "politico-europe",
+      "分类": "regional",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=politico-europe | subcategory=欧洲 | region=global",
+      "来源地址": "https://www.politico.eu/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "EUobserver",
+      "Slug": "euobserver",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=euobserver | subcategory=欧洲 | region=global",
+      "来源地址": "https://euobserver.com/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Balkan Insight",
+      "Slug": "balkan-insight",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=balkan-insight | subcategory=欧洲 | region=global",
+      "来源地址": "https://balkaninsight.com/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Kyiv Independent",
+      "Slug": "kyiv-independent",
+      "分类": "regional",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=kyiv-independent | subcategory=欧洲 | region=global",
+      "来源地址": "https://kyivindependent.com/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Meduza",
+      "Slug": "meduza",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "ru/en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=meduza | subcategory=欧洲 | region=global",
+      "来源地址": "https://meduza.io/rss/all"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Al-Monitor",
+      "Slug": "al-monitor",
+      "分类": "regional",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=al-monitor | subcategory=中东 | region=global",
+      "来源地址": "https://www.al-monitor.com/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Middle East Eye",
+      "Slug": "middle-east-eye",
+      "分类": "regional",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=middle-east-eye | subcategory=中东 | region=global",
+      "来源地址": "https://www.middleeasteye.net/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Times of Israel",
+      "Slug": "times-of-israel",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=times-of-israel | subcategory=中东 | region=global",
+      "来源地址": "https://www.timesofisrael.com/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Haaretz",
+      "Slug": "haaretz",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=haaretz | subcategory=中东 | region=global",
+      "来源地址": "https://www.haaretz.com/srv/haaretz-latest-headlines"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Arab News",
+      "Slug": "arab-news",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=arab-news | subcategory=中东 | region=global",
+      "来源地址": "https://www.arabnews.com/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Tehran Times",
+      "Slug": "tehran-times",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=tehran-times | subcategory=中东 | region=global",
+      "来源地址": "https://www.tehrantimes.com/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Daily Sabah",
+      "Slug": "daily-sabah",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=daily-sabah | subcategory=中东 | region=global",
+      "来源地址": "https://www.dailysabah.com/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Nikkei Asia",
+      "Slug": "nikkei-asia",
+      "分类": "regional",
+      "层级": "Tier 0",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__YES__",
+      "抓取频率": "每15分钟",
+      "可信度评分": 10,
+      "备注": "slug=nikkei-asia | subcategory=亚太 | region=global",
+      "来源地址": "https://asia.nikkei.com/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Caixin Global",
+      "Slug": "caixin-global",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en/zh",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=caixin-global | subcategory=亚太 | region=global",
+      "来源地址": "https://www.caixinglobal.com/rss/news.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Taiwan News",
+      "Slug": "taiwan-news",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=taiwan-news | subcategory=亚太 | region=global",
+      "来源地址": "https://www.taiwannews.com.tw/en/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Focus Taiwan",
+      "Slug": "focus-taiwan",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=focus-taiwan | subcategory=亚太 | region=global",
+      "来源地址": "https://focustaiwan.tw/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Bangkok Post",
+      "Slug": "bangkok-post",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=bangkok-post | subcategory=亚太 | region=global",
+      "来源地址": "https://www.bangkokpost.com/rss/data/topstories.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Vietnam News",
+      "Slug": "vietnam-news",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=vietnam-news | subcategory=亚太 | region=global",
+      "来源地址": "https://vietnamnews.vn/rss/home.rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Philippine Star",
+      "Slug": "philippine-star",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=philippine-star | subcategory=亚太 | region=global",
+      "来源地址": "https://www.philstar.com/rss/headlines"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Pakistan Dawn",
+      "Slug": "pakistan-dawn",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=pakistan-dawn | subcategory=亚太 | region=global",
+      "来源地址": "https://www.dawn.com/feeds/home"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Dhaka Tribune",
+      "Slug": "dhaka-tribune",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "en",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=dhaka-tribune | subcategory=亚太 | region=global",
+      "来源地址": "https://www.dhakatribune.com/feed"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Americas Quarterly",
+      "Slug": "americas-quarterly",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=americas-quarterly | subcategory=拉美 | region=global",
+      "来源地址": "https://www.americasquarterly.org/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Infobae",
+      "Slug": "infobae",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=infobae | subcategory=拉美 | region=global",
+      "来源地址": "https://www.infobae.com/feeds/rss/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Folha de S.Paulo",
+      "Slug": "folha-de-s-paulo",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=folha-de-s-paulo | subcategory=拉美 | region=global",
+      "来源地址": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "El Universal Mexico",
+      "Slug": "el-universal-mexico",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=el-universal-mexico | subcategory=拉美 | region=global",
+      "来源地址": "https://www.eluniversal.com.mx/rss.xml"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Mail & Guardian SA",
+      "Slug": "mail-guardian-sa",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=mail-guardian-sa | subcategory=非洲 | region=global",
+      "来源地址": "https://mg.co.za/feed/"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Premium Times Nigeria",
+      "Slug": "premium-times-nigeria",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=premium-times-nigeria | subcategory=非洲 | region=global",
+      "来源地址": "https://www.premiumtimesng.com/feed"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Daily Nation Kenya",
+      "Slug": "daily-nation-kenya",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=daily-nation-kenya | subcategory=非洲 | region=global",
+      "来源地址": "https://nation.africa/kenya/rss"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Moscow Times",
+      "Slug": "moscow-times",
+      "分类": "regional",
+      "层级": "Tier 1",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每30分钟",
+      "可信度评分": 8,
+      "备注": "slug=moscow-times | subcategory=俄罗斯 / 东欧 / 中亚 | region=global",
+      "来源地址": "https://www.themoscowtimes.com/rss/news"
+    }
+  },
+  {
+    "properties": {
+      "来源名称": "Belsat",
+      "Slug": "belsat",
+      "分类": "regional",
+      "层级": "Tier 2",
+      "接入方式": "rss",
+      "语言": "multi",
+      "源文件": "02-regional-by-geography.md",
+      "来源类型": "新闻RSS",
+      "是否启用": "__NO__",
+      "抓取频率": "每日",
+      "可信度评分": 6,
+      "备注": "slug=belsat | subcategory=俄罗斯 / 东欧 / 中亚 | region=global",
+      "来源地址": "https://belsat.eu/en/rss/"
+    }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "AI HOT — 精选",
+    "slug": "aihot-selected",
+    "category": "social",
+    "category_label": "社交/UGC",
+    "subcategory": "X 聚合",
+    "section": "AI HOT",
+    "type": "rss",
+    "url": "https://aihot.virxact.com/feed.xml",
+    "language": "zh",
+    "region": "global",
+    "tier": 0,
+    "enabled": true,
+    "license_notes": "AI HOT 精选 RSS，含 X/网页等多源 AI 动态，免费公开",
+    "source_file": "aggregator-sources.json"
+  },
+  {
+    "name": "AI HOT — 全部动态",
+    "slug": "aihot-all",
+    "category": "social",
+    "category_label": "社交/UGC",
+    "subcategory": "X 聚合",
+    "section": "AI HOT",
+    "type": "rss",
+    "url": "https://aihot.virxact.com/feed/all.xml",
+    "language": "zh",
+    "region": "global",
+    "tier": 0,
+    "enabled": true,
+    "license_notes": "AI HOT 全量 RSS 最新 50 条",
+    "source_file": "aggregator-sources.json"
+  },
+  {
+    "name": "AI HOT — 日报",
+    "slug": "aihot-daily",
+    "category": "social",
+    "category_label": "社交/UGC",
+    "subcategory": "X 聚合",
+    "section": "AI HOT",
+    "type": "rss",
+    "url": "https://aihot.virxact.com/feed/daily.xml",
+    "language": "zh",
+    "region": "global",
+    "tier": 0,
+    "enabled": true,
+    "license_notes": "AI HOT 日报 RSS",
+    "source_file": "aggregator-sources.json"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "AI HOT API — 精选",
+    "slug": "aihot-api-selected",
+    "category": "social",
+    "category_label": "社交/UGC",
+    "subcategory": "X 聚合",
+    "section": "AI HOT API",
+    "type": "aihot",
+    "url": "selected",
+    "language": "zh",
+    "region": "global",
+    "tier": 0,
+    "enabled": true,
+    "license_notes": "AI HOT REST API 精选（与 RSS 互补）",
+    "source_file": "aihot-api-sources.json"
+  },
+  {
+    "name": "AI HOT API — 全部",
+    "slug": "aihot-api-all",
+    "category": "social",
+    "category_label": "社交/UGC",
+    "subcategory": "X 聚合",
+    "section": "AI HOT API",
+    "type": "aihot",
+    "url": "all",
+    "language": "zh",
+    "region": "global",
+    "tier": 0,
+    "enabled": true,
+    "license_notes": "AI HOT REST API 全量最新",
+    "source_file": "aihot-api-sources.json"
+  }
+]

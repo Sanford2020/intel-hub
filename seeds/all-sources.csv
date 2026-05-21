@@ -1,0 +1,507 @@
+﻿name,slug,category,category_label,subcategory,type,url,language,region,tier,enabled,api_key_env,license_notes,section,source_file
+Reuters World,reuters-world,wire,通讯社/主流,,rss,https://www.reutersagency.com/feed/,en,global,0,True,,,,01-global-news-wire.md
+Reuters Top News,reuters-top-news,wire,通讯社/主流,,rss,https://feeds.reuters.com/reuters/topNews,en,global,0,True,,,,01-global-news-wire.md
+Reuters Business,reuters-business,wire,通讯社/主流,,rss,https://feeds.reuters.com/reuters/businessNews,en,global,0,True,,,,01-global-news-wire.md
+Reuters Technology,reuters-technology,wire,通讯社/主流,,rss,https://feeds.reuters.com/reuters/technologyNews,en,global,0,True,,,,01-global-news-wire.md
+AP Top News,ap-top-news,wire,通讯社/主流,,rss,https://apnews.com/hub/ap-top-news,en,global,0,True,,,,01-global-news-wire.md
+AP World,ap-world,wire,通讯社/主流,,rss,https://apnews.com/hub/world-news,en,global,0,True,,,,01-global-news-wire.md
+AFP (via partner feeds),afp-via-partner-feeds,wire,通讯社/主流,,rest_api,,multi,global,1,False,,,,01-global-news-wire.md
+BBC World,bbc-world,wire,通讯社/主流,,rss,http://feeds.bbci.co.uk/news/world/rss.xml,en,global,0,True,,,,01-global-news-wire.md
+BBC Business,bbc-business,wire,通讯社/主流,,rss,http://feeds.bbci.co.uk/news/business/rss.xml,en,global,0,True,,,,01-global-news-wire.md
+BBC Technology,bbc-technology,wire,通讯社/主流,,rss,http://feeds.bbci.co.uk/news/technology/rss.xml,en,global,0,True,,,,01-global-news-wire.md
+Guardian World,guardian-world,wire,通讯社/主流,,rss,https://www.theguardian.com/world/rss,en,global,0,True,,,,01-global-news-wire.md
+Guardian US,guardian-us,wire,通讯社/主流,,rss,https://www.theguardian.com/us-news/rss,en,global,0,True,,,,01-global-news-wire.md
+CNN Top Stories,cnn-top-stories,wire,通讯社/主流,,rss,http://rss.cnn.com/rss/cnn_topstories.rss,en,global,0,True,,,,01-global-news-wire.md
+CNN World,cnn-world,wire,通讯社/主流,,rss,http://rss.cnn.com/rss/edition_world.rss,en,global,0,True,,,,01-global-news-wire.md
+NPR News,npr-news,wire,通讯社/主流,,rss,https://feeds.npr.org/1001/rss.xml,en,global,0,True,,,,01-global-news-wire.md
+NPR World,npr-world,wire,通讯社/主流,,rss,https://feeds.npr.org/1004/rss.xml,en,global,0,True,,,,01-global-news-wire.md
+Al Jazeera English,al-jazeera-english,wire,通讯社/主流,,rss,https://www.aljazeera.com/xml/rss/all.xml,en,global,0,True,,,,01-global-news-wire.md
+Al Jazeera Arabic,al-jazeera-arabic,wire,通讯社/主流,,rss,https://www.aljazeera.net/aljazeera/rss,ar,global,1,False,,,,01-global-news-wire.md
+DW English,dw-english,wire,通讯社/主流,,rss,https://rss.dw.com/rdf/rss-en-all,en,global,0,True,,,,01-global-news-wire.md
+France 24,france-24,wire,通讯社/主流,,rss,https://www.france24.com/en/rss,en,global,0,True,,,,01-global-news-wire.md
+France 24 Arabic,france-24-arabic,wire,通讯社/主流,,rss,https://www.france24.com/ar/rss,ar,global,1,False,,,,01-global-news-wire.md
+Euronews,euronews,wire,通讯社/主流,,rss,https://www.euronews.com/rss,en,global,0,True,,,,01-global-news-wire.md
+Sky News,sky-news,wire,通讯社/主流,,rss,https://feeds.skynews.com/feeds/rss/world.xml,en,global,1,False,,,,01-global-news-wire.md
+CBS News,cbs-news,wire,通讯社/主流,,rss,https://www.cbsnews.com/latest/rss/main,en,global,1,False,,,,01-global-news-wire.md
+ABC News,abc-news,wire,通讯社/主流,,rss,https://abcnews.go.com/abcnews/topstories,en,global,1,False,,,,01-global-news-wire.md
+NBC News,nbc-news,wire,通讯社/主流,,rss,https://feeds.nbcnews.com/nbcnews/public/news,en,global,1,False,,,,01-global-news-wire.md
+PBS NewsHour,pbs-newshour,wire,通讯社/主流,,rss,https://www.pbs.org/newshour/feeds/rss/headlines,en,global,1,False,,,,01-global-news-wire.md
+CBC News,cbc-news,wire,通讯社/主流,,rss,https://www.cbc.ca/cmlink/rss-world,en,global,1,False,,,,01-global-news-wire.md
+ABC Australia,abc-australia,wire,通讯社/主流,,rss,https://www.abc.net.au/news/feed/51120/rss.xml,en,global,1,False,,,,01-global-news-wire.md
+NHK World,nhk-world,wire,通讯社/主流,,rss,https://www3.nhk.or.jp/nhkworld/en/news/rss/,en,global,1,False,,,,01-global-news-wire.md
+NHK 日本語,nhk,wire,通讯社/主流,,rss,https://www3.nhk.or.jp/rss/news/cat0.xml,ja,global,1,False,,,,01-global-news-wire.md
+TASS,tass,wire,通讯社/主流,,rss,https://tass.com/rss/v2.xml,en,global,1,False,,,,01-global-news-wire.md
+RT (monitoring),rt-monitoring,wire,通讯社/主流,,rss,https://www.rt.com/rss/,en,global,2,False,,,,01-global-news-wire.md
+Sputnik,sputnik,wire,通讯社/主流,,rss,https://sputniknews.com/export/rss2/archive/index.xml,en,global,2,False,,,,01-global-news-wire.md
+Times of India,times-of-india,wire,通讯社/主流,,rss,https://timesofindia.indiatimes.com/rssfeedstopstories.cms,en,global,1,False,,,,01-global-news-wire.md
+The Hindu,the-hindu,wire,通讯社/主流,,rss,https://www.thehindu.com/news/feeder/default.rss,en,global,1,False,,,,01-global-news-wire.md
+Jakarta Post,jakarta-post,wire,通讯社/主流,,rss,https://www.thejakartapost.com/rss,en,global,1,False,,,,01-global-news-wire.md
+Straits Times,straits-times,wire,通讯社/主流,,rss,https://www.straitstimes.com/news/world/rss.xml,en,global,1,False,,,,01-global-news-wire.md
+SCMP,scmp,wire,通讯社/主流,,rss,https://www.scmp.com/rss/91/feed,en,global,0,True,,,,01-global-news-wire.md
+Japan Times,japan-times,wire,通讯社/主流,,rss,https://www.japantimes.co.jp/feed/,en,global,1,False,,,,01-global-news-wire.md
+Korea Herald,korea-herald,wire,通讯社/主流,,rss,http://www.koreaherald.com/common/rss/rss.php,en,global,1,False,,,,01-global-news-wire.md
+Kyodo News,kyodo-news,wire,通讯社/主流,,rss,https://english.kyodonews.net/rss/news.xml,en,global,1,False,,,,01-global-news-wire.md
+Latin America — MercoPress,latin-america-mercopress,wire,通讯社/主流,,rss,https://en.mercopress.com/rss/all,en,global,1,False,,,,01-global-news-wire.md
+Africa News,africa-news,wire,通讯社/主流,,rss,https://www.africanews.com/rss,en,global,1,False,,,,01-global-news-wire.md
+AllAfrica,allafrica,wire,通讯社/主流,,rss,https://allafrica.com/tools/headlines/rdf/latest/headlines.rss,en,global,1,False,,,,01-global-news-wire.md
+Financial Times,financial-times,wire,通讯社/主流,财经主流（交叉引用 04）,rss,https://www.ft.com/?format=rss,multi,global,0,True,,,财经主流（交叉引用 04）,01-global-news-wire.md
+WSJ (limited RSS),wsj-limited-rss,wire,通讯社/主流,财经主流（交叉引用 04）,unknown,,multi,global,2,False,,,财经主流（交叉引用 04）,01-global-news-wire.md
+Bloomberg (API),bloomberg-api,wire,通讯社/主流,财经主流（交叉引用 04）,unknown,,multi,global,2,False,,,财经主流（交叉引用 04）,01-global-news-wire.md
+CNBC,cnbc,wire,通讯社/主流,财经主流（交叉引用 04）,rss,https://search.cnbc.com/rs/search/combinedcms/view.xml,multi,global,0,True,,,财经主流（交叉引用 04）,01-global-news-wire.md
+MarketWatch,marketwatch,wire,通讯社/主流,财经主流（交叉引用 04）,rss,https://feeds.marketwatch.com/marketwatch/topstories/,multi,global,1,False,,,财经主流（交叉引用 04）,01-global-news-wire.md
+Economist,economist,wire,通讯社/主流,财经主流（交叉引用 04）,rss,https://www.economist.com/the-world-this-week/rss.xml,multi,global,1,False,,,财经主流（交叉引用 04）,01-global-news-wire.md
+Google News — geopolitics,google-news-geopolitics,wire,通讯社/主流,Google News 关键词（动态源）,unknown,`https://news.google.com/rss/search?q=geopolitics&hl=en-US&gl=US&ceid=US:en`,multi,global,0,True,,,Google News 关键词（动态源）,01-global-news-wire.md
+Google News — Taiwan,google-news-taiwan,wire,通讯社/主流,Google News 关键词（动态源）,unknown,`...q=taiwan+strait...`,multi,global,0,True,,,Google News 关键词（动态源）,01-global-news-wire.md
+Google News — Ukraine,google-news-ukraine,wire,通讯社/主流,Google News 关键词（动态源）,unknown,`...q=ukraine+war...`,multi,global,0,True,,,Google News 关键词（动态源）,01-global-news-wire.md
+Google News — Middle East,google-news-middle-east,wire,通讯社/主流,Google News 关键词（动态源）,unknown,`...q=middle+east+conflict...`,multi,global,0,True,,,Google News 关键词（动态源）,01-global-news-wire.md
+Google News — AI regulation,google-news-ai-regulation,wire,通讯社/主流,Google News 关键词（动态源）,unknown,`...q=AI+regulation...`,multi,global,0,True,,,Google News 关键词（动态源）,01-global-news-wire.md
+Google News — 中国,google-news,wire,通讯社/主流,Google News 关键词（动态源）,unknown,`...q=中国&hl=zh-CN&gl=CN&ceid=CN:zh-Hans`,multi,global,1,False,,,Google News 关键词（动态源）,01-global-news-wire.md
+Politico,politico,regional,分地区,北美,rss,https://rss.politico.com/politics-news.xml,en,global,0,True,,,北美,02-regional-by-geography.md
+The Hill,the-hill,regional,分地区,北美,rss,https://thehill.com/feed/,en,global,1,False,,,北美,02-regional-by-geography.md
+Axios,axios,regional,分地区,北美,rss,https://api.axios.com/feed/,en,global,0,True,,,北美,02-regional-by-geography.md
+Vox,vox,regional,分地区,北美,rss,https://www.vox.com/rss/index.xml,en,global,1,False,,,北美,02-regional-by-geography.md
+Slate,slate,regional,分地区,北美,rss,https://slate.com/feeds/all.rss,en,global,2,False,,,北美,02-regional-by-geography.md
+Reason,reason,regional,分地区,北美,rss,https://reason.com/feed/,en,global,2,False,,,北美,02-regional-by-geography.md
+Texas Tribune,texas-tribune,regional,分地区,北美,rss,https://www.texastribune.org/feeds/,en,global,2,False,,,北美,02-regional-by-geography.md
+ProPublica,propublica,regional,分地区,北美,rss,https://www.propublica.org/feeds/propublica/main,en,global,1,False,,,北美,02-regional-by-geography.md
+Spiegel International,spiegel-international,regional,分地区,欧洲,rss,https://www.spiegel.de/international/index.rss,en,global,1,False,,,欧洲,02-regional-by-geography.md
+Deutsche Welle,deutsche-welle,regional,分地区,欧洲,rss,https://rss.dw.com/rdf/rss-en-all,en,global,0,True,,,欧洲,02-regional-by-geography.md
+Le Monde,le-monde,regional,分地区,欧洲,rss,https://www.lemonde.fr/rss/une.xml,fr,global,1,False,,,欧洲,02-regional-by-geography.md
+El País English,el-pais-english,regional,分地区,欧洲,rss,https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada,en,global,1,False,,,欧洲,02-regional-by-geography.md
+ANSA,ansa,regional,分地区,欧洲,rss,https://www.ansa.it/english/news/,en,global,1,False,,,欧洲,02-regional-by-geography.md
+POLITICO Europe,politico-europe,regional,分地区,欧洲,rss,https://www.politico.eu/feed/,en,global,0,True,,,欧洲,02-regional-by-geography.md
+EUobserver,euobserver,regional,分地区,欧洲,rss,https://euobserver.com/rss,en,global,1,False,,,欧洲,02-regional-by-geography.md
+Balkan Insight,balkan-insight,regional,分地区,欧洲,rss,https://balkaninsight.com/feed/,en,global,2,False,,,欧洲,02-regional-by-geography.md
+Kyiv Independent,kyiv-independent,regional,分地区,欧洲,rss,https://kyivindependent.com/feed/,en,global,0,True,,,欧洲,02-regional-by-geography.md
+Meduza,meduza,regional,分地区,欧洲,rss,https://meduza.io/rss/all,ru/en,global,1,False,,,欧洲,02-regional-by-geography.md
+Al-Monitor,al-monitor,regional,分地区,中东,rss,https://www.al-monitor.com/rss,en,global,0,True,,,中东,02-regional-by-geography.md
+Middle East Eye,middle-east-eye,regional,分地区,中东,rss,https://www.middleeasteye.net/rss,en,global,0,True,,,中东,02-regional-by-geography.md
+Times of Israel,times-of-israel,regional,分地区,中东,rss,https://www.timesofisrael.com/feed/,en,global,1,False,,,中东,02-regional-by-geography.md
+Haaretz,haaretz,regional,分地区,中东,rss,https://www.haaretz.com/srv/haaretz-latest-headlines,en,global,1,False,,,中东,02-regional-by-geography.md
+Arab News,arab-news,regional,分地区,中东,rss,https://www.arabnews.com/rss.xml,en,global,1,False,,,中东,02-regional-by-geography.md
+Tehran Times,tehran-times,regional,分地区,中东,rss,https://www.tehrantimes.com/rss,en,global,2,False,,,中东,02-regional-by-geography.md
+Daily Sabah,daily-sabah,regional,分地区,中东,rss,https://www.dailysabah.com/rss,en,global,1,False,,,中东,02-regional-by-geography.md
+Nikkei Asia,nikkei-asia,regional,分地区,亚太,rss,https://asia.nikkei.com/rss,en,global,0,True,,,亚太,02-regional-by-geography.md
+Caixin Global,caixin-global,regional,分地区,亚太,rss,https://www.caixinglobal.com/rss/news.xml,en/zh,global,1,False,,,亚太,02-regional-by-geography.md
+Taiwan News,taiwan-news,regional,分地区,亚太,rss,https://www.taiwannews.com.tw/en/rss,en,global,1,False,,,亚太,02-regional-by-geography.md
+Focus Taiwan,focus-taiwan,regional,分地区,亚太,rss,https://focustaiwan.tw/rss,en,global,1,False,,,亚太,02-regional-by-geography.md
+Bangkok Post,bangkok-post,regional,分地区,亚太,rss,https://www.bangkokpost.com/rss/data/topstories.xml,en,global,1,False,,,亚太,02-regional-by-geography.md
+Vietnam News,vietnam-news,regional,分地区,亚太,rss,https://vietnamnews.vn/rss/home.rss,en,global,2,False,,,亚太,02-regional-by-geography.md
+Philippine Star,philippine-star,regional,分地区,亚太,rss,https://www.philstar.com/rss/headlines,en,global,2,False,,,亚太,02-regional-by-geography.md
+Pakistan Dawn,pakistan-dawn,regional,分地区,亚太,rss,https://www.dawn.com/feeds/home,en,global,2,False,,,亚太,02-regional-by-geography.md
+Dhaka Tribune,dhaka-tribune,regional,分地区,亚太,rss,https://www.dhakatribune.com/feed,en,global,2,False,,,亚太,02-regional-by-geography.md
+Americas Quarterly,americas-quarterly,regional,分地区,拉美,rss,https://www.americasquarterly.org/feed/,multi,global,1,False,,,拉美,02-regional-by-geography.md
+Infobae,infobae,regional,分地区,拉美,rss,https://www.infobae.com/feeds/rss/,multi,global,1,False,,,拉美,02-regional-by-geography.md
+Folha de S.Paulo,folha-de-s-paulo,regional,分地区,拉美,rss,https://feeds.folha.uol.com.br/emcimadahora/rss091.xml,multi,global,1,False,,,拉美,02-regional-by-geography.md
+El Universal Mexico,el-universal-mexico,regional,分地区,拉美,rss,https://www.eluniversal.com.mx/rss.xml,multi,global,2,False,,,拉美,02-regional-by-geography.md
+Mail & Guardian SA,mail-guardian-sa,regional,分地区,非洲,rss,https://mg.co.za/feed/,multi,global,1,False,,,非洲,02-regional-by-geography.md
+Premium Times Nigeria,premium-times-nigeria,regional,分地区,非洲,rss,https://www.premiumtimesng.com/feed,multi,global,2,False,,,非洲,02-regional-by-geography.md
+Daily Nation Kenya,daily-nation-kenya,regional,分地区,非洲,rss,https://nation.africa/kenya/rss,multi,global,2,False,,,非洲,02-regional-by-geography.md
+Moscow Times,moscow-times,regional,分地区,俄罗斯 / 东欧 / 中亚,rss,https://www.themoscowtimes.com/rss/news,multi,global,1,False,,,俄罗斯 / 东欧 / 中亚,02-regional-by-geography.md
+Belsat,belsat,regional,分地区,俄罗斯 / 东欧 / 中亚,rss,https://belsat.eu/en/rss/,multi,global,2,False,,,俄罗斯 / 东欧 / 中亚,02-regional-by-geography.md
+RFERL,rferl,regional,分地区,俄罗斯 / 东欧 / 中亚,rest_api,https://www.rferl.org/api/,multi,global,1,False,,,俄罗斯 / 东欧 / 中亚,02-regional-by-geography.md
+Eurasianet,eurasianet,regional,分地区,俄罗斯 / 东欧 / 中亚,rss,https://eurasianet.org/feed,multi,global,1,False,,,俄罗斯 / 东欧 / 中亚,02-regional-by-geography.md
+White House Briefing,white-house-briefing,official,政府/机构,executive,rss,https://www.whitehouse.gov/briefing-room/feed/,multi,global,0,True,,,美国,03-government-official.md
+State Dept Press,state-dept-press,official,政府/机构,foreign-policy,rss,https://www.state.gov/feed/,multi,global,0,True,,,美国,03-government-official.md
+Pentagon News,pentagon-news,official,政府/机构,defense,rss,https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945,multi,global,0,True,,,美国,03-government-official.md
+DHS News,dhs-news,official,政府/机构,security,rss,https://www.dhs.gov/news-releases/feed,multi,global,1,False,,,美国,03-government-official.md
+CISA Advisories,cisa-advisories,official,政府/机构,cyber,rss,https://www.cisa.gov/cybersecurity-advisories/all.xml,multi,global,0,True,,,美国,03-government-official.md
+FBI News,fbi-news,official,政府/机构,law-enforcement,rss,https://www.fbi.gov/feeds/fbi-news.xml,multi,global,1,False,,,美国,03-government-official.md
+Federal Register,federal-register,official,政府/机构,regulation,rss,https://www.federalregister.gov/documents/search.rss,multi,global,1,False,,,美国,03-government-official.md
+SEC News,sec-news,official,政府/机构,finance,rss,https://www.sec.gov/news/pressreleases.rss,multi,global,0,True,,,美国,03-government-official.md
+SEC EDGAR full-text,sec-edgar-full-text,official,政府/机构,finance,rss,https://efts.sec.gov/LATEST/search-index,multi,global,1,False,,,美国,03-government-official.md
+Fed Press,fed-press,official,政府/机构,macro,rss,https://www.federalreserve.gov/feeds/press_all.xml,multi,global,0,True,,,美国,03-government-official.md
+Treasury Press,treasury-press,official,政府/机构,finance,rss,https://home.treasury.gov/system/files/136/TreasuryPressRSS.xml,multi,global,1,False,,,美国,03-government-official.md
+USTR,ustr,official,政府/机构,trade,rss,https://ustr.gov/about-us/policy-offices/press-office/feed,multi,global,1,False,,,美国,03-government-official.md
+OFAC Recent Actions,ofac-recent-actions,official,政府/机构,sanctions,rss,https://ofac.treasury.gov/recent-actions/rss,multi,global,0,True,,,美国,03-government-official.md
+CDC Health Alert,cdc-health-alert,official,政府/机构,health,rest_api,https://tools.cdc.gov/api/v2/resources/media/132608.rss,multi,global,1,False,,,美国,03-government-official.md
+FDA News,fda-news,official,政府/机构,health,rss,https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds,multi,global,1,False,,,美国,03-government-official.md
+NOAA Alerts,noaa-alerts,official,政府/机构,weather,rss,https://alerts.weather.gov/cap/us.php?x=0,multi,global,1,False,,,美国,03-government-official.md
+USGS Earthquake,usgs-earthquake,official,政府/机构,disaster,rss,https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.atom,multi,global,1,False,,,美国,03-government-official.md
+Congress.gov,congress-gov,official,政府/机构,legislative,rss,https://www.congress.gov/rss/,multi,global,1,False,,,美国,03-government-official.md
+USITC Trade,usitc-trade,official,政府/机构,trade,rss,https://www.usitc.gov/rss/trade_remedy,multi,global,2,False,,,美国,03-government-official.md
+EC News,ec-news,official,政府/机构,欧盟,rest_api,https://ec.europa.eu/commission/presscorner/api/rss,multi,global,0,True,,,欧盟,03-government-official.md
+EUR-Lex,eur-lex,official,政府/机构,欧盟,rss,https://eur-lex.europa.eu/EURLexWebService,multi,global,1,False,,,欧盟,03-government-official.md
+EEAS (EU Foreign),eeas-eu-foreign,official,政府/机构,欧盟,rss,https://www.eeas.europa.eu/rss.xml,multi,global,0,True,,,欧盟,03-government-official.md
+ECB Press,ecb-press,official,政府/机构,欧盟,rss,https://www.ecb.europa.eu/rss/press.html,multi,global,0,True,,,欧盟,03-government-official.md
+EU Sanctions,eu-sanctions,official,政府/机构,欧盟,rss,https://webgate.ec.europa.eu/fsd/fsf/public/files/rssFeed,multi,global,0,True,,,欧盟,03-government-official.md
+ENISA,enisa,official,政府/机构,欧盟,rss,https://www.enisa.europa.eu/media/news-items/news-wires/RSS,multi,global,1,False,,,欧盟,03-government-official.md
+UK Gov News,uk-gov-news,official,政府/机构,英国,rss,https://www.gov.uk/government/announcements.atom,multi,global,0,True,,,英国,03-government-official.md
+FCDO,fcdo,official,政府/机构,英国,rss,https://www.gov.uk/government/organisations/foreign-commonwealth-development-office.atom,multi,global,0,True,,,英国,03-government-official.md
+Bank of England,bank-of-england,official,政府/机构,英国,rss,https://www.bankofengland.co.uk/rss/news,multi,global,0,True,,,英国,03-government-official.md
+NCSC UK,ncsc-uk,official,政府/机构,英国,rest_api,https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml,multi,global,1,False,,,英国,03-government-official.md
+UN News,un-news,official,政府/机构,联合国 / 国际组织,rss,https://news.un.org/feed/subscribe/en/news/all/rss.xml,multi,global,0,True,,,联合国 / 国际组织,03-government-official.md
+UN Security Council,un-security-council,official,政府/机构,联合国 / 国际组织,rss,https://www.un.org/securitycouncil/rss,multi,global,0,True,,,联合国 / 国际组织,03-government-official.md
+WHO News,who-news,official,政府/机构,联合国 / 国际组织,rss,https://www.who.int/rss-feeds/news-english.xml,multi,global,0,True,,,联合国 / 国际组织,03-government-official.md
+IMF News,imf-news,official,政府/机构,联合国 / 国际组织,rss,https://www.imf.org/en/News/rss,multi,global,0,True,,,联合国 / 国际组织,03-government-official.md
+World Bank,world-bank,official,政府/机构,联合国 / 国际组织,rss,https://www.worldbank.org/en/news/rss,multi,global,0,True,,,联合国 / 国际组织,03-government-official.md
+WTO,wto,official,政府/机构,联合国 / 国际组织,rss,https://www.wto.org/english/news_e/news_e.rss,multi,global,1,False,,,联合国 / 国际组织,03-government-official.md
+IAEA,iaea,official,政府/机构,联合国 / 国际组织,rss,https://www.iaea.org/feeds/topnews,multi,global,0,True,,,联合国 / 国际组织,03-government-official.md
+NATO News,nato-news,official,政府/机构,联合国 / 国际组织,rss,https://www.nato.int/cps/en/natohq/news.rss,multi,global,0,True,,,联合国 / 国际组织,03-government-official.md
+OPCW,opcw,official,政府/机构,联合国 / 国际组织,rss,https://www.opcw.org/rss,multi,global,2,False,,,联合国 / 国际组织,03-government-official.md
+ICRC,icrc,official,政府/机构,联合国 / 国际组织,rss,https://www.icrc.org/en/rss.xml,multi,global,1,False,,,联合国 / 国际组织,03-government-official.md
+WFP,wfp,official,政府/机构,联合国 / 国际组织,rss,https://www.wfp.org/rss.xml,multi,global,1,False,,,联合国 / 国际组织,03-government-official.md
+UNHCR,unhcr,official,政府/机构,联合国 / 国际组织,rss,https://www.unhcr.org/rss.xml,multi,global,1,False,,,联合国 / 国际组织,03-government-official.md
+Interpol,interpol,official,政府/机构,联合国 / 国际组织,rss,https://www.interpol.int/en/News-and-Events/News,multi,global,2,False,,,联合国 / 国际组织,03-government-official.md
+中国国务院,source,official,政府/机构,亚太政府,unknown,,multi,gov.cn RSS,0,True,,,亚太政府,03-government-official.md
+外交部,source-official,official,政府/机构,亚太政府,unknown,,multi,fmprc.gov.cn,0,True,,,亚太政府,03-government-official.md
+新加坡 Gov,gov,official,政府/机构,亚太政府,unknown,,multi,gov.sg RSS,1,False,,,亚太政府,03-government-official.md
+澳大利亚 DFAT,dfat,official,政府/机构,亚太政府,unknown,,multi,dfat.gov.au RSS,1,False,,,亚太政府,03-government-official.md
+印度 PIB,pib,official,政府/机构,亚太政府,unknown,,multi,pib.gov.in RSS,1,False,,,亚太政府,03-government-official.md
+Financial Times,financial-times-financial,financial,财经,新闻与评论,rss,https://www.ft.com/?format=rss,multi,global,0,True,,,新闻与评论,04-financial-economic.md
+CNBC,cnbc-financial,financial,财经,新闻与评论,rss,https://search.cnbc.com/rs/search/combinedcms/view.xml,multi,global,0,True,,,新闻与评论,04-financial-economic.md
+MarketWatch,marketwatch-financial,financial,财经,新闻与评论,rss,https://feeds.marketwatch.com/marketwatch/topstories/,multi,global,1,False,,,新闻与评论,04-financial-economic.md
+Seeking Alpha,seeking-alpha,financial,财经,新闻与评论,rss,https://seekingalpha.com/feed.xml,multi,global,1,False,,,新闻与评论,04-financial-economic.md
+Zero Hedge,zero-hedge,financial,财经,新闻与评论,rss,https://www.zerohedge.com/fullrss2.xml,multi,global,2,False,,,新闻与评论,04-financial-economic.md
+Calculated Risk,calculated-risk,financial,财经,新闻与评论,rss,https://www.calculatedriskblog.com/feeds/posts/default,multi,global,1,False,,,新闻与评论,04-financial-economic.md
+Naked Capitalism,naked-capitalism,financial,财经,新闻与评论,rss,https://www.nakedcapitalism.com/feed,multi,global,2,False,,,新闻与评论,04-financial-economic.md
+FT Alphaville,ft-alphaville,financial,财经,新闻与评论,rss,https://www.ft.com/alphaville?format=rss,multi,global,1,False,,,新闻与评论,04-financial-economic.md
+Barron's,barron-s,financial,财经,新闻与评论,rss,https://www.barrons.com/feed/all,multi,global,2,False,,,新闻与评论,04-financial-economic.md
+Investopedia,investopedia,financial,财经,新闻与评论,rss,https://www.investopedia.com/feedbuilder/feed/getfeed?feedName=rss_headline,multi,global,2,False,,,新闻与评论,04-financial-economic.md
+财新,source-financial,financial,财经,新闻与评论,rss,https://www.caixinglobal.com/rss/news.xml,multi,global,0,True,,,新闻与评论,04-financial-economic.md
+FRED (St. Louis Fed),fred-st-louis-fed,financial,财经,宏观数据 API,rss,https://api.stlouisfed.org/fred/,multi,global,0,True,,免费 key,宏观数据 API,04-financial-economic.md
+World Bank Open Data,world-bank-open-data,financial,财经,宏观数据 API,rss,https://api.worldbank.org/,multi,global,0,True,,,宏观数据 API,04-financial-economic.md
+IMF Data,imf-data,financial,财经,宏观数据 API,rss,https://data.imf.org/,multi,global,1,False,,,宏观数据 API,04-financial-economic.md
+OECD,oecd,financial,财经,宏观数据 API,rss,https://data.oecd.org/,multi,global,1,False,,,宏观数据 API,04-financial-economic.md
+Eurostat,eurostat,financial,财经,宏观数据 API,rest_api,https://ec.europa.eu/eurostat/api/,multi,global,1,False,,,宏观数据 API,04-financial-economic.md
+UN Comtrade,un-comtrade,financial,财经,宏观数据 API,rss,https://comtradeplus.un.org/,multi,global,2,False,,贸易,宏观数据 API,04-financial-economic.md
+BIS,bis,financial,财经,宏观数据 API,rss,https://www.bis.org/statistics/,multi,global,1,False,,央行,宏观数据 API,04-financial-economic.md
+Trading Economics,trading-economics,financial,财经,宏观数据 API,unknown,,multi,global,2,False,,,宏观数据 API,04-financial-economic.md
+Alpha Vantage,alpha-vantage,financial,财经,市场与行情,rss,https://www.alphavantage.co/,multi,global,0,True,,,市场与行情,04-financial-economic.md
+Polygon.io,polygon-io,financial,财经,市场与行情,rss,https://polygon.io/,multi,global,1,False,,,市场与行情,04-financial-economic.md
+Yahoo Finance (unofficial),yahoo-finance-unofficial,financial,财经,市场与行情,unknown,yfinance,multi,global,1,False,,,市场与行情,04-financial-economic.md
+CoinGecko,coingecko,financial,财经,市场与行情,rss,https://www.coingecko.com/en/api,multi,global,0,True,,,市场与行情,04-financial-economic.md
+CoinMarketCap,coinmarketcap,financial,财经,市场与行情,unknown,API,multi,global,1,False,,,市场与行情,04-financial-economic.md
+Glassnode,glassnode,financial,财经,市场与行情,unknown,on-chain,multi,global,2,False,,,市场与行情,04-financial-economic.md
+DefiLlama,defillama,financial,财经,市场与行情,rss,https://defillama.com/docs/api,multi,global,1,False,,,市场与行情,04-financial-economic.md
+SEC EDGAR,sec-edgar,financial,财经,公司与融资,unknown,full-text search API,multi,global,0,True,,,公司与融资,04-financial-economic.md
+Crunchbase,crunchbase,financial,财经,公司与融资,unknown,,multi,global,2,False,,,公司与融资,04-financial-economic.md
+PitchBook,pitchbook,financial,财经,公司与融资,unknown,,multi,global,2,False,,,公司与融资,04-financial-economic.md
+OpenCorporates,opencorporates,financial,财经,公司与融资,rss,https://api.opencorporates.com/,multi,global,1,False,,,公司与融资,04-financial-economic.md
+Companies House UK,companies-house-uk,financial,财经,公司与融资,unknown,API,multi,global,1,False,,,公司与融资,04-financial-economic.md
+US Census Trade,us-census-trade,financial,财经,贸易与供应链,unknown,,multi,global,1,False,,,贸易与供应链,04-financial-economic.md
+WTO Trade Stats,wto-trade-stats,financial,财经,贸易与供应链,unknown,,multi,global,1,False,,,贸易与供应链,04-financial-economic.md
+Baltic Dry Index,baltic-dry-index,financial,财经,贸易与供应链,unknown,,multi,global,1,False,,,贸易与供应链,04-financial-economic.md
+Freightos FBX,freightos-fbx,financial,财经,贸易与供应链,unknown,,multi,global,2,False,,,贸易与供应链,04-financial-economic.md
+Bellingcat,bellingcat,geopolitical,OSINT/地缘,OSINT 调查,rss,https://www.bellingcat.com/feed/,multi,global,0,True,,,调查与开源情报媒体,05-osint-geopolitical.md
+Oryx,oryx,geopolitical,OSINT/地缘,装备战损追踪,rss,https://www.oryxspioenkop.com/feed,multi,global,0,True,,,调查与开源情报媒体,05-osint-geopolitical.md
+The War Zone,the-war-zone,geopolitical,OSINT/地缘,军事技术,rss,https://www.thedrive.com/the-war-zone/rss,multi,global,0,True,,,调查与开源情报媒体,05-osint-geopolitical.md
+Conflict News,conflict-news,geopolitical,OSINT/地缘,聚合,rss,https://www.reddit.com/r/ConflictNews/.rss,multi,global,1,False,,,调查与开源情报媒体,05-osint-geopolitical.md
+Liveuamap,liveuamap,geopolitical,OSINT/地缘,实时地图,rss,https://liveuamap.com/,multi,global,1,False,,,调查与开源情报媒体,05-osint-geopolitical.md
+DeepState UA,deepstate-ua,geopolitical,OSINT/地缘,乌克兰战线,rss,https://deepstatemap.live/,multi,global,1,False,,,调查与开源情报媒体,05-osint-geopolitical.md
+ISW (Institute for Study of War),isw-institute-for-study-of-war,geopolitical,OSINT/地缘,战情分析,rss,https://www.understandingwar.org/rss.xml,multi,global,0,True,,,调查与开源情报媒体,05-osint-geopolitical.md
+ACLED,acled,geopolitical,OSINT/地缘,武装冲突 API,acled,https://api.acleddata.com/,multi,global,0,True,,,调查与开源情报媒体,05-osint-geopolitical.md
+UCDP,ucdp,geopolitical,OSINT/地缘,冲突数据库,rss,https://ucdp.uu.se/,multi,global,1,False,,,调查与开源情报媒体,05-osint-geopolitical.md
+GDELT Project,gdelt-project,geopolitical,OSINT/地缘,全球事件,gdelt,https://api.gdeltproject.org/,multi,global,0,True,,,调查与开源情报媒体,05-osint-geopolitical.md
+GDELT DOC 2.0,gdelt-doc-2-0,geopolitical,OSINT/地缘,0,unknown,新闻全文搜索,multi,global,1,False,,,调查与开源情报媒体,05-osint-geopolitical.md
+ReliefWeb,reliefweb,geopolitical,OSINT/地缘,人道危机,rss,https://reliefweb.int/rss,multi,global,0,True,,,调查与开源情报媒体,05-osint-geopolitical.md
+Saferworld / Crisis Group,saferworld-crisis-group,geopolitical,OSINT/地缘,冲突预防,unknown,,multi,global,1,False,,,调查与开源情报媒体,05-osint-geopolitical.md
+Global Conflict Tracker (CFR),global-conflict-tracker-cfr,geopolitical,OSINT/地缘,1,unknown,,multi,global,1,False,,,调查与开源情报媒体,05-osint-geopolitical.md
+Intel471,intel471,geopolitical,OSINT/地缘,2,unknown,,multi,global,1,False,,,调查与开源情报媒体,05-osint-geopolitical.md
+Recorded Future,recorded-future,geopolitical,OSINT/地缘,2,unknown,,multi,global,1,False,,,调查与开源情报媒体,05-osint-geopolitical.md
+Defense One,defense-one,geopolitical,OSINT/地缘,防务与军工,rss,https://www.defenseone.com/rss/all/,multi,global,0,True,,,防务与军工,05-osint-geopolitical.md
+Breaking Defense,breaking-defense,geopolitical,OSINT/地缘,防务与军工,rss,https://breakingdefense.com/feed/,multi,global,0,True,,,防务与军工,05-osint-geopolitical.md
+Defense News,defense-news,geopolitical,OSINT/地缘,防务与军工,rss,https://www.defensenews.com/arc/outboundfeeds/rss/,multi,global,0,True,,,防务与军工,05-osint-geopolitical.md
+Military Times,military-times,geopolitical,OSINT/地缘,防务与军工,rss,https://www.militarytimes.com/arc/outboundfeeds/rss/,multi,global,0,True,,,防务与军工,05-osint-geopolitical.md
+Task & Purpose,task-purpose,geopolitical,OSINT/地缘,防务与军工,rss,https://taskandpurpose.com/feed/,multi,global,0,True,,,防务与军工,05-osint-geopolitical.md
+USNI News,usni-news,geopolitical,OSINT/地缘,防务与军工,rss,https://news.usni.org/feed,multi,global,0,True,,,防务与军工,05-osint-geopolitical.md
+Janes (付费),janes,geopolitical,OSINT/地缘,防务与军工,unknown,,multi,global,2,False,,,防务与军工,05-osint-geopolitical.md
+IISS,iiss,geopolitical,OSINT/地缘,防务与军工,rss,https://www.iiss.org/rss,multi,global,1,False,,,防务与军工,05-osint-geopolitical.md
+SIPRI,sipri,geopolitical,OSINT/地缘,防务与军工,rss,https://www.sipri.org/rss,multi,global,0,True,,,防务与军工,05-osint-geopolitical.md
+NATO.int,nato-int,geopolitical,OSINT/地缘,防务与军工,unknown,,multi,global,0,True,,,防务与军工,05-osint-geopolitical.md
+OFAC SDN,ofac-sdn,geopolitical,OSINT/地缘,制裁与出口管制,unknown,,multi,global,0,True,,,制裁与出口管制,05-osint-geopolitical.md
+EU Consolidated Sanctions,eu-consolidated-sanctions,geopolitical,OSINT/地缘,制裁与出口管制,unknown,,multi,global,0,True,,,制裁与出口管制,05-osint-geopolitical.md
+UK OFSI,uk-ofsi,geopolitical,OSINT/地缘,制裁与出口管制,unknown,,multi,global,1,False,,,制裁与出口管制,05-osint-geopolitical.md
+BIS Entity List,bis-entity-list,geopolitical,OSINT/地缘,制裁与出口管制,unknown,,multi,global,0,True,,,制裁与出口管制,05-osint-geopolitical.md
+UN Sanctions,un-sanctions,geopolitical,OSINT/地缘,制裁与出口管制,unknown,,multi,global,1,False,,,制裁与出口管制,05-osint-geopolitical.md
+IAEA,iaea-geopolitical,geopolitical,OSINT/地缘,核与大规模杀伤,unknown,,multi,global,0,True,,,核与大规模杀伤,05-osint-geopolitical.md
+NTI,nti,geopolitical,OSINT/地缘,核与大规模杀伤,unknown,,multi,global,0,True,,,核与大规模杀伤,05-osint-geopolitical.md
+Bulletin of Atomic Scientists,bulletin-of-atomic-scientists,geopolitical,OSINT/地缘,核与大规模杀伤,unknown,,multi,global,0,True,,,核与大规模杀伤,05-osint-geopolitical.md
+Arms Control Association,arms-control-association,geopolitical,OSINT/地缘,核与大规模杀伤,unknown,,multi,global,0,True,,,核与大规模杀伤,05-osint-geopolitical.md
+Krebs on Security,krebs-on-security,cyber,网安,安全新闻,rss,https://krebsonsecurity.com/feed/,multi,global,0,True,,,安全新闻,06-cyber-threat-intel.md
+Schneier on Security,schneier-on-security,cyber,网安,安全新闻,rss,https://www.schneier.com/feed/atom/,multi,global,0,True,,,安全新闻,06-cyber-threat-intel.md
+Dark Reading,dark-reading,cyber,网安,安全新闻,rss,https://www.darkreading.com/rss.xml,multi,global,0,True,,,安全新闻,06-cyber-threat-intel.md
+The Hacker News,the-hacker-news,cyber,网安,安全新闻,rss,https://feeds.feedburner.com/TheHackersNews,multi,global,0,True,,,安全新闻,06-cyber-threat-intel.md
+BleepingComputer,bleepingcomputer,cyber,网安,安全新闻,rss,https://www.bleepingcomputer.com/feed/,multi,global,0,True,,,安全新闻,06-cyber-threat-intel.md
+SecurityWeek,securityweek,cyber,网安,安全新闻,rss,https://www.securityweek.com/feed/,multi,global,1,False,,,安全新闻,06-cyber-threat-intel.md
+Threatpost,threatpost,cyber,网安,安全新闻,rss,https://threatpost.com/feed/,multi,global,1,False,,,安全新闻,06-cyber-threat-intel.md
+Ars Technica Security,ars-technica-security,cyber,网安,安全新闻,rss,https://feeds.arstechnica.com/arstechnica/security,multi,global,0,True,,,安全新闻,06-cyber-threat-intel.md
+Wired Security,wired-security,cyber,网安,安全新闻,rss,https://www.wired.com/feed/tag/security/latest/rss,multi,global,1,False,,,安全新闻,06-cyber-threat-intel.md
+Record,record,cyber,网安,安全新闻,rss,https://therecord.media/feed/,multi,global,0,True,,,安全新闻,06-cyber-threat-intel.md
+CyberScoop,cyberscoop,cyber,网安,安全新闻,rss,https://cyberscoop.com/feed/,multi,global,1,False,,,安全新闻,06-cyber-threat-intel.md
+安全客,source-cyber,cyber,网安,安全新闻,unknown,,multi,global,1,False,,,安全新闻,06-cyber-threat-intel.md
+FreeBuf,freebuf,cyber,网安,安全新闻,unknown,,multi,global,1,False,,,安全新闻,06-cyber-threat-intel.md
+CISA KEV,cisa-kev,cyber,网安,漏洞与告警,rest_api,https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json,multi,global,0,True,,,漏洞与告警,06-cyber-threat-intel.md
+CISA Advisories,cisa-advisories-cyber,cyber,网安,漏洞与告警,unknown,,multi,global,0,True,,,漏洞与告警,06-cyber-threat-intel.md
+US-CERT,us-cert,cyber,网安,漏洞与告警,unknown,,multi,global,0,True,,,漏洞与告警,06-cyber-threat-intel.md
+NVD NIST,nvd-nist,cyber,网安,漏洞与告警,rss,https://nvd.nist.gov/vuln/data-feeds,multi,global,0,True,,,漏洞与告警,06-cyber-threat-intel.md
+GitHub Advisory DB,github-advisory-db,cyber,网安,漏洞与告警,unknown,API,multi,global,1,False,,,漏洞与告警,06-cyber-threat-intel.md
+Exploit-DB,exploit-db,cyber,网安,漏洞与告警,unknown,,multi,global,2,False,,,漏洞与告警,06-cyber-threat-intel.md
+CERT-EU,cert-eu,cyber,网安,漏洞与告警,unknown,,multi,global,1,False,,,漏洞与告警,06-cyber-threat-intel.md
+NCSC UK,ncsc-uk-cyber,cyber,网安,漏洞与告警,unknown,,multi,global,1,False,,,漏洞与告警,06-cyber-threat-intel.md
+AlienVault OTX,alienvault-otx,cyber,网安,威胁情报平台,api,,multi,global,0,True,,,威胁情报平台,06-cyber-threat-intel.md
+MISP,misp,cyber,网安,威胁情报平台,自建/api,,multi,global,1,False,,,威胁情报平台,06-cyber-threat-intel.md
+VirusTotal,virustotal,cyber,网安,威胁情报平台,api,,multi,global,0,True,,,威胁情报平台,06-cyber-threat-intel.md
+AbuseIPDB,abuseipdb,cyber,网安,威胁情报平台,api,,multi,global,1,False,,,威胁情报平台,06-cyber-threat-intel.md
+Shodan,shodan,cyber,网安,威胁情报平台,api,,multi,global,1,False,,,威胁情报平台,06-cyber-threat-intel.md
+GreyNoise,greynoise,cyber,网安,威胁情报平台,api,,multi,global,1,False,,,威胁情报平台,06-cyber-threat-intel.md
+URLhaus (abuse.ch),urlhaus-abuse-ch,cyber,网安,威胁情报平台,feed,,multi,global,0,True,,,威胁情报平台,06-cyber-threat-intel.md
+Feodo Tracker,feodo-tracker,cyber,网安,威胁情报平台,botnet_c2,,multi,global,0,True,,,威胁情报平台,06-cyber-threat-intel.md
+Ransomware.live,ransomware-live,cyber,网安,威胁情报平台,feed,,multi,global,0,True,,,威胁情报平台,06-cyber-threat-intel.md
+MalwareBazaar,malwarebazaar,cyber,网安,威胁情报平台,api,,multi,global,1,False,,,威胁情报平台,06-cyber-threat-intel.md
+ThreatFox,threatfox,cyber,网安,威胁情报平台,api,,multi,global,1,False,,,威胁情报平台,06-cyber-threat-intel.md
+PhishTank,phishtank,cyber,网安,威胁情报平台,api,,multi,global,1,False,,,威胁情报平台,06-cyber-threat-intel.md
+MITRE ATT&CK,mitre-att-ck,cyber,网安,威胁情报平台,json,,multi,global,0,True,,,威胁情报平台,06-cyber-threat-intel.md
+Sigma Rules,sigma-rules,cyber,网安,威胁情报平台,github,,multi,global,1,False,,,威胁情报平台,06-cyber-threat-intel.md
+Have I Been Pwned,have-i-been-pwned,cyber,网安,暗网与泄露（合规使用）,unknown,,multi,global,1,False,,泄露查询 API,暗网与泄露（合规使用）,06-cyber-threat-intel.md
+Intel471,intel471-cyber,cyber,网安,暗网与泄露（合规使用）,unknown,,multi,global,2,False,,付费,暗网与泄露（合规使用）,06-cyber-threat-intel.md
+Flashpoint,flashpoint,cyber,网安,暗网与泄露（合规使用）,unknown,,multi,global,2,False,,付费,暗网与泄露（合规使用）,06-cyber-threat-intel.md
+X (Twitter),x-twitter,social,社交/UGC,平台 API,unknown,v2 API 付费,multi,global,1,False,,,平台 API,07-social-sentiment-ugc.md
+Reddit,reddit,social,社交/UGC,平台 API,unknown,OAuth API,multi,global,0,True,,,平台 API,07-social-sentiment-ugc.md
+YouTube,youtube,social,社交/UGC,平台 API,unknown,Data API v3,multi,global,1,False,,,平台 API,07-social-sentiment-ugc.md
+Mastodon,mastodon,social,社交/UGC,平台 API,unknown,联邦 API,multi,global,2,False,,,平台 API,07-social-sentiment-ugc.md
+Bluesky,bluesky,social,社交/UGC,平台 API,unknown,AT Protocol,multi,global,2,False,,,平台 API,07-social-sentiment-ugc.md
+LinkedIn,linkedin,social,社交/UGC,平台 API,unknown,受限 API,multi,global,2,False,,,平台 API,07-social-sentiment-ugc.md
+Facebook/Meta,facebook-meta,social,社交/UGC,平台 API,unknown,受限,multi,global,2,False,,,平台 API,07-social-sentiment-ugc.md
+Telegram,telegram,social,社交/UGC,平台 API,unknown,Bot API,multi,global,1,False,,,平台 API,07-social-sentiment-ugc.md
+Discord,discord,social,社交/UGC,平台 API,unknown,Webhook/Bot,multi,global,2,False,,,平台 API,07-social-sentiment-ugc.md
+微博,source-social,social,社交/UGC,平台 API,unknown,开放平台,multi,global,1,False,,,平台 API,07-social-sentiment-ugc.md
+Bilibili,bilibili,social,社交/UGC,平台 API,unknown,,multi,global,2,False,,,平台 API,07-social-sentiment-ugc.md
+Hacker News,hacker-news,social,社交/UGC,平台 API,rss,https://hnrss.org/,multi,global,0,True,,,平台 API,07-social-sentiment-ugc.md
+Lobsters,lobsters,social,社交/UGC,平台 API,rss,https://lobste.rs/rss,multi,global,1,False,,,平台 API,07-social-sentiment-ugc.md
+Product Hunt,product-hunt,social,社交/UGC,平台 API,unknown,API,multi,global,2,False,,,平台 API,07-social-sentiment-ugc.md
+arXiv (CS/AI/Physics),arxiv-cs-ai-physics,research,学术/专利,预印本与论文,rss,https://rss.arxiv.org/rss/cs,multi,global,0,True,,,预印本与论文,08-academic-research-patents.md
+arXiv API,arxiv-api,research,学术/专利,预印本与论文,unknown,export.arxiv.org/api,multi,global,0,True,,,预印本与论文,08-academic-research-patents.md
+bioRxiv,biorxiv,research,学术/专利,预印本与论文,rss,https://connect.biorxiv.org/biorxiv_xml.php?subject=all,multi,global,1,False,,,预印本与论文,08-academic-research-patents.md
+medRxiv,medrxiv,research,学术/专利,预印本与论文,unknown,,multi,global,1,False,,,预印本与论文,08-academic-research-patents.md
+SSRN,ssrn,research,学术/专利,预印本与论文,unknown,,multi,global,1,False,,,预印本与论文,08-academic-research-patents.md
+Semantic Scholar,semantic-scholar,research,学术/专利,预印本与论文,unknown,API,multi,global,0,True,,,预印本与论文,08-academic-research-patents.md
+OpenAlex,openalex,research,学术/专利,预印本与论文,rss,https://api.openalex.org/,multi,global,0,True,,,预印本与论文,08-academic-research-patents.md
+PubMed,pubmed,research,学术/专利,预印本与论文,rss,https://pubmed.ncbi.nlm.nih.gov/rss/,multi,global,0,True,,,预印本与论文,08-academic-research-patents.md
+Europe PMC,europe-pmc,research,学术/专利,预印本与论文,unknown,API,multi,global,1,False,,,预印本与论文,08-academic-research-patents.md
+Google Scholar,google-scholar,research,学术/专利,预印本与论文,unknown,无官方 API,multi,global,2,False,,,预印本与论文,08-academic-research-patents.md
+CNKI,cnki,research,学术/专利,预印本与论文,unknown,,multi,global,2,False,,,预印本与论文,08-academic-research-patents.md
+万方/维普,source-research,research,学术/专利,预印本与论文,unknown,,multi,global,2,False,,,预印本与论文,08-academic-research-patents.md
+Google Patents,google-patents,research,学术/专利,专利,unknown,BigQuery/搜索,multi,global,1,False,,,专利,08-academic-research-patents.md
+USPTO,uspto,research,学术/专利,专利,unknown,API,multi,global,0,True,,,专利,08-academic-research-patents.md
+EPO Espacenet,epo-espacenet,research,学术/专利,专利,unknown,API,multi,global,1,False,,,专利,08-academic-research-patents.md
+WIPO Patentscope,wipo-patentscope,research,学术/专利,专利,unknown,API,multi,global,1,False,,,专利,08-academic-research-patents.md
+CNIPA 中国专利,cnipa,research,学术/专利,专利,unknown,付费/爬虫,multi,global,2,False,,,专利,08-academic-research-patents.md
+Nature News,nature-news,research,学术/专利,科研与政策,unknown,,multi,global,0,True,,,科研与政策,08-academic-research-patents.md
+Science Magazine,science-magazine,research,学术/专利,科研与政策,unknown,,multi,global,1,False,,,科研与政策,08-academic-research-patents.md
+Cell Press,cell-press,research,学术/专利,科研与政策,unknown,,multi,global,2,False,,,科研与政策,08-academic-research-patents.md
+IEEE Spectrum,ieee-spectrum,research,学术/专利,科研与政策,unknown,,multi,global,1,False,,,科研与政策,08-academic-research-patents.md
+ACM TechNews,acm-technews,research,学术/专利,科研与政策,unknown,,multi,global,1,False,,,科研与政策,08-academic-research-patents.md
+RAND Publications,rand-publications,research,学术/专利,科研与政策,unknown,,multi,global,0,True,,,科研与政策,08-academic-research-patents.md
+Brookings Research,brookings-research,research,学术/专利,科研与政策,unknown,,multi,global,0,True,,,科研与政策,08-academic-research-patents.md
+Oil Price,oil-price,vertical,垂直行业,能源与资源,rss,https://oilprice.com/rss/main,multi,global,0,True,,,能源与资源,09-industry-verticals.md
+Energy Intelligence,energy-intelligence,vertical,垂直行业,能源与资源,unknown,,multi,global,2,False,,,能源与资源,09-industry-verticals.md
+Platts / S&P Global,platts-s-p-global,vertical,垂直行业,能源与资源,unknown,,multi,global,2,False,,,能源与资源,09-industry-verticals.md
+EIA Today in Energy,eia-today-in-energy,vertical,垂直行业,能源与资源,unknown,,multi,global,0,True,,,能源与资源,09-industry-verticals.md
+IEA News,iea-news,vertical,垂直行业,能源与资源,unknown,,multi,global,0,True,,,能源与资源,09-industry-verticals.md
+OPEC Bulletin,opec-bulletin,vertical,垂直行业,能源与资源,unknown,,multi,global,1,False,,,能源与资源,09-industry-verticals.md
+Mining.com,mining-com,vertical,垂直行业,能源与资源,unknown,,multi,global,1,False,,,能源与资源,09-industry-verticals.md
+Renewables Now,renewables-now,vertical,垂直行业,能源与资源,unknown,,multi,global,1,False,,,能源与资源,09-industry-verticals.md
+Carbon Brief,carbon-brief,vertical,垂直行业,能源与资源,rss,https://www.carbonbrief.org/feed,multi,global,0,True,,,能源与资源,09-industry-verticals.md
+SemiAnalysis,semianalysis,vertical,垂直行业,半导体与硬件,unknown,,multi,global,0,True,,,半导体与硬件,09-industry-verticals.md
+AnandTech,anandtech,vertical,垂直行业,半导体与硬件,unknown,,multi,global,1,False,,,半导体与硬件,09-industry-verticals.md
+Tom's Hardware,tom-s-hardware,vertical,垂直行业,半导体与硬件,unknown,,multi,global,1,False,,,半导体与硬件,09-industry-verticals.md
+EE Times,ee-times,vertical,垂直行业,半导体与硬件,unknown,,multi,global,1,False,,,半导体与硬件,09-industry-verticals.md
+TrendForce,trendforce,vertical,垂直行业,半导体与硬件,unknown,,multi,global,2,False,,,半导体与硬件,09-industry-verticals.md
+IC Insights,ic-insights,vertical,垂直行业,半导体与硬件,unknown,,multi,global,2,False,,,半导体与硬件,09-industry-verticals.md
+STAT News,stat-news,vertical,垂直行业,医药与生物,unknown,,multi,global,0,True,,,医药与生物,09-industry-verticals.md
+FiercePharma,fiercepharma,vertical,垂直行业,医药与生物,unknown,,multi,global,0,True,,,医药与生物,09-industry-verticals.md
+Endpoints News,endpoints-news,vertical,垂直行业,医药与生物,unknown,,multi,global,0,True,,,医药与生物,09-industry-verticals.md
+BioPharma Dive,biopharma-dive,vertical,垂直行业,医药与生物,unknown,,multi,global,1,False,,,医药与生物,09-industry-verticals.md
+FDA News,fda-news-vertical,vertical,垂直行业,医药与生物,unknown,,multi,global,0,True,,,医药与生物,09-industry-verticals.md
+EMA News,ema-news,vertical,垂直行业,医药与生物,unknown,,multi,global,1,False,,,医药与生物,09-industry-verticals.md
+WHO Health Topics,who-health-topics,vertical,垂直行业,医药与生物,unknown,,multi,global,0,True,,,医药与生物,09-industry-verticals.md
+SpaceNews,spacenews,vertical,垂直行业,航天与防务工业,unknown,,multi,global,0,True,,,航天与防务工业,09-industry-verticals.md
+NASA Breaking News,nasa-breaking-news,vertical,垂直行业,航天与防务工业,unknown,,multi,global,0,True,,,航天与防务工业,09-industry-verticals.md
+ESA News,esa-news,vertical,垂直行业,航天与防务工业,unknown,,multi,global,0,True,,,航天与防务工业,09-industry-verticals.md
+SpaceX / 商业航天 RSS,spacex-rss,vertical,垂直行业,航天与防务工业,unknown,,multi,global,1,False,,,航天与防务工业,09-industry-verticals.md
+Aviation Week,aviation-week,vertical,垂直行业,航天与防务工业,unknown,,multi,global,2,False,,,航天与防务工业,09-industry-verticals.md
+USDA News,usda-news,vertical,垂直行业,农业与食品,unknown,,multi,global,0,True,,,农业与食品,09-industry-verticals.md
+FAO News,fao-news,vertical,垂直行业,农业与食品,unknown,,multi,global,0,True,,,农业与食品,09-industry-verticals.md
+Food Safety News,food-safety-news,vertical,垂直行业,农业与食品,unknown,,multi,global,1,False,,,农业与食品,09-industry-verticals.md
+AgFunder News,agfunder-news,vertical,垂直行业,农业与食品,unknown,,multi,global,1,False,,,农业与食品,09-industry-verticals.md
+Automotive News,automotive-news,vertical,垂直行业,汽车与交通,unknown,,multi,global,1,False,,,汽车与交通,09-industry-verticals.md
+Electrek,electrek,vertical,垂直行业,汽车与交通,unknown,,multi,global,0,True,,,汽车与交通,09-industry-verticals.md
+InsideEVs,insideevs,vertical,垂直行业,汽车与交通,unknown,,multi,global,1,False,,,汽车与交通,09-industry-verticals.md
+Railway Gazette,railway-gazette,vertical,垂直行业,汽车与交通,unknown,,multi,global,2,False,,,汽车与交通,09-industry-verticals.md
+CoStar / 付费,costar,vertical,垂直行业,房地产与建筑,unknown,,multi,global,2,False,,,房地产与建筑,09-industry-verticals.md
+Construction Dive,construction-dive,vertical,垂直行业,房地产与建筑,unknown,,multi,global,1,False,,,房地产与建筑,09-industry-verticals.md
+GamesIndustry.biz,gamesindustry-biz,vertical,垂直行业,游戏与娱乐,unknown,,multi,global,1,False,,,游戏与娱乐,09-industry-verticals.md
+Variety,variety,vertical,垂直行业,游戏与娱乐,unknown,,multi,global,1,False,,,游戏与娱乐,09-industry-verticals.md
+Hollywood Reporter,hollywood-reporter,vertical,垂直行业,游戏与娱乐,unknown,,multi,global,1,False,,,游戏与娱乐,09-industry-verticals.md
+Retail Dive,retail-dive,vertical,垂直行业,零售与消费,unknown,,multi,global,1,False,,,零售与消费,09-industry-verticals.md
+NRF News,nrf-news,vertical,垂直行业,零售与消费,unknown,,multi,global,1,False,,,零售与消费,09-industry-verticals.md
+36氪,36,vertical,垂直行业,零售与消费,unknown,,multi,global,1,False,,,零售与消费,09-industry-verticals.md
+虎嗅,source-vertical,vertical,垂直行业,零售与消费,unknown,,multi,global,1,False,,,零售与消费,09-industry-verticals.md
+Law360,law360,vertical,垂直行业,法律与合规,unknown,,multi,global,2,False,,,法律与合规,09-industry-verticals.md
+JD Supra,jd-supra,vertical,垂直行业,法律与合规,unknown,,multi,global,1,False,,,法律与合规,09-industry-verticals.md
+Lexology,lexology,vertical,垂直行业,法律与合规,unknown,,multi,global,1,False,,,法律与合规,09-industry-verticals.md
+NewsAPI.org,newsapi-org,aggregator,聚合/API,新闻聚合 API,rss,https://newsapi.org/,multi,global,0,True,,80k+ 源,新闻聚合 API,10-aggregators-apis.md
+GNews,gnews,aggregator,聚合/API,新闻聚合 API,rss,https://gnews.io/,multi,global,0,True,,,新闻聚合 API,10-aggregators-apis.md
+Currents API,currents-api,aggregator,聚合/API,新闻聚合 API,rss,https://currentsapi.services/,multi,global,1,False,,,新闻聚合 API,10-aggregators-apis.md
+Mediastack,mediastack,aggregator,聚合/API,新闻聚合 API,rss,https://mediastack.com/,multi,global,1,False,,,新闻聚合 API,10-aggregators-apis.md
+NewsData.io,newsdata-io,aggregator,聚合/API,新闻聚合 API,rss,https://newsdata.io/,multi,global,1,False,,,新闻聚合 API,10-aggregators-apis.md
+Bing News Search,bing-news-search,aggregator,聚合/API,新闻聚合 API,unknown,Azure,multi,global,2,False,,,新闻聚合 API,10-aggregators-apis.md
+Google News RSS,google-news-rss,aggregator,聚合/API,新闻聚合 API,unknown,`{lang}/rss/search?q=`,multi,global,0,True,,按关键词,新闻聚合 API,10-aggregators-apis.md
+Event Registry,event-registry,aggregator,聚合/API,新闻聚合 API,rss,https://eventregistry.org/,multi,global,0,True,,事件聚类,新闻聚合 API,10-aggregators-apis.md
+Aylien News API,aylien-news-api,aggregator,聚合/API,新闻聚合 API,unknown,,multi,global,2,False,,NLP 增强,新闻聚合 API,10-aggregators-apis.md
+ContextualWeb News,contextualweb-news,aggregator,聚合/API,新闻聚合 API,unknown,,multi,global,2,False,,,新闻聚合 API,10-aggregators-apis.md
+GDELT 2.0,gdelt-2-0,aggregator,聚合/API,全球事件与 NLP,gdelt,https://blog.gdeltproject.org/gdelt-2-0-our-global-world-in-realtime/,multi,global,0,True,,,全球事件与 NLP,10-aggregators-apis.md
+GDELT GKG,gdelt-gkg,aggregator,聚合/API,全球事件与 NLP,unknown,全球知识图谱,multi,global,0,True,,,全球事件与 NLP,10-aggregators-apis.md
+Common Crawl News,common-crawl-news,aggregator,聚合/API,全球事件与 NLP,unknown,存档,multi,global,2,False,,,全球事件与 NLP,10-aggregators-apis.md
+Media Cloud,media-cloud,aggregator,聚合/API,全球事件与 NLP,rss,https://mediacloud.org/,multi,global,1,False,,,全球事件与 NLP,10-aggregators-apis.md
+CrowdTangle (Meta),crowdtangle-meta,aggregator,聚合/API,全球事件与 NLP,unknown,受限,multi,global,2,False,,,全球事件与 NLP,10-aggregators-apis.md
+FreshRSS / Miniflux,freshrss-miniflux,aggregator,聚合/API,RSS/OPML 工具链,unknown,,multi,global,1,False,,,RSS/OPML 工具链,10-aggregators-apis.md
+Feedly API,feedly-api,aggregator,聚合/API,RSS/OPML 工具链,unknown,,multi,global,1,False,,,RSS/OPML 工具链,10-aggregators-apis.md
+Inoreader API,inoreader-api,aggregator,聚合/API,RSS/OPML 工具链,unknown,,multi,global,1,False,,,RSS/OPML 工具链,10-aggregators-apis.md
+RSSHub,rsshub,aggregator,聚合/API,RSS/OPML 工具链,unknown,,multi,global,1,False,,,RSS/OPML 工具链,10-aggregators-apis.md
+Huginn,huginn,aggregator,聚合/API,RSS/OPML 工具链,unknown,,multi,global,1,False,,,RSS/OPML 工具链,10-aggregators-apis.md
+n8n / Zapier,n8n-zapier,aggregator,聚合/API,RSS/OPML 工具链,unknown,,multi,global,1,False,,,RSS/OPML 工具链,10-aggregators-apis.md
+Wikidata SPARQL,wikidata-sparql,aggregator,聚合/API,元数据与实体,unknown,,multi,global,0,True,,,元数据与实体,10-aggregators-apis.md
+DBpedia,dbpedia,aggregator,聚合/API,元数据与实体,unknown,,multi,global,1,False,,,元数据与实体,10-aggregators-apis.md
+GeoNames,geonames,aggregator,聚合/API,元数据与实体,unknown,,multi,global,0,True,,,元数据与实体,10-aggregators-apis.md
+OpenStreetMap Nominatim,openstreetmap-nominatim,aggregator,聚合/API,元数据与实体,unknown,,multi,global,0,True,,,元数据与实体,10-aggregators-apis.md
+spaCy NER,spacy-ner,aggregator,聚合/API,元数据与实体,unknown,,multi,global,0,True,,,元数据与实体,10-aggregators-apis.md
+OpenAI / Claude,openai-claude,aggregator,聚合/API,元数据与实体,unknown,,multi,global,1,False,,,元数据与实体,10-aggregators-apis.md
+MarineTraffic,marinetraffic,maritime,海事/航空/卫星,海事,unknown,,multi,global,1,False,,AIS 船位,海事,11-maritime-aviation-satellite.md
+VesselFinder,vesselfinder,maritime,海事/航空/卫星,海事,unknown,,multi,global,1,False,,,海事,11-maritime-aviation-satellite.md
+AISHub,aishub,maritime,海事/航空/卫星,海事,unknown,免费/付费,multi,global,1,False,,,海事,11-maritime-aviation-satellite.md
+FleetMon,fleetmon,maritime,海事/航空/卫星,海事,unknown,API,multi,global,2,False,,,海事,11-maritime-aviation-satellite.md
+Lloyd's List,lloyd-s-list,maritime,海事/航空/卫星,海事,unknown,,multi,global,2,False,,航运新闻,海事,11-maritime-aviation-satellite.md
+Splash247,splash247,maritime,海事/航空/卫星,海事,unknown,,multi,global,1,False,,,海事,11-maritime-aviation-satellite.md
+gCaptain,gcaptain,maritime,海事/航空/卫星,海事,unknown,,multi,global,0,True,,,海事,11-maritime-aviation-satellite.md
+IMO News,imo-news,maritime,海事/航空/卫星,海事,unknown,,multi,global,0,True,,,海事,11-maritime-aviation-satellite.md
+Panama Canal / Suez 公告,panama-canal-suez,maritime,海事/航空/卫星,海事,unknown,,multi,global,1,False,,航道,海事,11-maritime-aviation-satellite.md
+FlightAware,flightaware,maritime,海事/航空/卫星,航空,unknown,API,multi,global,1,False,,,航空,11-maritime-aviation-satellite.md
+FlightRadar24,flightradar24,maritime,海事/航空/卫星,航空,unknown,,multi,global,1,False,,,航空,11-maritime-aviation-satellite.md
+OpenSky Network,opensky-network,maritime,海事/航空/卫星,航空,rss,https://opensky-network.org/apidoc/,multi,global,0,True,,,航空,11-maritime-aviation-satellite.md
+ADS-B Exchange,ads-b-exchange,maritime,海事/航空/卫星,航空,unknown,,multi,global,2,False,,,航空,11-maritime-aviation-satellite.md
+NOTAM (FAA),notam-faa,maritime,海事/航空/卫星,航空,unknown,feed,multi,global,1,False,,,航空,11-maritime-aviation-satellite.md
+Eurocontrol,eurocontrol,maritime,海事/航空/卫星,航空,unknown,,multi,global,1,False,,,航空,11-maritime-aviation-satellite.md
+IATA Press,iata-press,maritime,海事/航空/卫星,航空,unknown,,multi,global,1,False,,,航空,11-maritime-aviation-satellite.md
+Sentinel Hub,sentinel-hub,maritime,海事/航空/卫星,卫星与遥感,unknown,,multi,global,1,False,,欧空局,卫星与遥感,11-maritime-aviation-satellite.md
+NASA FIRMS,nasa-firms,maritime,海事/航空/卫星,卫星与遥感,unknown,,multi,global,0,True,,火点,卫星与遥感,11-maritime-aviation-satellite.md
+NOAA GOES,noaa-goes,maritime,海事/航空/卫星,卫星与遥感,unknown,,multi,global,0,True,,气象卫星,卫星与遥感,11-maritime-aviation-satellite.md
+Planet Labs,planet-labs,maritime,海事/航空/卫星,卫星与遥感,unknown,,multi,global,2,False,,商业影像,卫星与遥感,11-maritime-aviation-satellite.md
+Maxar,maxar,maritime,海事/航空/卫星,卫星与遥感,unknown,,multi,global,2,False,,,卫星与遥感,11-maritime-aviation-satellite.md
+Copernicus EMS,copernicus-ems,maritime,海事/航空/卫星,卫星与遥感,unknown,,multi,global,0,True,,灾害,卫星与遥感,11-maritime-aviation-satellite.md
+Orbital Focus / N2YO,orbital-focus-n2yo,maritime,海事/航空/卫星,卫星与遥感,unknown,,multi,global,1,False,,在轨物体,卫星与遥感,11-maritime-aviation-satellite.md
+Space-Track.org,space-track-org,maritime,海事/航空/卫星,卫星与遥感,unknown,,multi,global,1,False,,需账号,卫星与遥感,11-maritime-aviation-satellite.md
+CelesTrak,celestrak,maritime,海事/航空/卫星,卫星与遥感,unknown,,multi,global,0,True,,TLE 轨道,卫星与遥感,11-maritime-aviation-satellite.md
+ADSB Exchange 军用过滤,adsb-exchange,maritime,海事/航空/卫星,军事态势（开源）,unknown,,multi,global,1,False,,,军事态势（开源）,11-maritime-aviation-satellite.md
+USNI Fleet Tracker,usni-fleet-tracker,maritime,海事/航空/卫星,军事态势（开源）,unknown,,multi,global,0,True,,,军事态势（开源）,11-maritime-aviation-satellite.md
+shipspotting / 开源 AIS 异常,shipspotting-ais,maritime,海事/航空/卫星,军事态势（开源）,unknown,,multi,global,2,False,,,军事态势（开源）,11-maritime-aviation-satellite.md
+OFAC SDN,ofac-sdn-compliance,compliance,制裁/法律,制裁名单,rss,https://sanctionssearch.ofac.treas.gov/,multi,global,0,True,,,制裁名单,12-sanctions-legal-pep.md
+OFAC Consolidated,ofac-consolidated,compliance,制裁/法律,制裁名单,unknown,treasury.gov,multi,global,0,True,,,制裁名单,12-sanctions-legal-pep.md
+EU Sanctions Map,eu-sanctions-map,compliance,制裁/法律,制裁名单,rss,https://www.sanctionsmap.eu/,multi,global,0,True,,,制裁名单,12-sanctions-legal-pep.md
+UK OFSI,uk-ofsi-compliance,compliance,制裁/法律,制裁名单,unknown,gov.uk,multi,global,0,True,,,制裁名单,12-sanctions-legal-pep.md
+UN Security Council Sanctions,un-security-council-sanctions,compliance,制裁/法律,制裁名单,unknown,un.org,multi,global,0,True,,,制裁名单,12-sanctions-legal-pep.md
+BIS Entity List,bis-entity-list-compliance,compliance,制裁/法律,制裁名单,unknown,bis.doc.gov,multi,global,0,True,,,制裁名单,12-sanctions-legal-pep.md
+BIS Denied Persons,bis-denied-persons,compliance,制裁/法律,制裁名单,unknown,bis.doc.gov,multi,global,1,False,,,制裁名单,12-sanctions-legal-pep.md
+Australia DFAT Sanctions,australia-dfat-sanctions,compliance,制裁/法律,制裁名单,unknown,1,multi,global,1,False,,,制裁名单,12-sanctions-legal-pep.md
+Canada SEMA,canada-sema,compliance,制裁/法律,制裁名单,unknown,1,multi,global,1,False,,,制裁名单,12-sanctions-legal-pep.md
+Japan METI End User List,japan-meti-end-user-list,compliance,制裁/法律,制裁名单,unknown,2,multi,global,1,False,,,制裁名单,12-sanctions-legal-pep.md
+中国不可靠实体清单,source-compliance,compliance,制裁/法律,制裁名单,unknown,商务部,multi,global,1,False,,,制裁名单,12-sanctions-legal-pep.md
+OpenSanctions,opensanctions,compliance,制裁/法律,PEP 与 KYC,unknown,,multi,global,0,True,,聚合全球制裁+PEP,PEP 与 KYC,12-sanctions-legal-pep.md
+Wikidata Politicians,wikidata-politicians,compliance,制裁/法律,PEP 与 KYC,unknown,,multi,global,1,False,,,PEP 与 KYC,12-sanctions-legal-pep.md
+EveryPolitician (存档),everypolitician,compliance,制裁/法律,PEP 与 KYC,unknown,,multi,global,2,False,,,PEP 与 KYC,12-sanctions-legal-pep.md
+WorldCheck (Refinitiv),worldcheck-refinitiv,compliance,制裁/法律,PEP 与 KYC,unknown,,multi,global,2,False,,付费,PEP 与 KYC,12-sanctions-legal-pep.md
+Dow Jones Risk,dow-jones-risk,compliance,制裁/法律,PEP 与 KYC,unknown,,multi,global,2,False,,付费,PEP 与 KYC,12-sanctions-legal-pep.md
+ComplyAdvantage,complyadvantage,compliance,制裁/法律,PEP 与 KYC,unknown,,multi,global,2,False,,API,PEP 与 KYC,12-sanctions-legal-pep.md
+US CourtListener,us-courtlistener,compliance,制裁/法律,法院与立法,unknown,,multi,global,0,True,,,法院与立法,12-sanctions-legal-pep.md
+PACER (美国联邦法院),pacer,compliance,制裁/法律,法院与立法,unknown,,multi,global,1,False,,,法院与立法,12-sanctions-legal-pep.md
+EUR-Lex,eur-lex-compliance,compliance,制裁/法律,法院与立法,unknown,,multi,global,0,True,,,法院与立法,12-sanctions-legal-pep.md
+UK Legislation.gov.uk,uk-legislation-gov-uk,compliance,制裁/法律,法院与立法,unknown,,multi,global,0,True,,,法院与立法,12-sanctions-legal-pep.md
+ICIJ Offshore Leaks,icij-offshore-leaks,compliance,制裁/法律,反腐与透明,unknown,,multi,global,0,True,,,反腐与透明,12-sanctions-legal-pep.md
+Panama Papers 索引,panama-papers,compliance,制裁/法律,反腐与透明,unknown,,multi,global,0,True,,,反腐与透明,12-sanctions-legal-pep.md
+OCCRP Aleph,occrp-aleph,compliance,制裁/法律,反腐与透明,unknown,,multi,global,0,True,,,反腐与透明,12-sanctions-legal-pep.md
+Transparency International,transparency-international,compliance,制裁/法律,反腐与透明,unknown,,multi,global,0,True,,,反腐与透明,12-sanctions-legal-pep.md
+Global Witness,global-witness,compliance,制裁/法律,反腐与透明,unknown,,multi,global,0,True,,,反腐与透明,12-sanctions-legal-pep.md
+Wassenaar Arrangement,wassenaar-arrangement,compliance,制裁/法律,出口管制与贸易合规,unknown,,multi,global,1,False,,,出口管制与贸易合规,12-sanctions-legal-pep.md
+ITAR/EAR 更新 (State/Commerce),itar-ear-state-commerce,compliance,制裁/法律,出口管制与贸易合规,unknown,,multi,global,0,True,,,出口管制与贸易合规,12-sanctions-legal-pep.md
+Dual-use 清单 EU,dual-use-eu,compliance,制裁/法律,出口管制与贸易合规,unknown,,multi,global,1,False,,,出口管制与贸易合规,12-sanctions-legal-pep.md
+ReliefWeb,reliefweb-humanitarian,humanitarian,人道/灾害,人道主义,rss,https://reliefweb.int/rss,multi,global,0,True,,,人道主义,13-humanitarian-disaster-weather.md
+OCHA Situation Reports,ocha-situation-reports,humanitarian,人道/灾害,人道主义,unknown,,multi,global,0,True,,,人道主义,13-humanitarian-disaster-weather.md
+UNHCR News,unhcr-news,humanitarian,人道/灾害,人道主义,unknown,,multi,global,0,True,,,人道主义,13-humanitarian-disaster-weather.md
+UNICEF Press,unicef-press,humanitarian,人道/灾害,人道主义,unknown,,multi,global,0,True,,,人道主义,13-humanitarian-disaster-weather.md
+WFP News,wfp-news,humanitarian,人道/灾害,人道主义,unknown,,multi,global,0,True,,,人道主义,13-humanitarian-disaster-weather.md
+ICRC News,icrc-news,humanitarian,人道/灾害,人道主义,unknown,,multi,global,0,True,,,人道主义,13-humanitarian-disaster-weather.md
+MSF / Doctors Without Borders,msf-doctors-without-borders,humanitarian,人道/灾害,人道主义,unknown,,multi,global,0,True,,,人道主义,13-humanitarian-disaster-weather.md
+IFRC,ifrc,humanitarian,人道/灾害,人道主义,unknown,,multi,global,0,True,,,人道主义,13-humanitarian-disaster-weather.md
+ACAPS,acaps,humanitarian,人道/灾害,人道主义,rss,https://www.acaps.org/,multi,global,1,False,,,人道主义,13-humanitarian-disaster-weather.md
+Humanitarian Data Exchange (HDX),humanitarian-data-exchange-hdx,humanitarian,人道/灾害,人道主义,unknown,API,multi,global,0,True,,,人道主义,13-humanitarian-disaster-weather.md
+USGS Earthquake,usgs-earthquake-humanitarian,humanitarian,人道/灾害,灾害,rss,https://earthquake.usgs.gov/earthquakes/feed/,multi,global,0,True,,,灾害,13-humanitarian-disaster-weather.md
+GDACS,gdacs,humanitarian,人道/灾害,灾害,rss,https://www.gdacs.org/,multi,global,0,True,,,灾害,13-humanitarian-disaster-weather.md
+EM-DAT (CRED),em-dat-cred,humanitarian,人道/灾害,灾害,unknown,1,multi,global,1,False,,,灾害,13-humanitarian-disaster-weather.md
+NASA EONET,nasa-eonet,humanitarian,人道/灾害,灾害,unknown,自然事件,multi,global,0,True,,,灾害,13-humanitarian-disaster-weather.md
+Copernicus EMS,copernicus-ems-humanitarian,humanitarian,人道/灾害,灾害,unknown,0,multi,global,1,False,,,灾害,13-humanitarian-disaster-weather.md
+FEMA,fema,humanitarian,人道/灾害,灾害,unknown,,multi,global,1,False,,,灾害,13-humanitarian-disaster-weather.md
+Global Disaster Alert (GDACS),global-disaster-alert-gdacs,humanitarian,人道/灾害,灾害,unknown,,multi,global,0,True,,,灾害,13-humanitarian-disaster-weather.md
+OpenWeatherMap,openweathermap,humanitarian,人道/灾害,气象与气候,unknown,API,multi,global,0,True,,,气象与气候,13-humanitarian-disaster-weather.md
+NOAA Weather,noaa-weather,humanitarian,人道/灾害,气象与气候,unknown,API,multi,global,0,True,,,气象与气候,13-humanitarian-disaster-weather.md
+ECMWF,ecmwf,humanitarian,人道/灾害,气象与气候,unknown,1,multi,global,1,False,,,气象与气候,13-humanitarian-disaster-weather.md
+MeteoAlarm (EU),meteoalarm-eu,humanitarian,人道/灾害,气象与气候,unknown,,multi,global,1,False,,,气象与气候,13-humanitarian-disaster-weather.md
+Tropical Tidbits,tropical-tidbits,humanitarian,人道/灾害,气象与气候,unknown,1,multi,global,1,False,,,气象与气候,13-humanitarian-disaster-weather.md
+Weather Underground,weather-underground,humanitarian,人道/灾害,气象与气候,unknown,1,multi,global,1,False,,,气象与气候,13-humanitarian-disaster-weather.md
+中国气象局,source-humanitarian,humanitarian,人道/灾害,气象与气候,unknown,1,multi,global,1,False,,,气象与气候,13-humanitarian-disaster-weather.md
+日本气象厅 JMA,jma,humanitarian,人道/灾害,气象与气候,unknown,1,multi,global,1,False,,,气象与气候,13-humanitarian-disaster-weather.md
+WHO Disease Outbreak News,who-disease-outbreak-news,humanitarian,人道/灾害,疫情与健康紧急,unknown,,multi,global,0,True,,,疫情与健康紧急,13-humanitarian-disaster-weather.md
+ProMED-mail,promed-mail,humanitarian,人道/灾害,疫情与健康紧急,unknown,,multi,global,0,True,,,疫情与健康紧急,13-humanitarian-disaster-weather.md
+CDC Health Alert Network,cdc-health-alert-network,humanitarian,人道/灾害,疫情与健康紧急,unknown,,multi,global,0,True,,,疫情与健康紧急,13-humanitarian-disaster-weather.md
+ECDC,ecdc,humanitarian,人道/灾害,疫情与健康紧急,unknown,,multi,global,0,True,,,疫情与健康紧急,13-humanitarian-disaster-weather.md
+GISAID (病毒序列),gisaid,humanitarian,人道/灾害,疫情与健康紧急,unknown,,multi,global,1,False,,,疫情与健康紧急,13-humanitarian-disaster-weather.md
+IAEA Incident Reports,iaea-incident-reports,humanitarian,人道/灾害,核与化学事故,unknown,,multi,global,0,True,,,核与化学事故,13-humanitarian-disaster-weather.md
+NRC (US Nuclear),nrc-us-nuclear,humanitarian,人道/灾害,核与化学事故,unknown,,multi,global,0,True,,,核与化学事故,13-humanitarian-disaster-weather.md
+新华社,source-china,china,大中华区,官方与权威媒体,rss,http://www.xinhuanet.com/rss/,multi,global,0,True,,多频道,官方与权威媒体,14-china-greater-china.md
+央行/PBOC,pboc,china,大中华区,官方与权威媒体,unknown,pbc.gov.cn,multi,global,0,True,,货政,官方与权威媒体,14-china-greater-china.md
+台湾中央社 CNA,cna,china,大中华区,官方与权威媒体,rss,https://www.cna.com.tw/rss/,multi,global,0,True,,,官方与权威媒体,14-china-greater-china.md
+财新 Caixin,caixin,china,大中华区,财经商业,unknown,,multi,global,0,True,,,财经商业,14-china-greater-china.md
+21世纪经济报道,21,china,大中华区,财经商业,unknown,,multi,global,1,False,,,财经商业,14-china-greater-china.md
+36氪,36-china,china,大中华区,科技与产业,unknown,,multi,global,0,True,,,科技与产业,14-china-greater-china.md
+RAND Corporation,rand-corporation,thinktank,智库,防务/政策,rss,https://www.rand.org/rss.xml,multi,global,0,True,,,美国,15-think-tanks-policy.md
+Brookings,brookings,thinktank,智库,综合,unknown,,multi,global,0,True,,,美国,15-think-tanks-policy.md
+CSIS,csis,thinktank,智库,地缘,unknown,,multi,global,0,True,,,美国,15-think-tanks-policy.md
+Carnegie Endowment,carnegie-endowment,thinktank,智库,国际,unknown,,multi,global,0,True,,,美国,15-think-tanks-policy.md
+CFR (Council on Foreign Relations),cfr-council-on-foreign-relations,thinktank,智库,外交,unknown,,multi,global,0,True,,,美国,15-think-tanks-policy.md
+Atlantic Council,atlantic-council,thinktank,智库,北约/欧洲,unknown,,multi,global,0,True,,,美国,15-think-tanks-policy.md
+Wilson Center,wilson-center,thinktank,智库,历史/地缘,unknown,,multi,global,0,True,,,美国,15-think-tanks-policy.md
+Heritage Foundation,heritage-foundation,thinktank,智库,保守派,unknown,,multi,global,1,False,,,美国,15-think-tanks-policy.md
+Cato Institute,cato-institute,thinktank,智库,自由派,unknown,,multi,global,1,False,,,美国,15-think-tanks-policy.md
+Pew Research,pew-research,thinktank,智库,民调,unknown,,multi,global,0,True,,,美国,15-think-tanks-policy.md
+Stimson Center,stimson-center,thinktank,智库,亚洲,unknown,,multi,global,1,False,,,美国,15-think-tanks-policy.md
+Hudson Institute,hudson-institute,thinktank,智库,1,unknown,,multi,global,1,False,,,美国,15-think-tanks-policy.md
+American Enterprise Institute,american-enterprise-institute,thinktank,智库,1,unknown,,multi,global,1,False,,,美国,15-think-tanks-policy.md
+Chatham House (IISS 同档),chatham-house-iiss,thinktank,智库,欧洲,unknown,,multi,global,0,True,,,欧洲,15-think-tanks-policy.md
+ECFR (European Council on Foreign Relations),ecfr-european-council-on-foreign-relations,thinktank,智库,欧洲,unknown,,multi,global,0,True,,,欧洲,15-think-tanks-policy.md
+IISS,iiss-thinktank,thinktank,智库,欧洲,unknown,,multi,global,0,True,,,欧洲,15-think-tanks-policy.md
+Bruegel,bruegel,thinktank,智库,欧洲,unknown,,multi,global,1,False,,,欧洲,15-think-tanks-policy.md
+SWP (German),swp-german,thinktank,智库,欧洲,unknown,,multi,global,1,False,,,欧洲,15-think-tanks-policy.md
+IFRI (French),ifri-french,thinktank,智库,欧洲,unknown,,multi,global,1,False,,,欧洲,15-think-tanks-policy.md
+Clingendael (Dutch),clingendael-dutch,thinktank,智库,欧洲,unknown,,multi,global,1,False,,,欧洲,15-think-tanks-policy.md
+Lowy Institute (Australia),lowy-institute-australia,thinktank,智库,亚太,unknown,,multi,global,0,True,,,亚太,15-think-tanks-policy.md
+ASPI (Australian Strategic Policy),aspi-australian-strategic-policy,thinktank,智库,亚太,unknown,,multi,global,0,True,,,亚太,15-think-tanks-policy.md
+RSIS (Singapore),rsis-singapore,thinktank,智库,亚太,unknown,,multi,global,0,True,,,亚太,15-think-tanks-policy.md
+JIIA (Japan),jiia-japan,thinktank,智库,亚太,unknown,,multi,global,1,False,,,亚太,15-think-tanks-policy.md
+ORF (India Observer Research),orf-india-observer-research,thinktank,智库,亚太,unknown,,multi,global,1,False,,,亚太,15-think-tanks-policy.md
+CICIR 中国现代国际关系研究院,cicir,thinktank,智库,亚太,unknown,,multi,global,1,False,,,亚太,15-think-tanks-policy.md
+CASS 社科院,cass,thinktank,智库,亚太,unknown,,multi,global,1,False,,,亚太,15-think-tanks-policy.md
+清华战略与安全研究中心,source-thinktank,thinktank,智库,亚太,unknown,,multi,global,1,False,,,亚太,15-think-tanks-policy.md
+SIPRI,sipri-thinktank,thinktank,智库,军备,unknown,,multi,global,0,True,,,专题智库,15-think-tanks-policy.md
+NTI,nti-thinktank,thinktank,智库,核,unknown,,multi,global,0,True,,,专题智库,15-think-tanks-policy.md
+FAS (Federation of American Scientists),fas-federation-of-american-scientists,thinktank,智库,核/情报,unknown,,multi,global,0,True,,,专题智库,15-think-tanks-policy.md
+Bulletin of Atomic Scientists,bulletin-of-atomic-scientists-thinktank,thinktank,智库,核时钟,unknown,,multi,global,0,True,,,专题智库,15-think-tanks-policy.md
+ICCT,icct,thinktank,智库,反恐,unknown,,multi,global,1,False,,,专题智库,15-think-tanks-policy.md
+New America,new-america,thinktank,智库,科技政策,unknown,,multi,global,1,False,,,专题智库,15-think-tanks-policy.md
+Bellingcat (调查),bellingcat-thinktank,thinktank,智库,OSINT,unknown,,multi,global,0,True,,,专题智库,15-think-tanks-policy.md
+Long War Journal (FDD),long-war-journal-fdd,thinktank,智库,反恐,unknown,,multi,global,1,False,,,专题智库,15-think-tanks-policy.md
+War on the Rocks,war-on-the-rocks,thinktank,智库,军事战略,unknown,,multi,global,0,True,,,专题智库,15-think-tanks-policy.md
+Peterson Institute (PIIE),peterson-institute-piie,thinktank,智库,经济智库,unknown,,multi,global,0,True,,,经济智库,15-think-tanks-policy.md
+NBER Working Papers,nber-working-papers,thinktank,智库,经济智库,unknown,,multi,global,0,True,,,经济智库,15-think-tanks-policy.md
+IMF Research,imf-research,thinktank,智库,经济智库,unknown,,multi,global,0,True,,,经济智库,15-think-tanks-policy.md
+BIS Working Papers,bis-working-papers,thinktank,智库,经济智库,unknown,,multi,global,1,False,,,经济智库,15-think-tanks-policy.md
+中国金融四十人论坛 CF40,cf40,thinktank,智库,经济智库,unknown,,multi,global,1,False,,,经济智库,15-think-tanks-policy.md

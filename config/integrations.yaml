@@ -1,0 +1,32 @@
+# External integrations — synced via scripts/sync-integrations.ps1
+
+twelve_factor_agents:
+  repo: https://github.com/humanlayer/12-factor-agents
+  license: Apache-2.0
+  role: engineering_principles
+  local_docs: docs/standards/12-factor-agents.md
+  local_runtime: services/agent/
+
+opc_methodology:
+  repo: https://github.com/easychen/opc-methodology
+  license: CC-BY-NC-SA-4.0
+  role: business_methodology
+  local_docs: docs/standards/opc-methodology.md
+  sync_target: skills/opc/
+  output_dir: opc-doc/
+  note: Skills synced locally; respect NC license for commercial use
+
+agency_agents:
+  repo: https://github.com/msitarzewski/agency-agents
+  license: MIT
+  role: agent_personas
+  local_docs: docs/standards/agency-agents.md
+  sync_target: agents/agency/
+  divisions:
+    - engineering
+    - design
+    - product
+    - marketing
+    - project-management
+    - testing
+    - strategy

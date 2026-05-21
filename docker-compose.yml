@@ -1,0 +1,128 @@
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-intel_hub}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache & Message Broker
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - backend/.env
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/intel_hub
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+      PROMPTS_DIR: /app/prompts
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # Next.js Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    depends_on:
+      - backend
+
+  # Celery Worker
+  worker:
+    build:
+      context: .
+      dockerfile: docker/worker/Dockerfile
+    restart: unless-stopped
+    env_file:
+      - backend/.env
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/intel_hub
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+      PROMPTS_DIR: /app/prompts
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # Celery Beat Scheduler (optional)
+  beat:
+    build:
+      context: .
+      dockerfile: docker/worker/Dockerfile
+    restart: unless-stopped
+    command: celery -A workers.celery_app beat --loglevel=info
+    env_file:
+      - backend/.env
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/intel_hub
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+      PROMPTS_DIR: /app/prompts
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # RSSHub — optional X/social → RSS bridge (enable for rsshub-x seeds)
+  rsshub:
+    image: diygod/rsshub:latest
+    restart: unless-stopped
+    ports:
+      - "1200:1200"
+    environment:
+      NODE_ENV: production
+      CACHE_TYPE: redis
+      REDIS_URL: redis://redis:6379/2
+    depends_on:
+      redis:
+        condition: service_healthy
+    profiles:
+      - rsshub
+
+volumes:
+  postgres_data:
+  redis_data:

@@ -81,50 +81,123 @@ T4  Codex             D1→D5 (test + ops + review)
 
 ## 4. Sprint S3 · M6 Commercial Auth Foundation
 
-**触发条件：** S1 (M5) DONE，且老板表态愿意把 Hub 让外部账号使用。
-
-> 这一步把 `REVIEW.md` 里"商业 Auth 未定义"和 BACKLOG "Commercial auth ADR" 一起结清。**先 ADR 再代码。**
+**触发条件：** S1 (M5) DONE。  
+**核心决策（ADR-20260521-03 Accepted upon S1 DONE）：** JWT (HS256) + httpOnly Cookie + CSRF 双提交；RBAC 三档 `admin/analyst/viewer`；多租户列 `tenant_id` 全表预留（v1 单租户 `default`）；首管理员 env 引导；bcrypt rounds=12；refresh 黑名单 Redis；公开白名单 `/health /ping /docs /openapi.json /auth/*`。
 
 ### Phase 排序（强串行）
 
 ```text
-M6-ADR  Master  写鉴权 ADR + 任务拆解
-  └─→ M6-A  Windsurf Backend  User / Session / JWT scaffold
-  └─→ M6-B  Windsurf Backend  保护现有 /api/v1 路由 + RBAC
-        └─→ M6-C Windsurf Frontend  登录页 + 受保护路由 + 401 处理
-              └─→ M6-D Codex  测试 / 部署 / 文档
+M6-ADR  Master   ADR Proposed→Accepted + PRD §11 + 修订下游卡（若需要）
+  └─→ M6-A  Windsurf Backend  User + JWT + auth router + tenant 列迁移
+        └─→ M6-B  Windsurf Backend  注入 current_user + tenant 过滤 + RBAC 矩阵
+              └─→ M6-C Windsurf Frontend  /login + AuthProvider + middleware + RoleGate
+                    └─→ M6-D Codex  鉴权测试 + RBAC 矩阵测试 + 部署文档 + CI 密钥校验
 ```
 
-| Task ID | 员工 | Owner Skill | 关键交付 |
-|---------|------|-------------|----------|
-| TASK-20260601-M6-ADR | Cursor | Architecture | `DECISIONS.md` ADR：JWT vs Session、单租户 vs 多租户、`OPENAI_API_KEY` 是否对租户透明 |
-| TASK-20260601-M6-A | Windsurf · Backend | Backend Skill | `backend/app/modules/auth/**`、`alembic` 用户表迁移、`/api/v1/auth/{login,logout,me}` |
-| TASK-20260601-M6-B | Windsurf · Backend | Backend Skill | FastAPI dependency `current_user`，给 sources/articles/alerts 加保护；管理员-only 接口标注 |
-| TASK-20260601-M6-C | Windsurf · Frontend | Frontend Skill | `/login`、`AuthProvider`、`apps/web/middleware.ts` 路由守卫、401 跳转 |
-| TASK-20260601-M6-D | Codex | Test + Deployment + Documentation | `tests/test_auth.py`、`docs/api.md` 鉴权章节、`docs/deployment.md` JWT secret 配置、`docker-compose` 注入 `JWT_SECRET` |
+| Task ID | 员工 | Owner Skill | 关键交付 | 卡片 |
+|---------|------|-------------|----------|------|
+| TASK-20260601-M6-ADR | Cursor | Architecture | ADR Accepted + PRD §11 权限矩阵 | `.multi-agent/task-cards/TASK-20260601-M6-ADR.md` |
+| TASK-20260601-M6-A | Windsurf · Backend | Backend Skill | `auth/**` + JWT + bootstrap admin + 多租户列迁移 | `TASK-20260601-M6-A.md` |
+| TASK-20260601-M6-B | Windsurf · Backend | Backend Skill | 12 业务路由加保护 + RBAC 矩阵 + tenant_scoped_query 工具 | `TASK-20260601-M6-B.md` |
+| TASK-20260601-M6-C | Windsurf · Frontend | Frontend Skill | `/login` + middleware + AuthProvider + RoleGate + 401 自动 refresh | `TASK-20260601-M6-C.md` |
+| TASK-20260601-M6-D | Codex | Test+Deploy+Doc | `test_auth.py / test_rbac.py / test_tenant_isolation.py` + JWT_SECRET 校验 + docker-compose.prod | `TASK-20260601-M6-D.md` |
 
-**老板验收：** 公网部署后未登录访问 dashboard → 跳 `/login`；管理员能创建用户；分析师只读。
+**老板验收：**
+- 公网部署后未登录访问 dashboard → 跳 `/login`
+- admin 创建 analyst/viewer 用户
+- viewer 看 sources 但无删除按钮；尝试 DELETE 返回 403
+- A 租户用户读不到 B 租户数据（虽然 v1 默认 `default` 单租户，列已就位）
 
-## 5. Sprint S4 · M7 Stickiness Phase 2（四选一）
+## 5. Sprint S4 · M7 Stickiness Phase 2（四赛道全规划，老板按需激活）
 
-S3 收尾后，老板需要在以下四个方向中**择一**作为 M7，避免 scope creep。Master 不替老板做选择，但给出推荐顺序：
+**激活规则：** 老板把对应赛道的卡从 BACKLOG 移到 DOING（或一句话告知 Master）即可。每个赛道的 ADR 已写为 `Proposed`，激活时翻 `Accepted`。
 
-| 候选 | 主要价值 | 估算 | 主力员工 |
-|------|----------|------|----------|
-| **A. 双语简报** | 海外信息中文化，老板每日体验提升 | 小 | Windsurf Backend（翻译管线）+ Codex |
-| **B. Setup Wizard** | 新用户 5 分钟跑起来，商业可分发 | 中 | Windsurf Backend + Frontend |
-| **C. AI 成本守门** | 真实 `OPENAI_API_KEY` 上线前的护栏（限额 / 队列优先级 / mock fallback 透明) | 小 | Windsurf Backend + Codex |
-| **D. Postgres 全文检索** | 4000+ 文章可搜，避免引入 ES | 中 | Windsurf Backend + Frontend |
+**Master 推荐顺序：** C → A → B → D
+- **C（AI 成本守门）** = prod 上线前置护栏，最高优先
+- **A（双语简报）** = 体验提升，与 C 联动最自然
+- **B（Setup Wizard）** = 商业分发前置
+- **D（全文检索）** = 数据量到 8000+ 后真痛
 
-**Master 推荐顺序：** C → A → B → D（先把生产风险盖住，再做易用性，最后做高级检索）。
+四赛道**文件不重叠**，理论可并行（但建议串行以免 Master Context 过载）。
+
+### 5.1 M7-A · 双语简报（中文化海外资讯）
+
+**ADR：** ADR-20260521-04（Proposed）  
+**核心决策：** `intelligence_reports` 增 `summary_zh/title_zh/translated_at`；Celery `translate_report` 链在 `analyze_article` 后；mock 模式打 `[ZH-MOCK]` 前缀；UI 默认中文 + "看原文"切换。
+
+| Task ID | 员工 | 交付 |
+|---------|------|------|
+| TASK-20260615-M7A-1 | Windsurf · Backend | 迁移 + `services/ai/translate.py` + Celery 任务 + Schema |
+| TASK-20260615-M7A-2 | Windsurf · Frontend | `LangToggle` + 3 路由接入 + `AITranslatedBadge` |
+| TASK-20260615-M7A-3 | Codex | `test_bilingual.py` + 部署文档 + PRD 更新 |
+
+**老板验收：** 打开 `/briefing` 默认看中文；点"看原文"切英文；旧报告显示"AI 翻译尚未生成"+ 英文兜底。
+
+### 5.2 M7-B · Setup Wizard（5 分钟跑起来）
+
+**ADR：** ADR-20260521-05（Proposed） · 依赖 S3 M6 完成  
+**核心决策：** `/setup` 4 步引导仅当 `users` 表空时开放；后端写 `backend/.env` 后 chmod 600；引导完成写 `system_settings.setup_completed_at`，二次访问 403。
+
+| Task ID | 员工 | 交付 |
+|---------|------|------|
+| TASK-20260615-M7B-1 | Windsurf · Backend | `setup/router.py` 5 个端点 + `system_settings` 表 + guards |
+| TASK-20260615-M7B-2 | Windsurf · Frontend | `/setup` 4 步组件 + middleware 白名单 |
+| TASK-20260615-M7B-3 | Codex | `test_setup.py` + README 快速开始改写 + deployment |
+
+**老板验收：** fresh DB → 访问 `/setup` → 4 步走完 → 自动跳 `/login`；再访问 `/setup` 重定向 `/login`。
+
+### 5.3 M7-C · AI 成本守门（Master 推荐最高优先）
+
+**ADR：** ADR-20260521-06（Proposed）  
+**核心决策：** `AI_DAILY_TOKEN_BUDGET` + `AI_MONTHLY_TOKEN_BUDGET` + `ai_usage_events` 表；超额降级 mock 并打 `ai_mode='budget_exceeded'`；Celery 队列分级 `briefing>analyze>translate>backfill`。
+
+| Task ID | 员工 | 交付 |
+|---------|------|------|
+| TASK-20260615-M7C-1 | Windsurf · Backend | `services/ai/budget.py` + 用量表 + 队列分级 + `ai_mode` 列 + `/ai/usage` API |
+| TASK-20260615-M7C-2 | Windsurf · Frontend + Codex | `/settings/ai-usage` + `AIModeBadge` + 测试 + 部署文档 |
+
+**老板验收：** prod 配 `OPENAI_API_KEY` 后日预算 5 美元跑分析；超额自动降级 mock；admin 在 `/settings/ai-usage` 看到日/月用量。
+
+### 5.4 M7-D · Postgres 全文检索（不引入 ES）
+
+**ADR：** ADR-20260521-07（Proposed）  
+**核心决策：** `articles.search_vector` 生成列 + GIN 索引；`websearch_to_tsquery` + `ts_rank_cd` + `ts_headline`；中文 v1 用 `simple` 配置（zhparser 列为 v1.1）。
+
+| Task ID | 员工 | 交付 |
+|---------|------|------|
+| TASK-20260615-M7D-1 | Windsurf · Backend | 迁移生成列 + GIN + `/articles?q=...` + 高亮 |
+| TASK-20260615-M7D-2 | Windsurf · Frontend | SearchBox + 高亮渲染 + URL 同步 + sanitize |
+| TASK-20260615-M7D-3 | Codex | API 测试 + 注入安全测试 + 召回率人工评估报告 |
+
+**老板验收：** `/articles` 顶部搜索 "OpenAI" → 命中文章 + 高亮 + 排序合理；评估报告说明中英文召回率差异。
 
 ## 6. BACKLOG（不进当前 Sprint）
 
-- 多租户隔离与配额（M8+）
-- Elasticsearch / 向量检索（M8+）
-- 实体关系图（M9+）
-- Mobile / 推送 App（M9+）
-- 翻译质量评估 + 人工反馈环（M8+）
+### M8 · 商业上架（S3 + S4 完成后）
+
+- 多租户 RLS 真正启用（依赖 M6 列）
+- OIDC / SSO 接入（Auth0 / Clerk）
+- API 限流 + 用户配额（依赖 M6 + M7-C）
+- 商业计费层（Stripe / 国内支付）
+
+### M9 · 数据深度
+
+- 实体关系图
+- 标签共现矩阵
+- 主题聚类与趋势预测
+- 翻译质量评估 + 人工反馈环
+
+### M10 · 触达
+
+- Mobile / 推送 App
+- 邮件 digest
+- Slack / 飞书机器人交互
+
+### 一直被推迟的"非必要项"
+
+- zhparser PG 扩展（如 M7-D 评估证明值得）
+- 向量检索（pgvector 而非 ES）
+- 冷存储归档到 S3
 
 ## 7. 工作节拍（持续运行的"老板模式"）
 

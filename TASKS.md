@@ -6,20 +6,59 @@
 
 ## BACKLOG
 
-### M7 候选（S3 完成后四选一）
+### S4 · M7 四赛道（全部规划完毕 · 老板按需激活）
 
-- M7-A 双语简报（中文化海外信息）
-- M7-B Setup Wizard（5 分钟跑起来）
-- M7-C AI 成本守门（限额 / 队列优先级 / mock 透明）
-- M7-D Postgres 全文检索
+派单依据 `docs/plans/roadmap-3-employees.md` §5。每个赛道 ADR 已写为 Proposed（DECISIONS.md ADR-20260521-04..07），激活时翻 Accepted。
 
-### 长期
+#### M7-A 双语简报
 
-- 多租户隔离与配额（M8+）
-- Elasticsearch / 向量检索
+| Task | Skill | 状态 |
+| --- | --- | --- |
+| TASK-20260615-M7A-1: 翻译管线（迁移 + Celery + Schema） | Windsurf · Backend | TODO |
+| TASK-20260615-M7A-2: LangToggle + 3 路由切换 | Windsurf · Frontend | TODO |
+| TASK-20260615-M7A-3: 测试 + 文档 | Codex | TODO |
+
+#### M7-B Setup Wizard（依赖 M6 DONE）
+
+| Task | Skill | 状态 |
+| --- | --- | --- |
+| TASK-20260615-M7B-1: 引导 API + system_settings | Windsurf · Backend | TODO |
+| TASK-20260615-M7B-2: 4 步 Wizard UI | Windsurf · Frontend | TODO |
+| TASK-20260615-M7B-3: 测试 + README 重写 | Codex | TODO |
+
+#### M7-C AI 成本守门（Master 推荐最高优先）
+
+| Task | Skill | 状态 |
+| --- | --- | --- |
+| TASK-20260615-M7C-1: 预算层 + 队列分级 + ai_mode 列 | Windsurf · Backend | TODO |
+| TASK-20260615-M7C-2: admin UI + AIModeBadge + 测试 + 文档 | Windsurf · Frontend + Codex | TODO |
+
+#### M7-D Postgres 全文检索
+
+| Task | Skill | 状态 |
+| --- | --- | --- |
+| TASK-20260615-M7D-1: search_vector + GIN + 检索 API | Windsurf · Backend | TODO |
+| TASK-20260615-M7D-2: SearchBox + 高亮 + URL 同步 | Windsurf · Frontend | TODO |
+| TASK-20260615-M7D-3: 测试 + 注入安全 + 召回评估报告 | Codex | TODO |
+
+### M8 · 商业上架
+
+- 多租户 RLS 真正启用（依赖 M6 列）
+- OIDC / SSO 接入
+- API 限流 + 用户配额
+- 商业计费层
+
+### M9 · 数据深度
+
 - 实体关系图
-- Mobile / 推送 App
+- 主题聚类 / 标签共现矩阵
 - 翻译质量评估 + 人工反馈环
+
+### M10 · 触达
+
+- Mobile / 推送 App
+- 邮件 digest
+- Slack / 飞书机器人交互
 
 ## TODO
 

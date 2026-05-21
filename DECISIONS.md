@@ -210,3 +210,45 @@ Add **Archive Layer**: table `daily_archives` with per-calendar-day `briefing_js
 - [ ] Approve `docs/plans/M5-daily-archive-trends.md`
 - [ ] Windsurf Phase A–C; Codex Phase D
 - [ ] Update PRD scenario 10 (archives/trends)
+
+## ADR-20260521-02: Three-Employee Delivery Cadence (Cursor / Windsurf / Codex)
+
+Date: 2026-05-21
+Status: Proposed
+Owner: Cursor (Master)
+
+### Context
+
+老板希望让 3 个 AI 员工（Cursor / Codex / Windsurf）持续完善 Intel Hub。原有 `AGENTS.md` 与 `SKILLS.md` 已经规定 Single Master + Multiple Skills，但**没有沉淀一个跨 Sprint、跨员工、可复制的派单节拍**。结果：每次开新 Sprint 都要重写规则，员工边界容易漂移，TASKS.md 容易堆积无主卡。
+
+### Decision
+
+把"3 员工持续交付节拍"沉淀为 `docs/plans/roadmap-3-employees.md`，作为 **Sprint S1 → S4 的派单依据**，并约束：
+
+1. **员工 ↔ Skill 绑定**：Cursor=Master(Product/Architecture/Review)，Windsurf=Backend+Frontend Skill，Codex=Test+Deployment+Documentation Skill。
+2. **每张 task-card 只有一个 Owner Skill**，`Files owned` 必须精确到路径；越界即 Review 打回。
+3. **并行的两张卡必须文件不重叠**；Master 在 TASKS.md DOING 列只能放不重叠的卡。
+4. **5 行 handoff**（Changed / Verified / Risks / Next / Files）替代全量 diff 回传 Master，防止 Context 污染。
+5. **Sprint 顺序**：S1 (M5 Archive) → S2 (M3.5 Ops，可与 S1 并行) → S3 (M6 Auth，强串行) → S4 (M7 候选 4 选 1)。
+
+### Alternatives
+
+1. 每次自由分配 — 已实践过，容易丢任务、漂移边界。
+2. 单员工全栈 — 失去并行性，老板验收周期长。
+3. 引入第 4 个 AI 员工 — 增加协调成本；不在当前预算内。
+
+### Tradeoffs
+
+- Pros：派单可复制；老板 1 行批准即可启动整 Sprint；Context 不爆。
+- Cons：维护成本——roadmap + task-cards + TASKS.md 三处同步。
+
+### Risks
+
+- 员工"自行扩 Scope"——靠 `Files owned/avoided` + Review 打回兜底。
+- 路线图与现实漂移——每个 Sprint DONE 后必须追加 §Retrospective 3 行。
+
+### Follow-up
+
+- [ ] 跑通 Sprint S1（M5）作为节拍样板
+- [ ] S1 完成后在 roadmap 增 §Retrospective
+- [ ] 若并行卡冲突 ≥ 2 次，重新评估边界粒度

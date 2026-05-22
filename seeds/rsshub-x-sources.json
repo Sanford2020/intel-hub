@@ -11,7 +11,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @OSINTdefender (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -27,7 +27,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @GeoConfirmed (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -43,7 +43,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @bellingcat (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -59,7 +59,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @IntelCrab (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -75,7 +75,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @War_Mapper (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -91,7 +91,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @KyivIndependent (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -107,7 +107,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @Osinttechnical (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -123,7 +123,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @CalibreObscura (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -139,7 +139,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @CISAgov (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -155,7 +155,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @TheHackersNews (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -171,7 +171,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @vxunderground (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -187,7 +187,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @SwiftOnSecurity (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -203,7 +203,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @GossiTheDog (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -219,7 +219,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @RecordedFuture (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -235,7 +235,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @Mandiant (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -251,7 +251,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @CyberScoopNews (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -267,7 +267,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @financialjuice (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -283,7 +283,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @Reuters (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -299,7 +299,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @AP (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -315,7 +315,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @AJEnglish (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -331,7 +331,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @AnthropicAI (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -347,7 +347,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @OpenAI (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -363,7 +363,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @BreakingDefense (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -379,7 +379,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @DefenseOne (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   },
@@ -395,7 +395,7 @@
     "language": "zh",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "RSSHub timeline for @RFI_Cn (requires self-hosted RSSHub)",
     "source_file": "rsshub-x-sources.json"
   }

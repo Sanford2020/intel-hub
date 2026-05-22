@@ -53,8 +53,6 @@
 
 | Task | Skill | 状态 |
 | --- | --- | --- |
-| TASK-20260521-OPS-01: RSS 源健康清单 v2 | Codex · Test | TODO |
-| TASK-20260521-OPS-02: `validate_project.sh` + GitHub Actions CI | Codex · Deployment | TODO |
 | TASK-20260521-OPS-03: Worker / Beat 24h 观测落档 | Codex · Test | TODO |
 | TASK-20260521-OPS-04: 解决 `DECISIONS.md` vs `docs/decisions.md` 权威性 | Cursor · Documentation | TODO |
 
@@ -98,6 +96,13 @@ seeds 含 osint-rss / aihot-api / rsshub-x（25 条）+ BestBlogs 策展（7 条
 
 - **TASK-20260521-01:** `run-daily-intel.ps1`, `docs/OWNER.md`, PRD 8–9, `autonomous-delivery.md`
 - **TASK-20260521-02:** `docs/deployment.md` Daily Operations
+
+### S2 · Ops — 2026-05-22
+
+| Task | Skill | 结果 |
+| --- | --- | --- |
+| TASK-20260521-OPS-01: RSS 源健康清单 v2 | Codex · Test | `probe-rss-health.py` + `docs/operations/rss-health-2026-05.md`；坏源 seeds disabled |
+| TASK-20260521-OPS-02: validate + CI | Codex · Deployment | `validate_project.sh` + `.github/workflows/ci.yml` + `make ci` |
 
 - TASK-20260520-03 飞书推送
 - TASK-20260520-02 相关度 + 今日精选

@@ -43,7 +43,7 @@
     "language": "zh",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "AI HOT 日报 RSS",
     "source_file": "aggregator-sources.json"
   }

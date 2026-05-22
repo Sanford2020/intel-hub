@@ -94,6 +94,14 @@
 摘要：`docs/integrations-m4.md`、RSSHub docker、`aihot`/`apify` 连接器、n8n/Telegram 出站；
 seeds 含 osint-rss / aihot-api / rsshub-x（25 条）+ BestBlogs 策展（7 条）+ `ingest-social-fast` 优先队列；**71 pytest passing**。
 
+### M4.7 Trend Aggregators — 2026-05-22
+
+见 `docs/plans/M4.7-trend-aggregator-sources.md`
+
+- `trends_parser.py` + pipeline `trends` 类型
+- 4 源：trends24 / getdaytrends / trend-calendar (X + Google)
+- `test_trends_parser.py` + `ingest-social-fast` 优先 slug
+
 ### M2 Operator Closure — 2026-05-21
 
 - **TASK-20260521-01:** `run-daily-intel.ps1`, `docs/OWNER.md`, PRD 8–9, `autonomous-delivery.md`

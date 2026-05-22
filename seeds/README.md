@@ -4,6 +4,7 @@
 |------|------|
 | `all-sources.json` | 506 条结构化源（由 `scripts/parse-data-sources.py` 生成） |
 | `all-sources.csv` | 同上，**可导入 Notion** |
+| `trend-aggregator-sources.json` | trends24 / getdaytrends / trend-calendar（`type=trends`） |
 
 ## 导入 Notion（三选一）
 

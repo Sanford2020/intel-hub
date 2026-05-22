@@ -19,9 +19,10 @@ from app.modules.ingest.rss_parser import RssItem, fetch_rss_items
 from app.modules.ingest.x_parser import fetch_x_items
 from app.modules.ingest.aihot_parser import fetch_aihot_items
 from app.modules.ingest.apify_parser import fetch_apify_items
+from app.modules.ingest.trends_parser import fetch_trends_items
 
 INGESTIBLE_SOURCE_TYPES = frozenset(
-    {"rss", "x", "reddit", "hn", "polymarket", "aihot", "apify"}
+    {"rss", "x", "reddit", "hn", "polymarket", "aihot", "apify", "trends"}
 )
 
 
@@ -157,6 +158,8 @@ def _fetch_items_for_source(source: Source) -> list[RssItem]:
         return fetch_aihot_items(url)
     if source.source_type == "apify":
         return fetch_apify_items(url)
+    if source.source_type == "trends":
+        return fetch_trends_items(url)
     raise ValueError(f"Unsupported source type: {source.source_type}")
 
 

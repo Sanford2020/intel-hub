@@ -73,6 +73,21 @@ Verdict: **BLOCK** — M5 archive-specific tests pass and API docs are now synce
 - Frontend includes `/archives`, `/archives/{date}`, `/trends`, TS types, and `intel-api.ts` wrappers.
 - M5-D should be rerun after the root pytest environment/fixture issue is resolved and a seeded API is available for acceptance smoke.
 
+## M5.5 UI-QA (2026-05-22)
+
+Verdict: **PASS (F1 scope)** — Frontend-only PR; no `backend/**` changes. Full APPROVE pending UI-F2 (briefing/trends) and UI-R.
+
+### Verification
+
+- `npm run lint`: **PASS**
+- `npm run type-check`: **PASS**
+- `npm run build`: **PASS**, 10 routes
+- `npm run test:run`: **PASS**, Vitest 5 tests
+- Browser smoke at 390px / 768px / 1280px: **PASS** for `/`, `/briefing`, `/articles`, `/sources`, `/alerts`, `/archives`, `/trends`
+- Boundary check: **PASS**, no backend or seed files in this PR
+
+See `docs/operations/frontend-ui-qa-2026-05.md`.
+
 ## Operational Risks (Sprint 6 Observations)
 
 - **Sync batch ingest blocks API** for minutes when many RSS sources are ingested synchronously; use `?async=1` or `batch-ingest-rss.py --async`.

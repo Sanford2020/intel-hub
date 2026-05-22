@@ -71,7 +71,8 @@ export default function ArticlesPage() {
         .then((sourceRes) => setSources(sourceRes.data))
         .catch(() => undefined);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "加载失败");
+      const msg = e instanceof Error ? e.message : "加载失败";
+      setError(msg.includes("Internal Server Error") || msg.includes("Failed to fetch") ? "无法连接后端服务，请确认 API 已启动" : msg);
       setArticles([]);
       setTotal(0);
       setTotalPages(0);

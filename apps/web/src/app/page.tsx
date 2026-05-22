@@ -3,239 +3,271 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
-  Activity,
   ArrowRight,
   Bell,
-  Bot,
-  Cpu,
-  Database,
   FileText,
-  Layers,
   RadioTower,
+  Shield,
 } from "lucide-react";
 import type { APIResponse, HealthData } from "@opc/shared-types";
 import { apiClient } from "@/lib/api";
-import { getOverviewStats } from "@/lib/intel-api";
-import type { OverviewStats } from "@/types/intel";
+import { getDailyBriefing, getOverviewStats } from "@/lib/intel-api";
+import type { BriefingItem, DailyBriefing, OverviewStats } from "@/types/intel";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { MetricCard } from "@/components/ui/MetricCard";
+import { SurfaceCard } from "@/components/ui/SurfaceCard";
+import { StatusBadge } from "@/components/ui/StatusBadge";
+import { EmptyState } from "@/components/ui/EmptyState";
+import { ErrorBanner } from "@/components/ui/ErrorBanner";
+import { LoadingBlock } from "@/components/ui/LoadingBlock";
+import { scoreTone } from "@/lib/intel-ui";
+import { relativeTime } from "@/lib/format";
 
 export default function Home() {
   const [health, setHealth] = useState<HealthData | null>(null);
   const [stats, setStats] = useState<OverviewStats | null>(null);
+  const [briefing, setBriefing] = useState<DailyBriefing | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    let cancelled = false;
     const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 2500);
+    const timeout = window.setTimeout(() => controller.abort(), 3000);
 
-    apiClient
-      .get<APIResponse<HealthData>>("/api/v1/health", { signal: controller.signal })
-      .then((res) => setHealth(res.data ?? null))
-      .catch(() => setHealth(null))
+    Promise.allSettled([
+      apiClient
+        .get<APIResponse<HealthData>>("/api/v1/health", { signal: controller.signal })
+        .then((res) => { if (!cancelled) setHealth(res.data ?? null); }),
+      getOverviewStats()
+        .then((res) => { if (!cancelled) setStats(res.data); }),
+      getDailyBriefing({ hours: 24, limit: 5 })
+        .then((res) => { if (!cancelled) setBriefing(res.data); }),
+    ])
+      .catch(() => { if (!cancelled) setError("部分数据加载失败"); })
       .finally(() => {
         window.clearTimeout(timeout);
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       });
 
-    getOverviewStats()
-      .then((res) => setStats(res.data))
-      .catch(() => setStats(null));
-
     return () => {
+      cancelled = true;
       window.clearTimeout(timeout);
       controller.abort();
     };
   }, []);
 
-  const features = [
-    {
-      icon: <Layers className="h-6 w-6" />,
-      title: "多源采集",
-      description: "RSS / API / Webhook，Celery 定时入库",
-    },
-    {
-      icon: <Database className="h-6 w-6" />,
-      title: "资讯归一",
-      description: "去重、清洗、PostgreSQL 持久化",
-    },
-    {
-      icon: <Cpu className="h-6 w-6" />,
-      title: "AI 情报分析",
-      description: "摘要、标签、实体抽取，结构化 JSON",
-    },
-    {
-      icon: <Bot className="h-6 w-6" />,
-      title: "Agent 工作流",
-      description: "OPC + Agency + 12-Factor 三库整合",
-    },
-    {
-      icon: <Bell className="h-6 w-6" />,
-      title: "关键词告警",
-      description: "规则匹配 + Webhook / 日志通知",
-    },
-    {
-      icon: <Activity className="h-6 w-6" />,
-      title: "检索分发",
-      description: "过滤检索、订阅告警、Dashboard",
-    },
-  ];
-
-  const statCards = stats
-    ? [
-        {
-          label: "情报源",
-          value: stats.sources_total,
-          sub: `${stats.sources_enabled} 启用`,
-          icon: RadioTower,
-          tone: "text-blue-700 bg-blue-50 dark:bg-blue-950/40 dark:text-blue-300",
-        },
-        {
-          label: "资讯条目",
-          value: stats.articles_total,
-          sub: `${stats.reports_total} 已分析`,
-          icon: FileText,
-          tone: "text-emerald-700 bg-emerald-50 dark:bg-emerald-950/40 dark:text-emerald-300",
-        },
-        {
-          label: "告警规则",
-          value: stats.alert_rules_total,
-          sub: `${stats.alert_rules_enabled} 启用`,
-          icon: Bell,
-          tone: "text-amber-700 bg-amber-50 dark:bg-amber-950/40 dark:text-amber-300",
-        },
-        {
-          label: "告警事件",
-          value: stats.alert_events_total,
-          sub: "累计触发",
-          icon: Activity,
-          tone: "text-rose-700 bg-rose-50 dark:bg-rose-950/40 dark:text-rose-300",
-        },
-      ]
-    : [];
-
   return (
-    <main className="min-h-[calc(100vh-4rem)]">
+    <main className="min-h-[calc(100vh-3.5rem)]">
       <section className="app-shell">
-        <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
-          <div className="surface overflow-hidden p-6 sm:p-8">
+        <PageHeader
+          title="今日情报工作台"
+          description="过去 24 小时情报概览"
+          meta={
             <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-lg bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-                Global intelligence desk
-              </span>
-              <span className="rounded-lg bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300">
-                Commercial Edition
-              </span>
+              {health ? (
+                <StatusBadge tone="success" label={`Backend v${health.version}`} />
+              ) : loading ? (
+                <StatusBadge tone="warning" label="连接中…" />
+              ) : (
+                <StatusBadge tone="danger" label="Backend 离线" />
+              )}
+              {briefing?.meta.ai_mode === "mock" && (
+                <StatusBadge tone="warning" label="Mock AI 模式" dot={false} />
+              )}
             </div>
-            <h1 className="mt-8 max-w-2xl text-3xl font-semibold leading-tight tracking-normal text-slate-950 sm:text-4xl lg:text-5xl dark:text-white">
-              分散资讯，统一采集、分析与告警。
-            </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">
-              Intel Hub 面向商业情报团队，汇总 RSS 与开放源信息，完成去重入库、AI 摘要、标签提取和关键词告警，帮助分析员更快进入判断。
-            </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link href="/articles" className="primary-action">
-                查看资讯 <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link href="/sources" className="secondary-action">
-                管理来源
-              </Link>
-              <Link href="/alerts" className="secondary-action">
-                告警规则
-              </Link>
-            </div>
-          </div>
-
-          <aside className="surface p-5">
-            <div className="flex items-center justify-between">
-              <div>
-                <div className="muted-label">System status</div>
-                <h2 className="mt-1 text-lg font-semibold">运行状态</h2>
-              </div>
-              <Activity className="h-5 w-5 text-slate-400" />
-            </div>
-            <div className="mt-5">
-          {loading ? (
-            <div className="flex items-center gap-2 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-700 dark:bg-amber-950/30 dark:text-amber-300">
-              <div className="h-2 w-2 animate-pulse rounded-full bg-yellow-400" />
-              Connecting...
-            </div>
-          ) : health ? (
-            <div className="flex items-center gap-2 rounded-lg bg-emerald-50 px-3 py-2 text-sm font-medium text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300">
-              <div className="h-2 w-2 rounded-full bg-green-500" />
-              Backend: {health.status} · v{health.version}
-            </div>
-          ) : (
-            <div className="flex items-center gap-2 rounded-lg bg-rose-50 px-3 py-2 text-sm font-medium text-rose-700 dark:bg-rose-950/40 dark:text-rose-300">
-              <div className="h-2 w-2 rounded-full bg-red-500" />
-              Backend: offline
-            </div>
-          )}
-            </div>
-            <div className="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-              <div className="flex items-center justify-between border-b border-slate-100 pb-3 dark:border-slate-800">
-                <span>采集调度</span>
-                <span className="font-medium text-slate-900 dark:text-white">5 min</span>
-              </div>
-              <div className="flex items-center justify-between border-b border-slate-100 pb-3 dark:border-slate-800">
-                <span>分析调度</span>
-                <span className="font-medium text-slate-900 dark:text-white">10 min</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span>AI 模式</span>
-                <span className="font-medium text-slate-900 dark:text-white">
-                  OpenAI / mock
-                </span>
-              </div>
-            </div>
-          </aside>
-        </div>
+          }
+        />
       </section>
 
+      {error && (
+        <section className="app-shell pt-0">
+          <ErrorBanner message={error} />
+        </section>
+      )}
+
+      {/* Metric cards */}
       <section className="app-shell pt-0">
-        {stats && (
+        {loading ? (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {statCards.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div key={item.label} className="surface p-5">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <div className="muted-label">{item.label}</div>
-                      <div className="mt-2 text-3xl font-semibold tracking-normal">
-                        {item.value}
-                      </div>
-                      <div className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                        {item.sub}
-                      </div>
-                    </div>
-                    <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${item.tone}`}>
-                      <Icon className="h-5 w-5" />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            {Array.from({ length: 4 }).map((_, i) => (
+              <SurfaceCard key={i}><LoadingBlock lines={2} /></SurfaceCard>
+            ))}
           </div>
+        ) : stats ? (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <MetricCard
+              label="今日入库"
+              value={stats.articles_total}
+              sub="资讯总量"
+              icon={FileText}
+              tone="text-blue-700 bg-blue-50 dark:bg-blue-950/40 dark:text-blue-300"
+            />
+            <MetricCard
+              label="已分析"
+              value={stats.reports_total}
+              sub="AI 分析报告"
+              icon={Shield}
+              tone="text-emerald-700 bg-emerald-50 dark:bg-emerald-950/40 dark:text-emerald-300"
+            />
+            <MetricCard
+              label="高相关"
+              value={briefing?.meta.item_count ?? 0}
+              sub="相关度 ≥ 6.0"
+              icon={RadioTower}
+              tone="text-amber-700 bg-amber-50 dark:bg-amber-950/40 dark:text-amber-300"
+            />
+            <MetricCard
+              label="告警事件"
+              value={stats.alert_events_total}
+              sub={`${stats.alert_rules_enabled} 条规则启用`}
+              icon={Bell}
+              tone="text-rose-700 bg-rose-50 dark:bg-rose-950/40 dark:text-rose-300"
+            />
+          </div>
+        ) : (
+          <SurfaceCard>
+            <EmptyState
+              title="无法加载统计数据"
+              description="请确认后端服务已启动"
+            />
+          </SurfaceCard>
         )}
+      </section>
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="surface p-5 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-slate-200/80 dark:hover:shadow-none"
-            >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
-                {feature.icon}
-              </div>
-              <h3 className="font-semibold text-slate-950 dark:text-white">{feature.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                {feature.description}
-              </p>
+      {/* Top intel + System status */}
+      <section className="app-shell pt-0">
+        <div className="grid gap-4 lg:grid-cols-[1.5fr_1fr]">
+          {/* Top 情报 */}
+          <SurfaceCard padding="none">
+            <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4 dark:border-slate-800">
+              <h2 className="text-sm font-semibold text-slate-900 dark:text-white">
+                今日 Top 情报
+              </h2>
+              <Link
+                href="/briefing"
+                className="inline-flex items-center gap-1 text-xs font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400"
+              >
+                完整简报 <ArrowRight className="h-3 w-3" />
+              </Link>
             </div>
-          ))}
+            <div className="divide-y divide-slate-100 dark:divide-slate-800">
+              {loading ? (
+                <div className="px-5 py-4">
+                  <LoadingBlock lines={4} />
+                </div>
+              ) : briefing && briefing.items.length > 0 ? (
+                briefing.items.slice(0, 5).map((item) => (
+                  <TopIntelItem key={item.article_id} item={item} />
+                ))
+              ) : (
+                <EmptyState
+                  title="暂无高相关情报"
+                  description="系统正常运行后将自动展示今日 Top 资讯"
+                  action={
+                    <Link href="/sources" className="secondary-action text-xs">
+                      配置来源
+                    </Link>
+                  }
+                />
+              )}
+            </div>
+          </SurfaceCard>
+
+          {/* System status */}
+          <SurfaceCard padding="none">
+            <div className="border-b border-slate-100 px-5 py-4 dark:border-slate-800">
+              <h2 className="text-sm font-semibold text-slate-900 dark:text-white">
+                系统状态
+              </h2>
+            </div>
+            <div className="space-y-0 divide-y divide-slate-100 px-5 dark:divide-slate-800">
+              <StatusRow label="Backend" loading={loading} value={health ? `${health.status} · v${health.version}` : "离线"} ok={!!health} />
+              <StatusRow label="采集调度" loading={false} value="5 min (Beat)" ok={true} />
+              <StatusRow label="分析调度" loading={false} value="AI 入库后触发" ok={true} />
+              <StatusRow
+                label="AI 模式"
+                loading={false}
+                value={briefing?.meta.ai_mode === "mock" ? "Mock (无 API Key)" : briefing?.meta.ai_mode ?? "—"}
+                ok={briefing?.meta.ai_mode !== "mock"}
+              />
+              <StatusRow
+                label="情报源"
+                loading={!stats && loading}
+                value={stats ? `${stats.sources_enabled} / ${stats.sources_total} 启用` : "—"}
+                ok={stats ? stats.sources_enabled > 0 : false}
+              />
+              <StatusRow
+                label="告警规则"
+                loading={!stats && loading}
+                value={stats ? `${stats.alert_rules_enabled} 条启用` : "—"}
+                ok={stats ? stats.alert_rules_enabled > 0 : false}
+              />
+            </div>
+            <div className="border-t border-slate-100 px-5 py-3 dark:border-slate-800">
+              <div className="flex flex-wrap gap-2">
+                <Link href="/sources" className="text-xs font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400">
+                  来源运营 →
+                </Link>
+                <Link href="/alerts" className="text-xs font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400">
+                  告警规则 →
+                </Link>
+              </div>
+            </div>
+          </SurfaceCard>
         </div>
       </section>
     </main>
+  );
+}
+
+function TopIntelItem({ item }: { item: BriefingItem }) {
+  const tone = scoreTone(item.relevance_score);
+  return (
+    <Link
+      href={`/articles/${item.article_id}`}
+      className="block px-5 py-3 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800/50"
+    >
+      <div className="flex items-start gap-3">
+        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded text-xs font-semibold text-slate-500 dark:text-slate-400">
+          {item.rank}
+        </span>
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-sm font-medium text-slate-900 dark:text-white">
+            {item.title}
+          </p>
+          <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
+            <span>{item.source_name}</span>
+            <StatusBadge tone={tone} label={item.relevance_score.toFixed(1)} dot={false} className="text-[10px]" />
+            {item.published_at && <span>{relativeTime(item.published_at)}</span>}
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function StatusRow({
+  label,
+  value,
+  ok,
+  loading,
+}: {
+  label: string;
+  value: string;
+  ok: boolean;
+  loading: boolean;
+}) {
+  return (
+    <div className="flex items-center justify-between py-3 text-sm">
+      <span className="text-slate-600 dark:text-slate-400">{label}</span>
+      {loading ? (
+        <div className="h-4 w-20 animate-pulse rounded bg-slate-200 dark:bg-slate-700" />
+      ) : (
+        <span className={ok ? "font-medium text-slate-900 dark:text-white" : "font-medium text-amber-600 dark:text-amber-400"}>
+          {value}
+        </span>
+      )}
+    </div>
   );
 }

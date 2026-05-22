@@ -96,4 +96,4 @@ AlertRule → AlertEvent ← Article
 - Commercial Auth 模块位置：**UNKNOWN**
 - 生产 hosting：**TODO**
 - 全文检索方案：**TODO**（v0.2+）
-- `docs/decisions.md` 与根 `DECISIONS.md` 权威关系：**TODO**
+- ADR 权威源：根 [`DECISIONS.md`](../DECISIONS.md)（见 ADR-20260521-03）；`docs/decisions.md` 为 redirect。

@@ -103,7 +103,7 @@ Standardize on root-level `AGENTS.md`, `TASKS.md`, `ARCHITECTURE.md`, `DECISIONS
 ### Follow-up Actions
 
 - [ ] Run first full cycle: Cursor plan → Windsurf → Codex → Review.
-- [ ] Resolve duplicate ADR locations (`DECISIONS.md` vs `docs/decisions.md`).
+- [x] Resolve duplicate ADR locations (`DECISIONS.md` vs `docs/decisions.md`) — see ADR-20260521-03.
 
 ## ADR-20260519-03: Single Master Agent + Multiple Skills
 
@@ -178,16 +178,23 @@ Add a **Delivery Layer** on top of existing platform: daily briefing + relevance
 ## ADR-20260521-01: Daily Archive Layer for Historical Briefings and Trends
 
 Date: 2026-05-21
-Status: Proposed
+Status: Accepted
 Owner: Cursor (Master)
 
 ### Context
 
-Daily briefing is computed on-the-fly; no day-boundary snapshots exist. Operators cannot compare metrics or re-read past Top-N digests as the corpus grows (4000+ articles).
+Daily briefing is computed on-the-fly; no day-boundary snapshots exist. Operators cannot compare metrics or re-read past Top-N digests as the corpus grows (4000+ articles). Commercial Edition requires day-boundary auditability and category-level trend visibility, not MVP-only live briefing.
 
 ### Decision
 
-Add **Archive Layer**: table `daily_archives` with per-calendar-day `briefing_json` + `metrics_json`. Celery task `archive_daily_snapshot` runs after daily briefing (Beat 06:15 UTC). Expose `GET /archives`, `/archives/{date}`, `/archives/trends` and UI `/archives`, `/trends`.
+Add **Archive Layer**: table `daily_archives` with per-calendar-day `briefing_json` + `metrics_json`.
+
+- **Calendar:** `archive_date` uses `ARCHIVE_TIMEZONE=Asia/Shanghai` (北京时间).
+- **Snapshot task:** Celery `archive_daily_snapshot` after daily briefing (Beat 06:15 UTC); UPSERT per day; `scripts/backfill-archives.py` for history.
+- **Metrics v1:** `metrics_json.category_heat[]` per `sources.category`; `heat_score = articles + 3×high_relevance + avg_relevance`.
+- **API:** `GET /api/v1/archives`, `/archives/{date}`, `/archives/trends/category-heat?days=30`.
+- **UI:** `/archives` (list + day detail), `/trends` (category heat over 7/14/30 days).
+- **List performance:** archive list queries defer `briefing_json` load (summary-only).
 
 ### Alternatives
 
@@ -197,24 +204,26 @@ Add **Archive Layer**: table `daily_archives` with per-calendar-day `briefing_js
 
 ### Tradeoffs
 
-- Pros: Fast trend queries; preserves readable history; minimal change to existing tables.
-- Cons: JSON row growth; timezone semantics must be documented.
+- Pros: Fast trend queries; preserves readable history; minimal change to existing tables; business-category heat aligns with taxonomy.
+- Cons: JSON row growth; timezone semantics must be documented; implementation ahead of Codex sign-off requires REVIEW gate.
 
 ### Risks
 
 - Beat ordering vs briefing task — mitigate with 15min offset or task chain.
-- Large `briefing_json` — cap at Top 20 items.
+- Large `briefing_json` — cap at Top 20 items; list API must not SELECT full JSON.
+- Dev port 8000 zombie processes — use `8001` in `dev.ps1` / Next rewrite until port cleared.
 
 ### Follow-up
 
-- [ ] Approve `docs/plans/M5-daily-archive-trends.md`
-- [ ] Windsurf Phase A–C; Codex Phase D
-- [ ] Update PRD scenario 10 (archives/trends)
+- [x] Approve `docs/plans/M5-daily-archive-trends.md`
+- [x] Windsurf Phase A–C (landed; pending Codex M5-D)
+- [x] Update PRD scenario 10 (archives/trends)
+- [ ] Codex M5-D: pytest + acceptance + `docs/api.md` sync + Review verdict
 
 ## ADR-20260521-02: Three-Employee Delivery Cadence (Cursor / Windsurf / Codex)
 
 Date: 2026-05-21
-Status: Proposed
+Status: Accepted
 Owner: Cursor (Master)
 
 ### Context
@@ -249,6 +258,44 @@ Owner: Cursor (Master)
 
 ### Follow-up
 
-- [ ] 跑通 Sprint S1（M5）作为节拍样板
+- [ ] 跑通 Sprint S1（M5）作为节拍样板 — M5-M Accepted; M5-D + UI 插队并行中
 - [ ] S1 完成后在 roadmap 增 §Retrospective
 - [ ] 若并行卡冲突 ≥ 2 次，重新评估边界粒度
+
+## ADR-20260521-03: ADR Authority Source (Root DECISIONS.md)
+
+Date: 2026-05-22
+Status: Accepted
+Owner: Cursor (Master)
+
+### Context
+
+Repository had two decision locations: root `DECISIONS.md` (ADR template + numbered ADRs) and `docs/decisions.md` (early bootstrap notes). Agents could write new ADRs to the wrong file, causing drift (`REVIEW.md` Documentation Risk).
+
+### Decision
+
+1. **Authoritative ADR registry:** root `/DECISIONS.md` only. All new ADRs use `ADR-YYYYMMDD-NN` format in this file.
+2. **`docs/decisions.md`:** redirect stub pointing to root; historical bootstrap notes moved to `docs/decisions-archive.md`.
+3. **Cross-references:** `AGENTS.md`, `ARCHITECTURE.md`, task-cards, and plans reference `DECISIONS.md` — not `docs/decisions.md` — for architecture decisions.
+4. **Runtime prompts:** `prompts/` YAML remains separate from ADR docs (see `REVIEW.md` AI Collaboration Risks).
+
+### Alternatives
+
+1. Keep dual files with sync discipline — rejected; already failed in practice.
+2. Delete `docs/decisions.md` — rejected; breaks old links; archive + redirect preferred.
+3. Move all ADRs under `docs/` — rejected; `AGENTS.md` already standardizes root `DECISIONS.md`.
+
+### Tradeoffs
+
+- Pros: Single source of truth; Review can grep one file; matches Commercial Edition governance.
+- Cons: One-time migration of legacy notes; old PR links need redirect header.
+
+### Risks
+
+- Stale references to `docs/decisions.md` in external docs — mitigate with redirect + archive.
+
+### Follow-up
+
+- [x] Redirect `docs/decisions.md`
+- [x] Archive legacy notes to `docs/decisions-archive.md`
+- [x] Close REVIEW.md duplicate-ADR item

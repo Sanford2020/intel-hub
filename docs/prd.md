@@ -27,6 +27,17 @@ Intel Hub is a Commercial Edition intelligence operations platform for collectin
 7. Operators monitor system status and counts from the dashboard.
 8. Analysts open **Daily Briefing** (`/briefing`) for a ranked summary of the last 24h analyzed articles (Delivery Layer).
 9. Operators receive the same briefing via **Feishu webhook** after the scheduled Celery job (optional `FEISHU_WEBHOOK_URL`).
+10. **Daily Archive & Trends (Commercial):** Operators and analysts review **Beijing calendar-day** (`Asia/Shanghai`) snapshots at `/archives` — each row stores the frozen daily briefing (`briefing_json`) plus operational metrics (`metrics_json`). Analysts compare **business category heat** (`category_heat`, derived from `sources.category`) over 7/14/30 days at `/trends`. Archive runs via Celery `archive_daily_snapshot` (Beat 06:15 UTC) with idempotent UPSERT and optional `scripts/backfill-archives.py`.
+
+### Scenario 10 — Acceptance (Commercial Edition)
+
+| # | Criterion |
+| --- | --- |
+| 10.1 | After Beat + backfill, `GET /api/v1/archives` returns ≥1 row with `timezone=Asia/Shanghai`. |
+| 10.2 | `GET /api/v1/archives/{date}` returns briefing items consistent with same-day live briefing window. |
+| 10.3 | `GET /api/v1/archives/trends/category-heat?days=30` returns `points_by_category` with ≥1 category. |
+| 10.4 | UI `/archives` lists days; `/trends` shows category heat table/cards without requiring MVP-only mock data. |
+| 10.5 | Codex sign-off: `pytest tests/test_archives.py -q` + acceptance archives check PASS. |
 
 ## Functional Modules
 
@@ -39,6 +50,7 @@ Intel Hub is a Commercial Edition intelligence operations platform for collectin
 | Alerting | Keyword rules, events, notification stubs | Implemented |
 | **Daily Briefing** | Aggregated ranked digest API + `/briefing` page | Implemented |
 | **Briefing Push** | Feishu interactive card after Beat / manual task | Implemented (env optional) |
+| **Daily Archive & Trends** | Beijing-day snapshots, category heat trends, `/archives` + `/trends` | Implemented (Codex M5-D review pending) |
 | Dashboard | Overview stats and navigation | Implemented |
 | Agent Runtime | 12-factor style agent run helpers | Present, details待补充 |
 | Commercial Auth | Tenant/user/permission model | 待补充 |
@@ -66,6 +78,7 @@ For this commercial project, interpret MVP scope as the minimum commercial basel
 - Worker/beat commands.
 - Daily briefing page and API.
 - Optional Feishu push for daily briefing.
+- Daily archive snapshots and category-heat trends (Commercial baseline — ADR-20260521-01).
 
 ## Out Of Scope For Now
 

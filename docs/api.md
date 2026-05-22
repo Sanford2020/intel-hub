@@ -185,6 +185,137 @@ Daily briefing delivery is triggered automatically by the `generate-daily-briefi
 
 Delivery logs are persisted in the `briefing_delivery_logs` table regardless of status.
 
+## Archives / Trends
+
+Daily archives store a frozen Beijing-calendar-day briefing snapshot plus metrics used by trend views. Archive dates use `ARCHIVE_TIMEZONE` (default `Asia/Shanghai`).
+
+| Method | Path | Query | Notes |
+| --- | --- | --- | --- |
+| GET | `/api/v1/archives` | `page` (default 1), `page_size` (1–100, default 20), `from` (ISO date), `to` (ISO date) | Paginated daily archive summaries, newest first |
+| GET | `/api/v1/archives/{archive_date}` | Path date `YYYY-MM-DD` | Full archive detail for one Beijing calendar day |
+| GET | `/api/v1/archives/trends/category-heat` | `days` (1–365, default 30) | Category heat trend series from `metrics_json.category_heat` |
+
+Archive summary response:
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "archive_date": "2026-05-21",
+      "timezone": "Asia/Shanghai",
+      "status": "success",
+      "item_count": 12,
+      "articles_created": 45,
+      "high_relevance_count": 8,
+      "top_category": "cyber",
+      "top_heat_score": 81.0
+    }
+  ],
+  "total": 1,
+  "page": 1,
+  "page_size": 20,
+  "total_pages": 1
+}
+```
+
+Archive detail response:
+
+```json
+{
+  "success": true,
+  "data": {
+    "id": 1,
+    "archive_date": "2026-05-21",
+    "timezone": "Asia/Shanghai",
+    "window_start": "2026-05-20T16:00:00Z",
+    "window_end": "2026-05-21T16:00:00Z",
+    "status": "success",
+    "error_message": null,
+    "briefing": { "...DailyBriefingRead": "..." },
+    "metrics": {
+      "version": 1,
+      "ingest": {
+        "articles_created": 45,
+        "by_source_type": { "rss": 30 }
+      },
+      "analysis": {
+        "reports_created": 40,
+        "avg_relevance": 5.8,
+        "high_relevance_count": 8
+      },
+      "category_heat": [
+        {
+          "category": "cyber",
+          "category_label": "网络安全",
+          "articles": 20,
+          "reports": 18,
+          "high_relevance": 6,
+          "avg_relevance": 6.5,
+          "heat_score": 44.5
+        }
+      ],
+      "alerts": { "events_created": 3 },
+      "briefing_meta": {
+        "item_count": 12,
+        "min_relevance": 6.0,
+        "ai_mode": "mock|live"
+      }
+    },
+    "created_at": "2026-05-22T06:15:00Z",
+    "updated_at": "2026-05-22T06:15:00Z"
+  }
+}
+```
+
+Missing archive response:
+
+```json
+{
+  "detail": "Archive not found"
+}
+```
+
+Category heat trend response:
+
+```json
+{
+  "success": true,
+  "data": {
+    "timezone": "Asia/Shanghai",
+    "days": 30,
+    "start_date": "2026-04-22",
+    "end_date": "2026-05-21",
+    "categories": ["cyber", "wire"],
+    "points_by_category": {
+      "cyber": [
+        {
+          "date": "2026-05-21",
+          "heat_score": 44.5,
+          "articles": 20,
+          "high_relevance": 6,
+          "avg_relevance": 6.5,
+          "category_label": "网络安全"
+        }
+      ]
+    }
+  }
+}
+
+```
+
+Category heat formula v1:
+
+```text
+heat_score = articles + 3 * high_relevance + avg_relevance
+```
+
+Archive worker:
+
+- Celery Beat task `archive-daily-snapshot` runs `workers.tasks.archives.snapshot.archive_daily_snapshot` at UTC 06:15.
+- Manual backfill: `python scripts/backfill-archives.py --days 30`.
+- Relevant env: `ARCHIVE_ENABLED`, `ARCHIVE_TIMEZONE`, `ARCHIVE_WINDOW_HOURS`, `ARCHIVE_BRIEFING_LIMIT`, `ARCHIVE_MIN_RELEVANCE`.
+
 ## AI
 
 | Method | Path | Notes |

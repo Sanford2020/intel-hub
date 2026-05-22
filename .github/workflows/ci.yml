@@ -7,85 +7,99 @@ on:
     branches: [main]
 
 jobs:
-  backend-lint:
-    name: Backend Lint
+  validate:
+    name: Project Validation
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      APP_ENV: test
+      APP_DEBUG: "false"
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/intel_hub
+      REDIS_URL: redis://localhost:6379/0
+      CELERY_BROKER_URL: redis://localhost:6379/0
+      CELERY_RESULT_BACKEND: redis://localhost:6379/1
+      OPENAI_API_KEY: ""
+      FEISHU_WEBHOOK_URL: ""
+      SECRET_KEY: ci-dummy-secret-key
+      PROMPTS_DIR: ../prompts
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+      TZ: UTC
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install Poetry
-        run: pip install poetry
-      - name: Install dependencies
-        run: poetry install
-      - name: Lint with ruff
-        run: poetry run ruff check app/ tests/
-      - name: Format check with ruff
-        run: poetry run ruff format --check app/ tests/
 
-  backend-test:
-    name: Backend Tests
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - name: Install Poetry
-        run: pip install poetry
-      - name: Install dependencies
-        run: poetry install
-      - name: Run tests
-        run: poetry run pytest tests/ -v --tb=short
-
-  frontend-lint:
-    name: Frontend Lint
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: apps/web
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Install dependencies
-        run: npm ci 2>/dev/null || npm install
-      - name: Lint
-        run: npm run lint
-      - name: Type check
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+
+      - name: Install PostgreSQL client
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+
+      - name: Install frontend dependencies
+        working-directory: apps/web
+        run: npm ci
+
+      - name: Prepare CI environment files
+        run: |
+          cp .env.example .env
+          cp backend/.env.example backend/.env
+          cp apps/web/.env.example apps/web/.env.local
+
+      - name: Prepare database
+        run: |
+          createdb "$DATABASE_URL"
+          cd backend
+          PYTHONPATH="$GITHUB_WORKSPACE" alembic upgrade head
+
+      - name: Backend pytest
+        working-directory: backend
+        run: PYTHONPATH="$GITHUB_WORKSPACE" python -m pytest tests/ -q
+
+      - name: Frontend type-check
+        working-directory: apps/web
         run: npm run type-check
 
-  frontend-test:
-    name: Frontend Tests
-    runs-on: ubuntu-latest
-    defaults:
-      run:
+      - name: Frontend build
         working-directory: apps/web
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-      - name: Install dependencies
-        run: npm ci 2>/dev/null || npm install
-      - name: Run tests
-        run: npm run test:run
+        run: npm run build
 
-  docker-build:
-    name: Docker Build Check
-    runs-on: ubuntu-latest
-    needs: [backend-lint, backend-test, frontend-lint, frontend-test]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build backend image
-        run: docker build -f docker/backend/Dockerfile -t opc-backend .
-      - name: Build frontend image
-        run: docker build -f docker/frontend/Dockerfile -t opc-frontend .
+      - name: Docker compose config
+        run: docker compose config >/dev/null
+
+      - name: Project quick validation script
+        run: bash scripts/validate_project.sh --quick

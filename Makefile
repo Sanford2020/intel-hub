@@ -1,4 +1,4 @@
-.PHONY: help setup lint test migrate dev docker-up docker-down clean
+.PHONY: help setup lint test ci migrate dev docker-up docker-down clean
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
@@ -14,6 +14,9 @@ lint: ## Run all linters
 
 test: ## Run all tests
 	@bash scripts/test.sh
+
+ci: ## Run project validation checks
+	@bash scripts/validate_project.sh
 
 migrate: ## Run database migrations (usage: make migrate or make migrate CMD=generate NAME=add_users)
 	@bash scripts/migrate.sh $(CMD) $(NAME)

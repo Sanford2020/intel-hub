@@ -14,7 +14,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "01-global-news-wire.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Reuters Top News",
@@ -31,7 +31,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "01-global-news-wire.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Reuters Business",
@@ -48,7 +48,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "01-global-news-wire.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Reuters Technology",
@@ -65,7 +65,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "01-global-news-wire.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "AP Top News",
@@ -82,7 +82,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "01-global-news-wire.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "AP World",
@@ -99,7 +99,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "01-global-news-wire.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "AFP (via partner feeds)",
@@ -830,7 +830,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "01-global-news-wire.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "MarketWatch",
@@ -1255,7 +1255,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "02-regional-by-geography.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Meduza",
@@ -1306,7 +1306,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "02-regional-by-geography.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Times of Israel",
@@ -1408,7 +1408,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "02-regional-by-geography.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Caixin Global",
@@ -1748,7 +1748,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "State Dept Press",
@@ -1765,7 +1765,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Pentagon News",
@@ -1952,7 +1952,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "CDC Health Alert",
@@ -2105,7 +2105,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "ECB Press",
@@ -2139,7 +2139,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "ENISA",
@@ -2173,7 +2173,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "FCDO",
@@ -2241,7 +2241,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "UN Security Council",
@@ -2258,7 +2258,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "WHO News",
@@ -2292,7 +2292,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "World Bank",
@@ -2309,7 +2309,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "WTO",
@@ -2360,7 +2360,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "03-government-official.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "OPCW",
@@ -2564,7 +2564,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "04-financial-economic.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "MarketWatch",
@@ -2717,7 +2717,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "04-financial-economic.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "FRED (St. Louis Fed)",
@@ -2734,7 +2734,7 @@
     "license_notes": "免费 key",
     "api_key_env": "",
     "source_file": "04-financial-economic.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "World Bank Open Data",
@@ -2751,7 +2751,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "04-financial-economic.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "IMF Data",
@@ -2870,7 +2870,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "04-financial-economic.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Polygon.io",
@@ -2921,7 +2921,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "04-financial-economic.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "CoinMarketCap",
@@ -3159,7 +3159,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "05-osint-geopolitical.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "The War Zone",
@@ -3244,7 +3244,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "05-osint-geopolitical.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "ACLED",
@@ -3329,7 +3329,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "05-osint-geopolitical.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Saferworld / Crisis Group",
@@ -3550,7 +3550,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "05-osint-geopolitical.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "NATO.int",
@@ -3805,7 +3805,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "06-cyber-threat-intel.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "SecurityWeek",
@@ -3856,7 +3856,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "06-cyber-threat-intel.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Wired Security",
@@ -4009,7 +4009,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "06-cyber-threat-intel.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "GitHub Advisory DB",
@@ -4570,7 +4570,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "07-social-sentiment-ugc.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Lobsters",
@@ -4621,7 +4621,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "08-academic-research-patents.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "arXiv API",
@@ -4723,7 +4723,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "08-academic-research-patents.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "PubMed",
@@ -4740,7 +4740,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "08-academic-research-patents.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Europe PMC",
@@ -5828,7 +5828,7 @@
     "license_notes": "80k+ 源",
     "api_key_env": "",
     "source_file": "10-aggregators-apis.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "GNews",
@@ -5845,7 +5845,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "10-aggregators-apis.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Currents API",
@@ -5947,7 +5947,7 @@
     "license_notes": "事件聚类",
     "api_key_env": "",
     "source_file": "10-aggregators-apis.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Aylien News API",
@@ -6474,7 +6474,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "11-maritime-aviation-satellite.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "ADS-B Exchange",
@@ -6763,7 +6763,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "12-sanctions-legal-pep.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "OFAC Consolidated",
@@ -6797,7 +6797,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "12-sanctions-legal-pep.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "UK OFSI",
@@ -7256,7 +7256,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "13-humanitarian-disaster-weather.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "OCHA Situation Reports",
@@ -7426,7 +7426,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "13-humanitarian-disaster-weather.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "GDACS",
@@ -7443,7 +7443,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "13-humanitarian-disaster-weather.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "EM-DAT (CRED)",
@@ -7800,7 +7800,7 @@
     "license_notes": "多频道",
     "api_key_env": "",
     "source_file": "14-china-greater-china.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "央行/PBOC",
@@ -7834,7 +7834,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "14-china-greater-china.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "财新 Caixin",
@@ -7902,7 +7902,7 @@
     "license_notes": "",
     "api_key_env": "",
     "source_file": "15-think-tanks-policy.md",
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Brookings",

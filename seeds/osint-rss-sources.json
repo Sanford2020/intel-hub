@@ -27,7 +27,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "ISW 每日战情",
     "source_file": "osint-rss-sources.json"
   },
@@ -43,7 +43,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "装备战损 OSINT",
     "source_file": "osint-rss-sources.json"
   },
@@ -107,7 +107,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "ReliefWeb 人道 RSS",
     "source_file": "osint-rss-sources.json"
   },
@@ -155,7 +155,7 @@
     "language": "en",
     "region": "global",
     "tier": 0,
-    "enabled": true,
+    "enabled": false,
     "license_notes": "SIPRI 军控/安全 RSS",
     "source_file": "osint-rss-sources.json"
   }

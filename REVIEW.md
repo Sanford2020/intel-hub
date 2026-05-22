@@ -17,7 +17,7 @@ This file records initial project risks for follow-up. Per initialization rules,
 
 ## Test Risks
 
-- Backend tests pass in the current local environment, but production-like Docker validation is not yet captured in a standard validation script.
+- Backend tests pass in the current local environment; `scripts/validate_project.sh` and GitHub Actions CI now capture production-like checks (OPS-02).
 - Frontend type-check/build pass, but end-to-end browser tests are not formalized.
 - Worker/beat unattended runtime observation is pending.
 
@@ -76,7 +76,7 @@ Verdict: **BLOCK** — M5 archive-specific tests pass and API docs are now synce
 ## Operational Risks (Sprint 6 Observations)
 
 - **Sync batch ingest blocks API** for minutes when many RSS sources are ingested synchronously; use `?async=1` or `batch-ingest-rss.py --async`.
-- **Many Tier-0 RSS feeds fail** from local network (BBC/CNN timeout, Reuters 404, AP invalid XML); operational value depends on feed curation.
+- ~~**Many Tier-0 RSS feeds fail** from local network (BBC/CNN timeout, Reuters 404, AP invalid XML)~~ **OPS-01 probed 2026-05-22:** `docs/operations/rss-health-2026-05.md` generated; failed enabled RSS rows were marked `enabled=false` in seeds. Remaining risk: results are localnet-only and RSSHub X requires a running local RSSHub service, so production/staging should rerun the probe before permanent source removal.
 - **Celery Worker/Beat are not always running** in dev; articles/reports will not grow without them.
 - **Worker autodiscovery** previously missed analyze/alerts tasks when `__init__.py` did not import modules; regression risk if new task packages omit imports.
 - **Mock AI mode** is active when `OPENAI_API_KEY` is empty; commercial demos must label mock vs real output.
@@ -97,7 +97,7 @@ Verdict: **BLOCK** — M5 archive-specific tests pass and API docs are now synce
 
 ## Follow-up Recommendations
 
-- Create a validation script task — OPS-02 pending.
+- ~~Create a validation script task.~~ Done: OPS-02 (`validate_project.sh` + CI).
 - Create a commercial auth architecture task — M6-ADR pending (S3).
 - Record a worker/beat observation task — OPS-03 pending.
 - ~~Decide whether root `DECISIONS.md` supersedes `docs/decisions.md`.~~ Done: ADR-20260521-03.

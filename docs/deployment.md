@@ -98,7 +98,7 @@ docker compose config
 
 ## Project Validation
 
-One-shot local/dev validation script:
+One-shot local/dev validation script on Windows:
 
 ```powershell
 cd C:\Users\sanford\Desktop\ai_code_new\intel-hub
@@ -119,6 +119,46 @@ Quick mode (skip frontend production build):
 | `-Quick` | Skip `npm run build` |
 
 Exit code `0` = all executed checks passed; non-zero = at least one failure.
+
+Linux/macOS equivalent:
+
+```bash
+cd /path/to/intel-hub
+bash scripts/validate_project.sh
+```
+
+Quick mode:
+
+```bash
+bash scripts/validate_project.sh --quick
+```
+
+| Flag | Effect |
+| --- | --- |
+| `--skip-docker` | Skip `docker compose config` |
+| `--skip-backend` | Skip backend pytest |
+| `--skip-frontend` | Skip frontend type-check and build |
+| `--quick` | Skip `npm run build` |
+
+`make ci` is a bash-friendly wrapper for `scripts/validate_project.sh`.
+
+## CI / Validate
+
+GitHub Actions workflow: `.github/workflows/ci.yml`.
+
+The CI job runs on `push` and `pull_request` to `main` and validates:
+
+- PostgreSQL 16 and Redis 7 service containers are healthy.
+- Backend dependencies install from `backend/requirements.txt`.
+- Database migrations run with `alembic upgrade head`.
+- Backend tests pass with `python -m pytest tests/ -q`.
+- Frontend dependencies install with `npm ci`.
+- Frontend type-check passes with `npm run type-check`.
+- Frontend production build passes with `npm run build`.
+- Docker Compose config renders with `docker compose config`.
+- `bash scripts/validate_project.sh --quick` passes.
+
+CI uses dummy/mock values for secrets such as `OPENAI_API_KEY` and `FEISHU_WEBHOOK_URL`; real production secrets must be configured in the deployment target, not in the workflow.
 
 ## Daily Operations
 

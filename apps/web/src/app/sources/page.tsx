@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -69,10 +69,10 @@ export default function SourcesPage() {
   pendingRef.current = pendingIngest;
   logsSourceRef.current = logsSource;
 
-  const sourceFilters = {
+  const sourceFilters = useMemo(() => ({
     tier: tierFilter === "" ? undefined : Number(tierFilter),
     enabled: enabledFilter === "" ? undefined : enabledFilter === "true",
-  };
+  }), [tierFilter, enabledFilter]);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -83,11 +83,12 @@ export default function SourcesPage() {
       setTotal(res.total);
       setTotalPages(res.total_pages);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "加载失败");
+      const msg = e instanceof Error ? e.message : "加载失败";
+      setError(msg.includes("Internal Server Error") || msg.includes("Failed to fetch") ? "无法连接后端服务，请确认 API 已启动" : msg);
     } finally {
       setLoading(false);
     }
-  }, [page, tierFilter, enabledFilter]);
+  }, [page, sourceFilters]);
 
   useEffect(() => {
     load();
@@ -148,7 +149,7 @@ export default function SourcesPage() {
       clearInterval(interval);
       clearTimeout(timeout);
     };
-  }, [pendingIngest.size, page, tierFilter, enabledFilter, sourceFilters.enabled, sourceFilters.tier]);
+  }, [pendingIngest.size, page, sourceFilters]);
 
   async function toggleEnabled(source: Source) {
     setBusyId(source.id);
@@ -183,7 +184,8 @@ export default function SourcesPage() {
         await load();
       }
     } catch (e) {
-      setError(e instanceof Error ? e.message : "采集失败");
+      const msg = e instanceof Error ? e.message : "采集失败";
+      setError(msg.includes("Internal Server Error") ? "后端服务异常，请稍后重试" : msg);
     } finally {
       setIngestingId(null);
     }
@@ -197,7 +199,8 @@ export default function SourcesPage() {
       const res = await listIngestLogs(source.id);
       setLogs(res.data);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "加载日志失败");
+      const msg = e instanceof Error ? e.message : "加载日志失败";
+      setError(msg.includes("Internal Server Error") ? "后端服务异常，无法加载日志" : msg);
     } finally {
       setLogsLoading(false);
     }
@@ -207,7 +210,7 @@ export default function SourcesPage() {
     <main className="app-shell">
       <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <div className="muted-label">Sources</div>
+          <div className="muted-label">运营</div>
           <h1 className="mt-1 text-3xl font-semibold tracking-normal">来源管理</h1>
           <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
             共 {total} 个来源
@@ -217,7 +220,7 @@ export default function SourcesPage() {
         </div>
         <div className="surface flex items-center gap-3 px-4 py-3 text-sm text-slate-600 dark:text-slate-300">
           <RadioTower className="h-4 w-4 text-slate-400" />
-          <span>{sources.filter((source) => source.enabled).length} enabled on page</span>
+          <span>本页 {sources.filter((source) => source.enabled).length} 个已启用</span>
         </div>
       </div>
 

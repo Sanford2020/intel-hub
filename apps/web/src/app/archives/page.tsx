@@ -32,11 +32,11 @@ export default function ArchivesPage() {
       const res = await listArchives(1, 60);
       setRows(res.data);
     } catch (err) {
-      const msg =
+      const raw =
         err instanceof Error && err.message
           ? err.message
-          : "加载归档列表失败，请确认后端 API 已启动。";
-      setError(msg);
+          : "加载归档列表失败";
+      setError(raw.includes("Internal Server Error") || raw.includes("Failed to fetch") ? "无法连接后端服务，请确认 API 已启动" : raw);
       setRows([]);
     } finally {
       setLoading(false);

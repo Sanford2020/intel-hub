@@ -30,7 +30,8 @@ export default function AlertsPage() {
       setRules(rulesRes.data);
       setEvents(eventsRes.data);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "加载失败");
+      const msg = e instanceof Error ? e.message : "加载失败";
+      setError(msg.includes("Internal Server Error") || msg.includes("Failed to fetch") ? "无法连接后端服务，请确认 API 已启动" : msg);
     } finally {
       setLoading(false);
     }
@@ -54,7 +55,8 @@ export default function AlertsPage() {
       setKeywords("");
       await load();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "创建失败");
+      const msg = err instanceof Error ? err.message : "创建失败";
+      setError(msg.includes("Internal Server Error") ? "后端服务异常，无法创建规则" : msg);
     }
   }
 
@@ -72,7 +74,7 @@ export default function AlertsPage() {
     <main className="app-shell">
       <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <div className="muted-label">Alerts</div>
+          <div className="muted-label">运营</div>
           <h1 className="mt-1 text-3xl font-semibold tracking-normal">关键词告警</h1>
           <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
             订阅关键词，匹配资讯标题 / 正文 / AI 标签后触发通知
@@ -80,12 +82,12 @@ export default function AlertsPage() {
         </div>
         <div className="surface flex items-center gap-3 px-4 py-3 text-sm text-slate-600 dark:text-slate-300">
           <Bell className="h-4 w-4 text-amber-500" />
-          <span>{rules.filter((rule) => rule.enabled).length} active rules</span>
+          <span>{rules.filter((rule) => rule.enabled).length} 个活跃规则</span>
         </div>
       </div>
 
       {error && (
-        <div className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+        <div className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950/30 dark:text-red-300">
           {error}
         </div>
       )}

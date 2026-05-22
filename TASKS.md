@@ -42,8 +42,8 @@
 
 | Task | Skill | 状态 | 依赖 |
 | --- | --- | --- | --- |
-| TASK-20260522-UI-F1: navigation + design components + dashboard homepage | Windsurf · Frontend | TODO | — |
-| TASK-20260522-UI-F2: briefing/articles/sources/alerts visual alignment | Windsurf · Frontend | TODO | UI-F1；archives/trends 依赖 M5-C |
+| TASK-20260522-UI-F1: navigation + design components + dashboard homepage | Windsurf · Frontend | DONE | — |
+| TASK-20260522-UI-F2: briefing/articles/sources/alerts visual alignment | Windsurf · Frontend | REVIEW | UI-F1；briefing/trends 待 F2 |
 | TASK-20260522-UI-QA: frontend lint/build/test + route smoke + Review evidence | Codex · Test/Review | TODO | UI-F1 起；完整 QA 依赖 UI-F2 |
 | TASK-20260522-UI-R: Master Review + 看板收口 | Cursor · Review | TODO | UI-QA |
 
@@ -76,7 +76,11 @@
 
 ## REVIEW
 
-- None
+### S1.5 · M5.5 UI — F1 已提交，F2 待 briefing/trends
+
+| Task | Skill | 状态 | Notes |
+| --- | --- | --- | --- |
+| TASK-20260522-UI-F2: briefing/articles/sources/alerts visual alignment | Windsurf · Frontend | REVIEW | alerts/articles/sources 部分对齐；briefing/trends 仍旧样式 |
 
 ## DONE
 

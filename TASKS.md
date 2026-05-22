@@ -2,7 +2,7 @@
 
 任务看板 — **Single Master Agent** 调度 **Skills**。老板模式见 `workflows/autonomous-delivery.md`。
 
-**多迭代路线图：** `docs/plans/roadmap-3-employees.md`（Sprint S1→S4 派单依据）
+**多迭代路线图：** `docs/plans/roadmap-3-employees.md`（Sprint S1→S4，含 S1.5 UI 插队派单依据）
 
 ## BACKLOG
 
@@ -35,6 +35,18 @@
 | TASK-20260521-M5-C: `/archives` + `/trends` UI | Windsurf · Frontend | TODO | M5-B |
 | TASK-20260521-M5-D: pytest + acceptance + Review 报告 | Codex | TODO | M5-A 起即可 |
 
+### S1.5 · M5.5 Frontend Intelligence Workbench Redesign（UI 规划完成 · 可派单）
+
+派单依据 `docs/plans/M5.5-frontend-intelligence-workbench-redesign.md`。
+执行原则：F1 可立即启动；F2 中的 `/archives`、`/trends` 视觉合流需等 M5-C 稳定，避免文件冲突。
+
+| Task | Skill | 状态 | 依赖 |
+| --- | --- | --- | --- |
+| TASK-20260522-UI-F1: navigation + design components + dashboard homepage | Windsurf · Frontend | TODO | — |
+| TASK-20260522-UI-F2: briefing/articles/sources/alerts visual alignment | Windsurf · Frontend | TODO | UI-F1；archives/trends 依赖 M5-C |
+| TASK-20260522-UI-QA: frontend lint/build/test + route smoke + Review evidence | Codex · Test/Review | TODO | UI-F1 起；完整 QA 依赖 UI-F2 |
+| TASK-20260522-UI-R: Master Review + 看板收口 | Cursor · Review | TODO | UI-QA |
+
 ### S2 · M3.5 Ops Closure（与 S1 并行 · 文件不冲突）
 
 派单依据 `docs/plans/roadmap-3-employees.md` §3。
@@ -56,7 +68,7 @@
 | TASK-20260601-M6-A: User / Session / JWT scaffold | Windsurf · Backend | TODO | M6-ADR |
 | TASK-20260601-M6-B: 受保护路由 + RBAC | Windsurf · Backend | TODO | M6-A |
 | TASK-20260601-M6-C: `/login` + AuthProvider + 路由守卫 | Windsurf · Frontend | TODO | M6-B |
-| TASK-20260601-M6-D: 鉴权测试 + 部署 + 文档 | Codex | TODO | M6-A 起即可
+| TASK-20260601-M6-D: 鉴权测试 + 部署 + 文档 | Codex | TODO | M6-A 起即可 |
 
 ## DOING
 

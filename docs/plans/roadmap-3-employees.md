@@ -21,11 +21,12 @@
 5. **每张卡必带 Validation** — Codex 才有验收口径。
 6. **5 行摘要回传** — Skill 完成后用 `Changed / Verified / Risks / Next / Files` 5 行回到 Master，不要把全量 diff 塞进 Master Context。
 
-## 1. 总览：四个 Sprint
+## 1. 总览：四个 Sprint + UI 插队 Sprint
 
 | Sprint | 主题 | 里程碑 | 主力员工 | 估算大小 |
 |--------|------|--------|----------|----------|
 | **S1 · M5** | Daily Archive & Trends（已规划，立即开工） | 历史归档 + 趋势页 | Windsurf 主力 · Codex Review | 中 |
+| **S1.5 · M5.5** | Frontend Intelligence Workbench Redesign | 专业情报工作台 + 统一 UI 系统 | Windsurf Frontend · Codex QA · Cursor Review | 中 |
 | **S2 · M3.5** | Ops Closure（与 S1 并行可做） | 24h 观测 + 源治理 + CI | Codex 主力 · Master 1 张文档卡 | 小 |
 | **S3 · M6** | Commercial Auth Foundation | 登录 + 鉴权 + 公网安全基线 | Cursor ADR → Windsurf B+F → Codex | 大 |
 | **S4 · M7** | Stickiness Phase 2（候选） | 双语简报 / Setup Wizard / AI 成本守门 / 全文检索（**四选一**） | 视方向定 | 中 |
@@ -65,6 +66,41 @@ T4  Codex             D1→D5 (test + ops + review)
 1. 跑一晚 Beat 后访问 `/archives` 看到昨天的简报快照。
 2. `/trends?days=30&metric=articles_created` 返回 ≥ 1 个点（backfill 之后 ≥ 7）。
 3. `pytest tests/ -q` 全绿。
+
+## 2.5 Sprint S1.5 · M5.5 Frontend Intelligence Workbench Redesign
+
+**状态：** 规划完成（见 `docs/plans/M5.5-frontend-intelligence-workbench-redesign.md`）
+**目的：** 把页面从"功能堆叠型后台"升级为"专业情报分析工作台"。
+
+### 派单顺序
+
+```text
+T0  Cursor    维护设计口径 + 最终 Review (UI-R)
+T1  Windsurf  F1: navigation + mobile menu + shared components + dashboard homepage
+T2  Windsurf  F2: briefing/articles/sources/alerts visual alignment
+T3  Codex     QA: lint/type-check/build/test + route smoke + Review evidence
+T4  Cursor    UI-R: verdict + TASKS.md 收口
+```
+
+| Task | 员工 | Files owned | Validation |
+|------|------|-------------|------------|
+| TASK-20260522-UI-F1 | Windsurf · Frontend | `apps/web/src/components/layout/AppNav.tsx`, `apps/web/src/components/ui/**`, `apps/web/src/components/intel/**`, `apps/web/src/app/globals.css`, `apps/web/src/app/layout.tsx`, `apps/web/src/app/page.tsx`, `apps/web/src/lib/format.ts`, `apps/web/src/lib/intel-ui.ts`, `apps/web/src/lib/intel-labels.ts`, `apps/web/src/stores/theme.ts` | `npm run type-check && npm run build && npm run test:run`; mobile nav works |
+| TASK-20260522-UI-F2 | Windsurf · Frontend | `apps/web/src/app/briefing/page.tsx`, `apps/web/src/app/articles/**`, `apps/web/src/app/sources/page.tsx`, `apps/web/src/app/alerts/page.tsx`, `apps/web/src/app/archives/**` and `apps/web/src/app/trends/**` only after M5-C stable | same frontend validation; route smoke for briefing/articles/sources/alerts |
+| TASK-20260522-UI-QA | Codex · Test/Review | `apps/web/__tests__/**`, `REVIEW.md`, `docs/operations/frontend-ui-qa-2026-05.md` | `npm run lint && npm run type-check && npm run build && npm run test:run`; Review verdict recorded |
+| TASK-20260522-UI-R | Cursor · Review | `TASKS.md`, `REVIEW.md`, optional plan retrospective | Review verdict APPROVE / REQUEST_CHANGES / BLOCK |
+
+**禁止跨边界：**
+
+- F1 不改 `apps/web/src/app/archives/**`、`apps/web/src/app/trends/**`，避免与 M5-C 冲突。
+- Windsurf 不改 `backend/**`、`workers/**`、`services/**`。
+- Codex 不修业务 UI；发现问题写 Review finding 或开 follow-up。
+
+**老板验收：**
+
+1. 首页第一屏是今日情报工作台：指标、Top 情报、系统状态、行动入口。
+2. 手机宽度下能进入所有核心页面。
+3. 简报、资讯、来源、告警视觉统一，深色模式可用。
+4. `npm run type-check && npm run build && npm run test:run` 全绿。
 
 ## 3. Sprint S2 · M3.5 Ops Closure（与 S1 并行）
 
@@ -185,7 +221,8 @@ Files: <touched paths>
 
 1. **批准本路线图** → Master 把 M5 5 张卡从 TODO 移到 DOING（仅 M5-M、M5-A 同时进入；其余等依赖）。
 2. **Codex 同步开 M3.5** → OPS-01/02/03 三张卡（与 M5 文件不重叠）。
-3. **Master 不写代码**：本轮 Master 只负责审 M5-M ADR + S2 OPS-04 ADR-02。
+3. **Windsurf 可开 UI-F1** → `TASK-20260522-UI-F1` 只改导航、共享组件、首页 Dashboard，不碰 archives/trends。
+4. **Master 不写代码**：本轮 Master 只负责审 M5-M ADR、S2 OPS-04 ADR-02、M5.5 UI-R。
 
 ---
 

@@ -51,27 +51,30 @@ This file records initial project risks for follow-up. Per initialization rules,
 
 ## M5-D Archive Review (2026-05-22)
 
-Verdict: **BLOCK** — M5 archive-specific tests pass and API docs are now synced, but M5-D cannot move M5-A/B/C to DONE because required root `pytest -q` failed and live acceptance smoke could not reach a running API.
+Verdict: **BLOCK** — M5 archive-specific tests pass, root `pytest -q` now passes, and API docs are synced, but M5-D cannot move M5-A/B/C to DONE because live acceptance smoke could not complete against a database-backed API in this local environment.
 
 ### Findings
 
-- **P0: Required validation command `pytest -q` fails from repo root.** Result: 27 failed, 53 passed, 76 warnings. Main failure classes: `backend/tests/test_ai.py` cannot find `default` prompt when run from root; multiple API tests receive `async_generator` instead of `AsyncSession`, e.g. `backend/tests/test_archives.py::test_category_heat_trends_api`, alerts, articles, briefings, intelligence, sources. The project PowerShell validation still passes because it runs from `backend`.
+- ~~**P0: Required validation command `pytest -q` fails from repo root.**~~ Resolved by adding root `pytest.ini` and setting `PROMPTS_DIR` in backend test setup. Result after fix: 80 passed.
+- **P0: Live acceptance smoke cannot complete in the current local environment.** Backend health on `127.0.0.1:8001` passes, but `/api/v1/sources`, `/api/v1/archives`, and `/api/v1/archives/trends/category-heat` return 500 because local Postgres at `localhost:5432` is not running. Docker CLI is installed, but Docker Desktop Linux engine is not running, so `docker compose up -d db redis` cannot start the dependencies.
 - **P1: Archive failure semantics do not match M5-D acceptance note.** `create_or_update_daily_archive_sync()` writes `status="failed"` and re-raises when briefing/metrics fail; M5-D requested upstream briefing failure -> archive `status="partial"` and task not hanging. This is non-trivial business behavior, so Codex did not patch it.
-- **P2: Review evidence gaps remain for production-like archive operation.** `briefing_json` p95 size and metrics SQL `EXPLAIN` were not measured because no live archive rows/API database were available. Local API ports 8000/8001 refused connection; `scripts/acceptance-smoke.py --api http://127.0.0.1:8001` failed at health.
+- **P2: Review evidence gaps remain for production-like archive operation.** `briefing_json` p95 size and metrics SQL `EXPLAIN` were not measured because no live archive rows/API database were available.
 
 ### Verification
 
 - `python -m pytest tests/test_archives.py -q` from `backend`: **PASS**, 5 passed.
+- `python -m pytest backend/tests/test_archives.py -q` from repo root: **PASS**, 5 passed.
 - `powershell -ExecutionPolicy Bypass -File scripts/validate_project.ps1 -Quick -SkipDocker`: **PASS**, backend pytest 80 passed, frontend type-check PASS.
-- `pytest -q` from repo root: **FAIL**, 27 failed / 53 passed.
+- `pytest -q` from repo root: **PASS**, 80 passed.
 - Archive API coverage: **PASS via TestClient tests** for `/api/v1/archives`, `/api/v1/archives/{date}`, `/api/v1/archives/trends/category-heat`.
+- Live acceptance smoke on `http://127.0.0.1:8001`: **FAIL / ENV BLOCKED**, Postgres refused connection and Docker engine unavailable.
 - `docs/api.md`: **UPDATED** with archives/trends contract.
 
 ### Review Notes
 
 - Backend implementation includes `daily_archives` model/migration, archive metrics, service, router, and UTC 06:15 Celery Beat task.
 - Frontend includes `/archives`, `/archives/{date}`, `/trends`, TS types, and `intel-api.ts` wrappers.
-- M5-D should be rerun after the root pytest environment/fixture issue is resolved and a seeded API is available for acceptance smoke.
+- M5-D should be rerun after local Postgres/Redis are running, migrations are applied, seed data is loaded, and a seeded API is available for acceptance smoke.
 
 ## M5.5 UI-QA (2026-05-22)
 

@@ -60,7 +60,7 @@
 
 | --- | --- | --- | --- |
 
-| TASK-20260521-M5-D: pytest + acceptance + Review 报告 | Codex | TODO | M5-A 起即可 |
+| None | — | — | M5-D 当前见 BLOCKED，待本地 Postgres/Redis 与 seeded API 后复跑 |
 
 
 
@@ -250,6 +250,8 @@ seeds 含 osint-rss / aihot-api / rsshub-x（25 条）+ BestBlogs 策展（7 条
 
 
 
-- None
+| Task | Skill | 阻塞原因 |
+| --- | --- | --- |
+| TASK-20260521-M5-D: pytest + acceptance + Review 报告 | Codex | `pytest -q` 与 quick validation 已 PASS；live acceptance smoke 因本地 Postgres 未运行、Docker engine 不可用而阻塞。 |
 
 

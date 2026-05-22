@@ -1,4 +1,5 @@
 import sys
+import os
 from collections.abc import AsyncGenerator, Generator
 from pathlib import Path
 
@@ -9,6 +10,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
+os.environ.setdefault("PROMPTS_DIR", str(_REPO_ROOT / "prompts"))
 
 from app.api.deps import get_session
 from app.db.base import Base

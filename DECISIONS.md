@@ -258,7 +258,7 @@ Owner: Cursor (Master)
 
 ### Follow-up
 
-- [ ] 跑通 Sprint S1（M5）作为节拍样板 — M5-M Accepted; M5-D + UI 插队并行中
+- [x] 跑通 Sprint S1（M5）作为节拍样板 — M5-D live smoke ALL PASS 2026-05-22
 - [ ] S1 完成后在 roadmap 增 §Retrospective
 - [ ] 若并行卡冲突 ≥ 2 次，重新评估边界粒度
 

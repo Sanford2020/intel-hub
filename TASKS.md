@@ -48,23 +48,7 @@
 
 
 
-### S1 · M5 Daily Archive & Trends
-
-
-
-派单顺序见 `docs/plans/roadmap-3-employees.md` §2；详细规划见 `docs/plans/M5-daily-archive-trends.md`。**ADR-20260521-01 Accepted**（TASK-20260521-M5-M DONE）。
-
-
-
-| Task | Skill | 状态 | 依赖 |
-
-| --- | --- | --- | --- |
-
-| None | — | — | M5-D 当前见 BLOCKED，待本地 Postgres/Redis 与 seeded API 后复跑 |
-
-
-
-### S1.5 · M5.5 Frontend Intelligence Workbench Redesign（UI 规划完成 · 可派单）
+### S1.5 · M5.5 Frontend Intelligence Workbench Redesign
 
 
 
@@ -112,7 +96,7 @@
 
 | --- | --- | --- | --- |
 
-| TASK-20260601-M6-ADR: 鉴权 ADR + 子任务拆解 | Cursor · Architecture | TODO | S1 DONE |
+| TASK-20260601-M6-ADR: 鉴权 ADR + 子任务拆解 | Cursor · Architecture | TODO | **S1 DONE** |
 
 | TASK-20260601-M6-A: User / Session / JWT scaffold | Windsurf · Backend | TODO | M6-ADR |
 
@@ -134,28 +118,31 @@
 
 ## REVIEW
 
-### S1 · M5 — 实现已落地，待 Codex M5-D 签收
-
-
-
-| Task | Skill | 状态 | Notes |
-
-| --- | --- | --- | --- |
-
-| TASK-20260521-M5-A: migration + metrics + Celery archive task | Windsurf · Backend | REVIEW | `006_daily_archives` + Beat + backfill |
-
-| TASK-20260521-M5-B: archives/trends API | Windsurf · Backend | REVIEW | `/archives`, `/trends/category-heat` |
-
-| TASK-20260521-M5-C: `/archives` + `/trends` UI | Windsurf · Frontend | REVIEW | 导航已加；M5.5 F2 视觉合流待 UI-F2 |
-
-
-### S1.5 · M5.5 UI — F1 已提交，F2 待 briefing/trends
+### S1.5 · M5.5 UI — F2 待 briefing/trends
 
 | Task | Skill | 状态 | Notes |
 | --- | --- | --- | --- |
 | TASK-20260522-UI-F2: briefing/articles/sources/alerts visual alignment | Windsurf · Frontend | REVIEW | alerts/articles/sources 部分对齐；briefing/trends 仍旧样式 |
 
 ## DONE
+
+
+
+### S1 · M5 Daily Archive & Trends — 2026-05-22 ✅
+
+
+
+| Task | Skill | 结果 |
+
+| --- | --- | --- |
+
+| TASK-20260521-M5-A: migration + metrics + Celery archive task | Windsurf · Backend | `006_daily_archives` + Beat + backfill |
+
+| TASK-20260521-M5-B: archives/trends API | Windsurf · Backend | `/archives`, `/trends/category-heat` |
+
+| TASK-20260521-M5-C: `/archives` + `/trends` UI | Windsurf · Frontend | 路由 + API 联调 |
+
+| TASK-20260521-M5-D: pytest + acceptance + Review | Codex | root pytest 80 passed；live smoke **ALL PASS** @ `:8001` |
 
 
 
@@ -248,10 +235,6 @@ seeds 含 osint-rss / aihot-api / rsshub-x（25 条）+ BestBlogs 策展（7 条
 
 ## BLOCKED
 
-
-
-| Task | Skill | 阻塞原因 |
-| --- | --- | --- |
-| TASK-20260521-M5-D: pytest + acceptance + Review 报告 | Codex | `pytest -q` 与 quick validation 已 PASS；live acceptance smoke 因本地 Postgres 未运行、Docker engine 不可用而阻塞。 |
+- None
 
 

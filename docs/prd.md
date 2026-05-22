@@ -50,7 +50,7 @@ Intel Hub is a Commercial Edition intelligence operations platform for collectin
 | Alerting | Keyword rules, events, notification stubs | Implemented |
 | **Daily Briefing** | Aggregated ranked digest API + `/briefing` page | Implemented |
 | **Briefing Push** | Feishu interactive card after Beat / manual task | Implemented (env optional) |
-| **Daily Archive & Trends** | Beijing-day snapshots, category heat trends, `/archives` + `/trends` | Implemented (Codex M5-D review pending) |
+| **Daily Archive & Trends** | Beijing-day snapshots, category heat trends, `/archives` + `/trends` | **Done (S1, 2026-05-22)** — M5-D APPROVE |
 | Dashboard | Overview stats and navigation | Implemented |
 | Agent Runtime | 12-factor style agent run helpers | Present, details待补充 |
 | Commercial Auth | Tenant/user/permission model | 待补充 |

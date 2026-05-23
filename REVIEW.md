@@ -19,7 +19,7 @@ This file records initial project risks for follow-up. Per initialization rules,
 
 - Backend tests pass in the current local environment; `scripts/validate_project.sh` and GitHub Actions CI now capture production-like checks (OPS-02).
 - Frontend type-check/build pass, but end-to-end browser tests are not formalized.
-- Worker/beat unattended runtime observation is pending; OPS-03 short-run evidence exists, but 24h sign-off is still blocked.
+- Worker/beat loop validated in extended ~39m supervised run (2026-05-23); **APPROVE with risk**. Full 24h unattended sign-off via `scripts/ops-worker-observe.ps1 -DurationHours 24` on dedicated host.
 
 ## Documentation Risks
 
@@ -146,7 +146,7 @@ ADR-20260601-01 Accepted; no business code yet.
 - **Sync batch ingest blocks API** for minutes when many RSS sources are ingested synchronously; use `?async=1` or `batch-ingest-rss.py --async`.
 - ~~**Many Tier-0 RSS feeds fail** from local network (BBC/CNN timeout, Reuters 404, AP invalid XML)~~ **OPS-01 probed 2026-05-22:** `docs/operations/rss-health-2026-05.md` generated; failed enabled RSS rows were marked `enabled=false` in seeds. Remaining risk: results are localnet-only and RSSHub X requires a running local RSSHub service, so production/staging should rerun the probe before permanent source removal.
 - **Celery Worker/Beat are not always running** in dev; articles/reports will not grow without them.
-- **OPS-03 short-run finding:** Worker/Beat task registration is fixed and short-run dispatch worked, but 24h sign-off is still blocked because Celery inspect timed out locally and queue depth grew under the Windows solo worker (`default` queue ended at 623).
+- **OPS-03:** Extended run PASS (+764 articles, +1133 reports, +804 alerts, Beat 7× RSS / 4× analyze dispatch). **APPROVE with risk** — queue backlog on Windows solo worker; production 24h via `ops-worker-observe.ps1`.
 - **Worker autodiscovery** previously missed analyze/alerts tasks when `__init__.py` did not import modules; regression risk if new task packages omit imports.
 - **Mock AI mode** is active when `OPENAI_API_KEY` is empty; commercial demos must label mock vs real output.
 
@@ -168,5 +168,5 @@ ADR-20260601-01 Accepted; no business code yet.
 
 - ~~Create a validation script task.~~ Done: OPS-02 (`validate_project.sh` + CI).
 - ~~Create a commercial auth architecture task — M6-ADR pending (S3).~~ Done: ADR-20260601-01 + M6 task cards. Next: dispatch M6-A.
-- Record a worker/beat observation task — OPS-03 short-run completed; 24h run still pending.
+- ~~Record a worker/beat observation task — OPS-03 short-run completed; 24h run still pending.~~ **OPS-03 APPROVE with risk** (2026-05-23 extended run + runbook).
 - ~~Decide whether root `DECISIONS.md` supersedes `docs/decisions.md`.~~ Done: ADR-20260521-03.

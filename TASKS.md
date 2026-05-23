@@ -80,7 +80,7 @@
 | Task | Skill | 状态 |
 
 | --- | --- | --- |
-| TASK-20260521-OPS-03: Worker / Beat 24h 观测落档 | Codex · Test | TODO |
+| TASK-20260521-OPS-03: Worker / Beat 24h 观测落档 | Cursor · Test | **APPROVE with risk** | Extended ~39m run + tooling; 24h runbook `ops-worker-observe.ps1` |
 
 
 

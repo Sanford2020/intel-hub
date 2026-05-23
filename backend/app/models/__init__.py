@@ -7,6 +7,7 @@ from app.models.daily_archive import DailyArchive
 from app.models.ingest_log import IngestLog
 from app.models.intelligence_report import IntelligenceReport
 from app.models.source import Source
+from app.models.user import User, UserSession
 
 __all__ = [
     "Base",
@@ -18,4 +19,6 @@ __all__ = [
     "AlertEvent",
     "BriefingDeliveryLog",
     "DailyArchive",
+    "User",
+    "UserSession",
 ]

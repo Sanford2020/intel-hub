@@ -11,6 +11,7 @@ import {
   updateAlertRule,
 } from "@/lib/intel-api";
 import type { AlertEvent, AlertRule } from "@/types/intel";
+import { ErrorBanner } from "@/components/ui/ErrorBanner";
 
 export default function AlertsPage() {
   const [rules, setRules] = useState<AlertRule[]>([]);
@@ -87,8 +88,8 @@ export default function AlertsPage() {
       </div>
 
       {error && (
-        <div className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950/30 dark:text-red-300">
-          {error}
+        <div className="mb-4">
+          <ErrorBanner message={error} onRetry={load} />
         </div>
       )}
 

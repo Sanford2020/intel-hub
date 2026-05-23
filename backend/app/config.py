@@ -35,6 +35,8 @@ class Settings(BaseSettings):
 
     secret_key: str = "change-this-to-a-random-secret-key"  # noqa: S105
     access_token_expire_minutes: int = 30
+    initial_admin_email: str = Field(default="", alias="INITIAL_ADMIN_EMAIL")
+    initial_admin_password: str = Field(default="", alias="INITIAL_ADMIN_PASSWORD")
 
     celery_broker_url: str = "redis://localhost:6379/0"
     celery_result_backend: str = "redis://localhost:6379/1"
@@ -61,7 +63,10 @@ class Settings(BaseSettings):
     telegram_chat_id: str = Field(default="", alias="TELEGRAM_CHAT_ID")
 
     # RSSHub (self-hosted X → RSS)
-    rsshub_base_url: str = Field(default="http://localhost:1200", alias="RSSHUB_BASE_URL")
+    rsshub_base_url: str = Field(
+        default="http://localhost:1200",
+        alias="RSSHUB_BASE_URL",
+    )
 
     # Apify X scraper
     apify_token: str = Field(default="", alias="APIFY_TOKEN")

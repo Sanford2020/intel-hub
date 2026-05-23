@@ -2,8 +2,13 @@ import hashlib
 import hmac
 import secrets
 from datetime import UTC, datetime, timedelta
+from typing import Any
+
+import jwt
 
 from app.config import settings
+
+JWT_ALGORITHM = "HS256"
 
 
 def generate_secret_key(length: int = 64) -> str:
@@ -44,3 +49,23 @@ def create_access_token(
         "exp": expire.isoformat(),
         "iat": datetime.now(UTC).isoformat(),
     }
+
+
+def sign_jwt(
+    claims: dict[str, Any],
+    expires_delta: timedelta | None = None,
+) -> tuple[str, datetime]:
+    expires_at = datetime.now(UTC) + (
+        expires_delta or timedelta(minutes=settings.access_token_expire_minutes)
+    )
+    issued_at = datetime.now(UTC)
+    payload = {
+        **claims,
+        "exp": expires_at,
+        "iat": issued_at,
+    }
+    return jwt.encode(payload, settings.secret_key, algorithm=JWT_ALGORITHM), expires_at
+
+
+def verify_jwt(token: str) -> dict[str, Any]:
+    return jwt.decode(token, settings.secret_key, algorithms=[JWT_ALGORITHM])

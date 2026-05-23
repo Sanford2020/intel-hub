@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -12,6 +13,18 @@ import httpx
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SEED = ROOT / "seeds" / "tier-0-sources.json"
+
+
+def _login(client: httpx.Client, base: str) -> None:
+    email = os.environ.get("SMOKE_EMAIL", "admin@example.com")
+    password = os.environ.get("SMOKE_PASSWORD", "change-me")
+    response = client.post(
+        f"{base}/api/v1/auth/login",
+        json={"email": email, "password": password},
+    )
+    response.raise_for_status()
+    token = response.json()["access_token"]
+    client.headers["Authorization"] = f"Bearer {token}"
 
 
 def main() -> None:
@@ -27,9 +40,11 @@ def main() -> None:
 
     sources = json.loads(seed_path.read_text(encoding="utf-8"))
     payload = {"sources": sources, "skip_existing": not args.replace}
-    url = f"{args.api.rstrip('/')}/api/v1/sources/import"
+    base = args.api.rstrip("/")
+    url = f"{base}/api/v1/sources/import"
 
     with httpx.Client(timeout=120.0) as client:
+        _login(client, base)
         resp = client.post(url, json=payload)
         if resp.status_code >= 400:
             print(resp.text, file=sys.stderr)

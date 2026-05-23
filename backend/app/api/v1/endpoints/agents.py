@@ -1,5 +1,7 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 
+from app.models.user import User
+from app.modules.auth.dependencies import require_operator_write
 from app.schemas.base import APIResponse
 from app.services.agent_run_service import (
     CreateRunRequest,
@@ -15,7 +17,10 @@ router = APIRouter(prefix="/agents", tags=["agents"])
 
 
 @router.post("/runs", response_model=APIResponse[RunSummary])
-async def start_run(body: CreateRunRequest) -> APIResponse[RunSummary]:
+async def start_run(
+    body: CreateRunRequest,
+    _user: User = Depends(require_operator_write),
+) -> APIResponse[RunSummary]:
     state = await create_run(body)
     from app.services.agent_run_service import _to_summary
 
@@ -36,7 +41,10 @@ async def get_run_by_id(run_id: str) -> APIResponse[AgentRunState]:
 
 
 @router.post("/runs/{run_id}/resume", response_model=APIResponse[RunSummary])
-async def resume_run_by_id(run_id: str) -> APIResponse[RunSummary]:
+async def resume_run_by_id(
+    run_id: str,
+    _user: User = Depends(require_operator_write),
+) -> APIResponse[RunSummary]:
     state = await resume_run(run_id)
     if not state:
         raise HTTPException(status_code=404, detail="Run not found or not paused")

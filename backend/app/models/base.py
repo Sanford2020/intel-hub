@@ -15,6 +15,7 @@ from app.models.daily_archive import DailyArchive  # noqa: F401
 from app.models.ingest_log import IngestLog  # noqa: F401
 from app.models.intelligence_report import IntelligenceReport  # noqa: F401
 from app.models.source import Source  # noqa: F401
+from app.models.user import User, UserSession  # noqa: F401
 
 __all__ = [
     "Base",
@@ -26,4 +27,6 @@ __all__ = [
     "AlertEvent",
     "BriefingDeliveryLog",
     "DailyArchive",
+    "User",
+    "UserSession",
 ]

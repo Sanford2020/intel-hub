@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AppNav } from "@/components/layout/AppNav";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import { AuthProvider } from "@/components/auth/AuthProvider";
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || "Intel Hub",
@@ -17,8 +18,10 @@ export default function RootLayout({
     <html lang="zh-CN" suppressHydrationWarning>
       <body className="min-h-screen antialiased">
         <ThemeProvider>
-          <AppNav />
-          {children}
+          <AuthProvider>
+            <AppNav />
+            {children}
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

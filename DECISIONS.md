@@ -218,7 +218,7 @@ Add **Archive Layer**: table `daily_archives` with per-calendar-day `briefing_js
 - [x] Approve `docs/plans/M5-daily-archive-trends.md`
 - [x] Windsurf Phase A–C (landed; pending Codex M5-D)
 - [x] Update PRD scenario 10 (archives/trends)
-- [ ] Codex M5-D: pytest + acceptance + `docs/api.md` sync + Review verdict
+- [x] Codex M5-D: pytest + acceptance + `docs/api.md` sync + Review verdict
 
 ## ADR-20260521-02: Three-Employee Delivery Cadence (Cursor / Windsurf / Codex)
 
@@ -299,3 +299,79 @@ Repository had two decision locations: root `DECISIONS.md` (ADR template + numbe
 - [x] Redirect `docs/decisions.md`
 - [x] Archive legacy notes to `docs/decisions-archive.md`
 - [x] Close REVIEW.md duplicate-ADR item
+
+## ADR-20260601-01: Commercial Auth Foundation (Single-Tenant JWT + RBAC)
+
+Date: 2026-06-01
+Status: Accepted
+Owner: Cursor (Master / Architecture)
+
+### Context
+
+S1 (M5 Daily Archive & Trends) is DONE with live acceptance smoke PASS. The dashboard and `/api/v1/*` routes are **open on the network** — acceptable for local dev, **unacceptable for Commercial Edition public deployment**. `REVIEW.md` lists "Auth undefined (M6)" as a P0 commercial blocker. `backend/app/core/security.py` already defines PBKDF2 password hashing and token payload helpers, but **no User model, no signed JWT, no route guards, no login UI**.
+
+Product roles in `docs/prd.md` (Analyst, Operator, Admin) need a minimal permission model without jumping to multi-tenant SaaS.
+
+### Decision
+
+Implement **single-organization Commercial Auth** for Sprint S3 (M6):
+
+#### In scope (M6)
+
+| Area | Decision |
+| --- | --- |
+| **User** | Table `users`: `id`, `email` (unique), `password_hash`, `role`, `is_active`, `created_at`, `updated_at`. Email is login identifier. |
+| **Password hash** | Reuse existing PBKDF2-HMAC-SHA256 (`hash_password` / `verify_password` in `backend/app/core/security.py`); do not introduce bcrypt in M6 unless Review finds compatibility issue. |
+| **Session audit** | Table `user_sessions`: `id`, `user_id`, `jti` (JWT ID, unique), `expires_at`, `revoked_at`, `created_at`. Supports logout and future revocation; **not** cookie-based server sessions. |
+| **JWT** | HS256 access tokens signed with `settings.secret_key` (env `SECRET_KEY` / document as `JWT_SECRET` alias in deployment). Claims: `sub` (user id), `email`, `role`, `jti`, `exp`, `iat`. Default TTL: `settings.access_token_expire_minutes` (30). Transport: `Authorization: Bearer <token>`. |
+| **Auth API** | `POST /api/v1/auth/login`, `POST /api/v1/auth/logout`, `GET /api/v1/auth/me`. Admin-only bootstrap: `POST /api/v1/auth/users` (create user) — no public self-registration. |
+| **RBAC roles** | Enum `admin` \| `operator` \| `analyst` (maps to PRD Admin / Operator / Analyst). |
+| **Protected API routes** | All `/api/v1/*` except **`/health`**, **`/ping`**, **`/auth/login`**. Apply FastAPI dependencies `get_current_user` + `require_roles(...)`. |
+| **Role matrix (v1)** | **admin:** full access + user CRUD. **operator:** read all intel modules; write `sources`, `alerts` (CRUD); read-only on destructive admin actions. **analyst:** read-only on `sources`, `articles`, `briefings`, `archives`, `alerts` (list/events), `stats`. |
+| **Frontend login** | Page `/login` (email + password). On success store access token (httpOnly cookie **or** memory + `sessionStorage` — prefer **memory + sessionStorage** for M6 to avoid CSRF complexity; document tradeoff). |
+| **AuthProvider** | React context: `user`, `login()`, `logout()`, `loading`. Wrap app in `layout.tsx`. |
+| **Route guard** | Next.js `middleware.ts`: unauthenticated requests to app routes → redirect `/login?next=...`. Public: `/login` only. |
+| **401 handling** | Frontend API client clears token and redirects to `/login` on 401. |
+| **Bootstrap** | One-time admin via env `INITIAL_ADMIN_EMAIL` + `INITIAL_ADMIN_PASSWORD` (startup check) **or** `scripts/seed-admin.py` — pick one in M6-A; document in `docs/deployment.md`. |
+| **Workers / Celery** | **Out of HTTP auth scope for M6.** Workers continue using DB credentials directly. Do not expose worker endpoints publicly. |
+
+#### Out of scope (explicit non-goals for M6)
+
+- Multi-tenant billing / org isolation / per-tenant quotas (M8+)
+- SSO (SAML, OIDC enterprise IdP)
+- OAuth social login (Google, GitHub, etc.)
+- Invite / magic-link / email verification flows
+- Refresh-token rotation (defer; access token + re-login acceptable for v1)
+- Per-source or row-level ACL
+- API keys for third-party integrators (defer to M7+)
+
+### Alternatives
+
+1. **Session cookies only (no JWT)** — simpler for same-site browser, awkward for API clients and Next.js BFF split; rejected.
+2. **OAuth2/OIDC from day one** — heavy for first commercial deploy; deferred.
+3. **API-key-only auth** — insufficient for multi-user dashboard; rejected as primary model.
+4. **Multi-tenant schema (`tenant_id` on all tables)** — premature; single-org deployment first.
+
+### Tradeoffs
+
+- Pros: Reuses existing `security.py`; minimal tables; clear role matrix; unblocks public deploy; aligns with FastAPI + Next separation.
+- Cons: HS256 symmetric JWT requires secret rotation discipline; no refresh tokens means shorter sessions or re-login; existing pytest/API tests must gain auth fixtures (M6-D); dev ergonomics change (login required).
+
+### Risks
+
+- **Test breakage:** All API tests need authenticated client or auth bypass fixture for M6-D.
+- **Dev friction:** Local `acceptance-smoke.py` must login or use test token helper.
+- **Celery/scripts:** `seed-sources.py`, ingest scripts use unauthenticated API today — M6-B must document service/admin token or `--api-key` defer; short-term: scripts use login endpoint in M6-D.
+- **Partial semantics / UI-F2** parallel work — M6-C must not conflict with Windsurf UI-F2 on `layout.tsx` / `AppNav`; coordinate file ownership.
+- **Push webhooks** (Feishu) remain unsigned URL secrets — separate from user auth; do not conflate.
+
+### Follow-up
+
+- [x] ADR-20260601-01 Accepted; task cards M6-A/B/C/D in `TASKS.md`
+- [x] M6-A: User + Session models, JWT sign/verify, `/auth/*` scaffold
+- [x] M6-B: Protect `/api/v1` routers + RBAC dependencies
+- [x] M6-C: `/login`, AuthProvider, middleware, 401 redirect
+- [x] M6-D: `test_auth.py`, `docs/api.md` auth chapter, deployment secrets, acceptance-smoke login step
+- [ ] Update `docs/prd.md` Scenario 11 (Commercial Auth) in M6-D
+- [ ] Close REVIEW.md "Auth undefined" after M6-D APPROVE
+

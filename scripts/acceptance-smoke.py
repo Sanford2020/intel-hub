@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 import time
 
@@ -19,6 +20,18 @@ ACCEPTANCE_SLUGS = {
 }
 
 
+def _login(client: httpx.Client, base: str) -> None:
+    email = os.environ.get("SMOKE_EMAIL", "admin@example.com")
+    password = os.environ.get("SMOKE_PASSWORD", "change-me")
+    response = client.post(
+        f"{base}/api/v1/auth/login",
+        json={"email": email, "password": password},
+    )
+    response.raise_for_status()
+    token = response.json()["access_token"]
+    client.headers["Authorization"] = f"Bearer {token}"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Acceptance ingest smoke")
     parser.add_argument("--api", default="http://127.0.0.1:8000")
@@ -31,6 +44,15 @@ def main() -> int:
             client.get(f"{base}/api/v1/health").raise_for_status()
         except httpx.HTTPError as exc:
             print(f"FAIL health: {exc}", file=sys.stderr)
+            return 1
+
+        try:
+            _login(client, base)
+        except httpx.HTTPError as exc:
+            print(
+                f"FAIL auth: {exc} — set SMOKE_EMAIL/SMOKE_PASSWORD or INITIAL_ADMIN_*",
+                file=sys.stderr,
+            )
             return 1
 
         slug_to_id: dict[str, int] = {}

@@ -4,6 +4,8 @@ from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_session
+from app.models.user import User
+from app.modules.auth.dependencies import require_admin, require_operator_write
 from app.modules.alerts.schemas import (
     AlertEventListResponse,
     AlertEventRead,
@@ -43,6 +45,7 @@ async def list_alert_rules(
 @router.post("/rules", response_model=AlertRuleRead, status_code=status.HTTP_201_CREATED)
 async def create_alert_rule(
     payload: AlertRuleCreate,
+    _user: User = Depends(require_operator_write),
     service: AlertService = Depends(get_alert_service),
 ) -> AlertRuleRead:
     rule = await service.create_rule(payload)
@@ -62,6 +65,7 @@ async def get_alert_rule(
 async def update_alert_rule(
     rule_id: int,
     payload: AlertRuleUpdate,
+    _user: User = Depends(require_operator_write),
     service: AlertService = Depends(get_alert_service),
 ) -> AlertRuleRead:
     rule = await service.update_rule(rule_id, payload)
@@ -71,6 +75,7 @@ async def update_alert_rule(
 @router.delete("/rules/{rule_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_alert_rule(
     rule_id: int,
+    _user: User = Depends(require_operator_write),
     service: AlertService = Depends(get_alert_service),
 ) -> None:
     await service.delete_rule(rule_id)
@@ -99,6 +104,7 @@ async def list_alert_events(
 @router.post("/evaluate/{article_id}", response_model=EvaluateAlertsResponse)
 async def evaluate_alerts_for_article(
     article_id: int,
+    _user: User = Depends(require_admin),
     service: AlertService = Depends(get_alert_service),
 ) -> EvaluateAlertsResponse:
     result = await service.evaluate_article(article_id)

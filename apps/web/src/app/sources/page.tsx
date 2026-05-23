@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { ingestSource, listIngestLogs, listSources, updateSource } from "@/lib/intel-api";
 import type { IngestLog, Source } from "@/types/intel";
+import { ErrorBanner } from "@/components/ui/ErrorBanner";
 
 const PAGE_SIZE = 20;
 
@@ -284,8 +285,8 @@ export default function SourcesPage() {
       )}
 
       {error && (
-        <div className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950/30 dark:text-red-300">
-          {error}
+        <div className="mb-4">
+          <ErrorBanner message={error} onRetry={load} />
         </div>
       )}
 

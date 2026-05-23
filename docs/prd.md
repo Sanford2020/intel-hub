@@ -53,7 +53,17 @@ Intel Hub is a Commercial Edition intelligence operations platform for collectin
 | **Daily Archive & Trends** | Beijing-day snapshots, category heat trends, `/archives` + `/trends` | **Done (S1, 2026-05-22)** — M5-D APPROVE |
 | Dashboard | Overview stats and navigation | Implemented |
 | Agent Runtime | 12-factor style agent run helpers | Present, details待补充 |
-| Commercial Auth | Tenant/user/permission model | 待补充 |
+| Commercial Auth | JWT login, RBAC (admin/operator/analyst), protected API + `/login` | **Done (S3, 2026-06-01)** — M6 REVIEW |
+
+### Scenario 11 — Commercial Auth Acceptance
+
+| # | Criterion |
+| --- | --- |
+| 11.1 | `POST /api/v1/auth/login` returns JWT; `GET /api/v1/auth/me` returns user with role. |
+| 11.2 | Unauthenticated `GET /api/v1/sources` returns 401; `GET /api/v1/health` remains public. |
+| 11.3 | **analyst** can GET intel modules; POST sources returns 403. **operator** can POST sources/alerts. **admin** can POST `/auth/users`. |
+| 11.4 | Frontend `/` redirects to `/login` without session; successful login lands on workbench; logout returns to `/login`. |
+| 11.5 | `acceptance-smoke.py` logs in before business checks; `pytest tests/test_auth.py -q` PASS. |
 
 ## Non-Functional Requirements
 
@@ -82,8 +92,8 @@ For this commercial project, interpret MVP scope as the minimum commercial basel
 
 ## Out Of Scope For Now
 
-- Multi-tenant accounts and permissions.
-- Production authentication.
+- Multi-tenant accounts and billing.
+- SSO / OAuth / invite-based registration.
 - Full-text search engine or advanced ranking.
 - Translation pipeline.
 - Entity graph UI.

@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { LogOut, Menu, Moon, Sun, X } from "lucide-react";
+import { useAuth } from "@/components/auth/AuthProvider";
 import { cn } from "@/lib/utils";
 import { useThemeStore } from "@/stores/theme";
 
@@ -31,6 +32,20 @@ export function AppNav() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const { isDark, toggle } = useThemeStore();
+  const { user, logout } = useAuth();
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [mobileOpen]);
+
+  if (pathname === "/login") {
+    return null;
+  }
 
   return (
     <>
@@ -80,6 +95,21 @@ export function AppNav() {
           </div>
 
           <div className="flex items-center gap-1">
+            {user ? (
+              <div className="hidden items-center gap-2 sm:flex">
+                <span className="max-w-[160px] truncate text-xs text-slate-500 dark:text-slate-400">
+                  {user.email}
+                </span>
+                <button
+                  onClick={() => void logout()}
+                  className="icon-action"
+                  aria-label="退出登录"
+                  title="退出登录"
+                >
+                  <LogOut className="h-4 w-4" />
+                </button>
+              </div>
+            ) : null}
             <button
               onClick={toggle}
               className="icon-action"

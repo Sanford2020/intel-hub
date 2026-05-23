@@ -10,6 +10,42 @@ Base URL:
 
 All application endpoints are under `/api/v1`.
 
+## Authentication
+
+Most `/api/v1/*` routes require a valid JWT access token.
+
+| Method | Path | Auth | Notes |
+| --- | --- | --- | --- |
+| POST | `/api/v1/auth/login` | Public | Returns `access_token`, `expires_at`, `user` |
+| POST | `/api/v1/auth/logout` | Bearer | Revokes current session (204) |
+| GET | `/api/v1/auth/me` | Bearer | Current user profile |
+| POST | `/api/v1/auth/users` | Admin | Create user (no self-registration) |
+
+**Public (no token):** `GET /api/v1/health`, `GET /api/v1/ping`, `POST /api/v1/auth/login`.
+
+Send authenticated requests with:
+
+```http
+Authorization: Bearer <access_token>
+```
+
+### Role matrix (v1)
+
+| Role | Read intel modules | Write sources/alerts | Write articles/admin | Create users |
+| --- | --- | --- | --- | --- |
+| `analyst` | Yes | No | No | No |
+| `operator` | Yes | Yes | No (analyze allowed) | No |
+| `admin` | Yes | Yes | Yes | Yes |
+
+### Auth errors
+
+| HTTP | Code | When |
+| --- | --- | --- |
+| 401 | `AUTHENTICATION_ERROR` | Missing/invalid/expired token |
+| 403 | `PERMISSION_DENIED` | Valid token but role not allowed |
+
+Bootstrap the first admin via `INITIAL_ADMIN_EMAIL` / `INITIAL_ADMIN_PASSWORD` on first login.
+
 ## API Design Rules
 
 - Use REST resource names under `/api/v1`.

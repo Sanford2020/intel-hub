@@ -1,3 +1,5 @@
+import { clearAccessToken, getAccessToken } from "@/lib/auth-storage";
+
 const REQUEST_TIMEOUT_MS = 15_000;
 
 function resolveApiBaseUrl(): string {
@@ -39,11 +41,13 @@ class ApiClient {
 
     let response: Response;
     try {
+      const token = getAccessToken();
       response = await fetch(url, {
         ...fetchOptions,
         signal: controller.signal,
         headers: {
           "Content-Type": "application/json",
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
           ...fetchOptions.headers,
         },
       });
@@ -64,6 +68,17 @@ class ApiClient {
     }
 
     if (!response.ok) {
+      if (
+        response.status === 401 &&
+        typeof window !== "undefined" &&
+        !path.includes("/auth/login")
+      ) {
+        clearAccessToken();
+        const next = encodeURIComponent(
+          `${window.location.pathname}${window.location.search}`,
+        );
+        window.location.href = `/login?next=${next}`;
+      }
       const error = await this.parseBody(response);
       const message =
         this.getErrorMessage(error) || response.statusText || `HTTP ${response.status}`;

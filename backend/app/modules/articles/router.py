@@ -6,6 +6,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_session
 from app.config import settings
+from app.models.user import User
+from app.modules.auth.dependencies import require_admin, require_operator_write
 from app.modules.articles.schemas import (
     ArticleCreate,
     ArticleListResponse,
@@ -61,6 +63,7 @@ async def list_articles(
 @router.post("", response_model=ArticleRead, status_code=status.HTTP_201_CREATED)
 async def create_article(
     payload: ArticleCreate,
+    _user: User = Depends(require_admin),
     service: ArticleService = Depends(get_article_service),
 ) -> ArticleRead:
     article = await service.create(payload)
@@ -80,6 +83,7 @@ async def get_article(
 async def update_article(
     article_id: int,
     payload: ArticleUpdate,
+    _user: User = Depends(require_admin),
     service: ArticleService = Depends(get_article_service),
 ) -> ArticleRead:
     article = await service.update(article_id, payload)
@@ -89,6 +93,7 @@ async def update_article(
 @router.delete("/{article_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_article(
     article_id: int,
+    _user: User = Depends(require_admin),
     service: ArticleService = Depends(get_article_service),
 ) -> None:
     await service.delete(article_id)
@@ -97,6 +102,7 @@ async def delete_article(
 @router.post("/{article_id}/analyze", response_model=AnalyzeArticleResponse)
 async def analyze_article(
     article_id: int,
+    _user: User = Depends(require_operator_write),
     session: AsyncSession = Depends(get_session),
 ) -> AnalyzeArticleResponse:
     """Run AI intelligence analysis and upsert IntelligenceReport."""

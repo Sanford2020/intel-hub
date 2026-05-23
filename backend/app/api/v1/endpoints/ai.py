@@ -1,5 +1,7 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 
+from app.models.user import User
+from app.modules.auth.dependencies import require_operator_write
 from app.schemas.base import APIResponse
 from app.services.ai_service import ChatRequest, ChatResponseData, run_chat
 
@@ -7,7 +9,10 @@ router = APIRouter(prefix="/ai", tags=["ai"])
 
 
 @router.post("/chat", response_model=APIResponse[ChatResponseData])
-async def chat(body: ChatRequest) -> APIResponse[ChatResponseData]:
+async def chat(
+    body: ChatRequest,
+    _user: User = Depends(require_operator_write),
+) -> APIResponse[ChatResponseData]:
     data = await run_chat(body)
     return APIResponse(success=True, data=data)
 

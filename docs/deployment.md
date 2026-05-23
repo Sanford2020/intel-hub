@@ -48,6 +48,29 @@ alembic upgrade head
 cd ..
 ```
 
+### Authentication bootstrap (M6)
+
+Set in `backend/.env` before first deploy:
+
+| Variable | Purpose |
+| --- | --- |
+| `SECRET_KEY` | HS256 JWT signing secret — **rotate in production** |
+| `ACCESS_TOKEN_EXPIRE_MINUTES` | Access token TTL (default 60) |
+| `INITIAL_ADMIN_EMAIL` | First admin email — bootstrapped on first successful login only |
+| `INITIAL_ADMIN_PASSWORD` | First admin password — change after first login |
+
+First-login checklist:
+
+1. Set strong `SECRET_KEY` and `INITIAL_ADMIN_*` in production env.
+2. Run `alembic upgrade head` (creates `users` / `user_sessions`).
+3. Open `/login` and sign in with `INITIAL_ADMIN_*` credentials (creates admin row if DB is empty).
+4. Create operator/analyst users via `POST /api/v1/auth/users` (admin Bearer token) or repeat bootstrap pattern in staging only.
+5. Run `python scripts/acceptance-smoke.py --api http://127.0.0.1:8001` with `SMOKE_EMAIL` / `SMOKE_PASSWORD` matching your admin account.
+
+Scripts (`seed-sources.py`, `acceptance-smoke.py`) authenticate via `POST /api/v1/auth/login` using `SMOKE_EMAIL` / `SMOKE_PASSWORD` (defaults: `admin@example.com` / `change-me`).
+
+JWT rotation: update `SECRET_KEY`, restart API, and have all users re-login (existing tokens invalidate immediately).
+
 Start services in separate terminals:
 
 ```powershell
@@ -219,7 +242,8 @@ docker run --env-file backend/.env intel-hub-worker
 
 - [ ] Set `APP_ENV=production`.
 - [ ] Set `APP_DEBUG=false`.
-- [ ] Generate a secure `SECRET_KEY`.
+- [ ] Generate a secure `SECRET_KEY` (JWT signing; rotate with planned re-login window).
+- [ ] Set `INITIAL_ADMIN_EMAIL` / `INITIAL_ADMIN_PASSWORD` for first bootstrap login.
 - [ ] Configure `CORS_ORIGINS`.
 - [ ] Configure real `DATABASE_URL`.
 - [ ] Configure Redis broker/result backend.

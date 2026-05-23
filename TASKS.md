@@ -54,18 +54,18 @@
 
 派单依据 `docs/plans/M5.5-frontend-intelligence-workbench-redesign.md`。
 
-执行原则：F1 可立即启动；F2 中的 `/archives`、`/trends` 视觉合流需等 M5-C 稳定，避免文件冲突。
+**Master UI-R (2026-05-22):** Codex UI-QA **REQUEST_CHANGES** — F2 主目标已达成，P1 移动 overflow + P2 trends key 待修后再签收。
 
 
 
 | Task | Skill | 状态 | 依赖 |
 
 | --- | --- | --- | --- |
-| TASK-20260522-UI-F1: navigation + design components + dashboard homepage | Windsurf · Frontend | DONE | — |
-| TASK-20260522-UI-F2: briefing/articles/sources/alerts visual alignment | Windsurf · Frontend | REVIEW | UI-F1；briefing/trends 待 F2 |
-| TASK-20260522-UI-QA: frontend lint/build/test + route smoke + Review evidence | Codex · Test/Review | TODO | UI-F1 起；完整 QA 依赖 UI-F2 |
 
-| TASK-20260522-UI-R: Master Review + 看板收口 | Cursor · Review | TODO | UI-QA |
+| TASK-20260522-UI-F2-FIX: 390px overflow + trends duplicate keys | Cursor · Frontend | DONE | 390px recheck PASS |
+| TASK-20260522-UI-QA-RECHECK: lint/build/smoke 复测 | Codex · Test/Review | DONE | lint/type-check/build PASS; 390px browser PASS |
+
+| TASK-20260522-UI-R: Master Review + 看板收口 | Cursor · Review | **APPROVE** | F2-FIX recheck 2026-05-23 |
 
 
 
@@ -84,27 +84,22 @@
 
 
 
-### S3 · M6 Commercial Auth Foundation（S1 DONE 后启动 · 强串行）
+### S3 · M6 Commercial Auth Foundation（S1 DONE · ADR Accepted · 强串行）
 
 
 
-派单依据 `docs/plans/roadmap-3-employees.md` §4。
+派单依据 `docs/plans/M6-commercial-auth-foundation.md` · **ADR-20260601-01 Accepted**。
 
 
 
-| Task | Skill | 状态 | 依赖 |
+| Task | Skill | 状态 | 依赖 | Files / 交付 |
 
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 
-| TASK-20260601-M6-ADR: 鉴权 ADR + 子任务拆解 | Cursor · Architecture | TODO | **S1 DONE** |
-
-| TASK-20260601-M6-A: User / Session / JWT scaffold | Windsurf · Backend | TODO | M6-ADR |
-
-| TASK-20260601-M6-B: 受保护路由 + RBAC | Windsurf · Backend | TODO | M6-A |
-
-| TASK-20260601-M6-C: `/login` + AuthProvider + 路由守卫 | Windsurf · Frontend | TODO | M6-B |
-
-| TASK-20260601-M6-D: 鉴权测试 + 部署 + 文档 | Codex | TODO | M6-A 起即可 |
+| TASK-20260601-M6-A: User / Session / JWT scaffold | Cursor · Backend | DONE | pytest 91 passed |
+| TASK-20260601-M6-B: 受保护路由 + RBAC | Cursor · Backend | DONE | router 级保护 + write RBAC |
+| TASK-20260601-M6-C: `/login` + AuthProvider + 路由守卫 | Cursor · Frontend | DONE | middleware 排除 `/api/*` |
+| TASK-20260601-M6-D: 鉴权测试 + 部署 + 文档 | Cursor | DONE | live smoke ALL PASS @ :8001 |
 
 
 
@@ -118,15 +113,23 @@
 
 ## REVIEW
 
-### S1.5 · M5.5 UI — F2 待 briefing/trends
+### S1.5 · M5.5 UI — Codex REQUEST_CHANGES · Master UI-R 同步
 
 | Task | Skill | 状态 | Notes |
 | --- | --- | --- | --- |
-| TASK-20260522-UI-F2: briefing/articles/sources/alerts visual alignment | Windsurf · Frontend | REVIEW | alerts/articles/sources 部分对齐；briefing/trends 仍旧样式 |
+| TASK-20260522-UI-F2: intelligence pages visual alignment | Windsurf · Frontend | REVIEW | briefing/trends/archives 已合流共享 shell；QA 未 APPROVE |
+| TASK-20260522-UI-QA: F2 recheck | Codex · Test | REVIEW | Verdict **REQUEST_CHANGES** — 见 `docs/operations/frontend-ui-qa-2026-05.md` |
+| TASK-20260522-UI-R: Master Review | Cursor · Review | REVIEW | Verdict **REQUEST_CHANGES**（与 Codex 一致）；不虚假 DONE |
 
 ## DONE
 
 
+
+### S1.5 · M5.5 UI Workbench — F1 — 2026-05-22
+
+| Task | Skill | 结果 |
+| --- | --- | --- |
+| TASK-20260522-UI-F1: navigation + design components + dashboard homepage | Windsurf · Frontend | 分组导航、移动菜单、暗色、共享 UI 组件、今日情报工作台 |
 
 ### S1 · M5 Daily Archive & Trends — 2026-05-22 ✅
 
@@ -159,6 +162,12 @@
 | TASK-20260521-OPS-04: `DECISIONS.md` vs `docs/decisions.md` 权威性 | Cursor · Documentation | ADR-20260521-03 Accepted；redirect + archive |
 
 
+
+### S3 · M6 Commercial Auth — ADR — 2026-06-01
+
+| Task | Skill | 结果 |
+| --- | --- | --- |
+| TASK-20260601-M6-ADR: 鉴权 ADR + 子任务拆解 | Cursor · Architecture | ADR-20260601-01 Accepted；`docs/plans/M6-commercial-auth-foundation.md`；task-cards M6-A/B/C/D |
 
 ### M4 Intel Stack Integration — 2026-05-19
 
@@ -236,5 +245,4 @@ seeds 含 osint-rss / aihot-api / rsshub-x（25 条）+ BestBlogs 策展（7 条
 ## BLOCKED
 
 - None
-
 

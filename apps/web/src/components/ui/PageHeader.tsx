@@ -9,7 +9,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, actions, meta }: PageHeaderProps) {
   return (
-    <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex min-w-0 flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
       <div>
         <h1 className="text-xl font-semibold text-slate-950 dark:text-white sm:text-2xl">
           {title}
@@ -19,7 +19,11 @@ export function PageHeader({ title, description, actions, meta }: PageHeaderProp
         )}
         {meta && <div className="mt-2">{meta}</div>}
       </div>
-      {actions && <div className="mt-3 flex items-center gap-2 sm:mt-0">{actions}</div>}
+      {actions && (
+        <div className="mt-3 flex min-w-0 flex-wrap items-center gap-2 sm:mt-0 sm:justify-end">
+          {actions}
+        </div>
+      )}
     </div>
   );
 }

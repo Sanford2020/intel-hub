@@ -5,6 +5,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_session
 from app.db.sync_session import get_sync_session
+from app.models.user import User
+from app.modules.auth.dependencies import require_admin, require_operator_write
 from app.modules.ingest.pipeline import ingest_source
 from app.modules.sources.schemas import (
     IngestLogListResponse,
@@ -55,6 +57,7 @@ async def list_sources(
 @router.post("", response_model=SourceRead, status_code=status.HTTP_201_CREATED)
 async def create_source(
     payload: SourceCreate,
+    _user: User = Depends(require_operator_write),
     service: SourceService = Depends(get_source_service),
 ) -> SourceRead:
     source = await service.create(payload)
@@ -64,6 +67,7 @@ async def create_source(
 @router.post("/import", response_model=SourceBulkImportResult)
 async def import_sources(
     payload: SourceBulkImportRequest,
+    _user: User = Depends(require_operator_write),
     service: SourceService = Depends(get_source_service),
 ) -> SourceBulkImportResult:
     return await service.bulk_import(payload)
@@ -73,6 +77,7 @@ async def import_sources(
 async def ingest_source_now(
     source_id: int,
     async_mode: bool = Query(False, alias="async"),
+    _user: User = Depends(require_operator_write),
     service: SourceService = Depends(get_source_service),
 ) -> IngestResultRead:
     """Run ingest synchronously, or queue Celery task when async=1."""
@@ -126,6 +131,7 @@ async def get_source(
 async def update_source(
     source_id: int,
     payload: SourceUpdate,
+    _user: User = Depends(require_operator_write),
     service: SourceService = Depends(get_source_service),
 ) -> SourceRead:
     source = await service.update(source_id, payload)
@@ -135,6 +141,7 @@ async def update_source(
 @router.delete("/{source_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_source(
     source_id: int,
+    _user: User = Depends(require_operator_write),
     service: SourceService = Depends(get_source_service),
 ) -> None:
     await service.delete(source_id)
